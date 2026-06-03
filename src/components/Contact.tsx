@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, User, MessageSquare, Send, Sparkles } from 'lucide-react';
 import useSoundEffects from '../hooks/useSoundEffects';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Contact() {
+  const { t } = useLanguage();
   const { playHover, playClick } = useSoundEffects();
   const [formData, setFormData] = useState({ nama: '', email: '', pesan: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,9 +46,9 @@ export default function Contact() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-accent-primary/30 bg-accent-primary/5 text-xs font-semibold tracking-widest text-accent-secondary uppercase font-space mb-6"
           >
             <Mail size={12} className="animate-pulse" />
-            Hubungi Aku
+            {t('contact.badge')}
           </motion.div>
-
+ 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +56,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-space font-extrabold text-4xl md:text-5xl tracking-tight text-white mb-4"
           >
-            Yuk Terhubung
+            {t('contact.sectionTitle')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +65,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-text-secondary text-base md:text-lg font-sans"
           >
-            Aku selalu terbuka untuk diskusi, kolaborasi, maupun sekadar ngobrol tentang teknologi, bisnis, dan ide-ide baru.
+            {t('contact.sectionDesc')}
           </motion.p>
         </div>
 
@@ -85,10 +87,10 @@ export default function Contact() {
                 <Sparkles size={36} className="animate-bounce" />
               </div>
               <h3 className="font-space font-extrabold text-2xl text-white mb-3">
-                Pesan Terkirim!
+                {t('contact.success.title')}
               </h3>
               <p className="text-text-secondary text-sm md:text-base font-sans max-w-md mb-8">
-                Terima kasih banyak sudah menyempatkan waktu untuk mampir dan menulis pesan. Aku akan segera membalas email kamu!
+                {t('contact.success.desc')}
               </p>
               <button
                 onClick={() => {
@@ -97,7 +99,7 @@ export default function Contact() {
                 }}
                 className="px-6 py-2.5 rounded-full text-xs font-bold font-space uppercase tracking-widest bg-portfolio-surface border border-portfolio-border hover:border-accent-primary/40 hover:text-white text-text-secondary transition-all cursor-pointer"
               >
-                Kirim Pesan Lain
+                {t('contact.success.resetBtn')}
               </button>
             </motion.div>
           ) : (
@@ -106,7 +108,7 @@ export default function Contact() {
                 {/* Nama input */}
                 <div className="space-y-2">
                   <label htmlFor="nama" className="text-xs font-bold uppercase tracking-widest text-white/70 font-space block">
-                    Nama
+                    {t('contact.form.nameLabel')}
                   </label>
                   <div className="relative">
                     <User size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary" />
@@ -114,7 +116,7 @@ export default function Contact() {
                       type="text"
                       id="nama"
                       required
-                      placeholder="Masukkan nama kamu"
+                      placeholder={t('contact.form.namePlaceholder')}
                       value={formData.nama}
                       onChange={(e) => setFormData({ ...formData, nama: e.target.value })}
                       onMouseEnter={playHover}
@@ -126,7 +128,7 @@ export default function Contact() {
                 {/* Email input */}
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-white/70 font-space block">
-                    Email
+                    {t('contact.form.emailLabel')}
                   </label>
                   <div className="relative">
                     <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary" />
@@ -134,7 +136,7 @@ export default function Contact() {
                       type="email"
                       id="email"
                       required
-                      placeholder="email@example.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       onMouseEnter={playHover}
@@ -147,7 +149,7 @@ export default function Contact() {
               {/* Pesan input */}
               <div className="space-y-2">
                 <label htmlFor="pesan" className="text-xs font-bold uppercase tracking-widest text-white/70 font-space block">
-                  Pesan
+                  {t('contact.form.messageLabel')}
                 </label>
                 <div className="relative">
                   <MessageSquare size={16} className="absolute left-4 top-5 text-text-secondary" />
@@ -155,7 +157,7 @@ export default function Contact() {
                     id="pesan"
                     required
                     rows={5}
-                    placeholder="Tulis pesan atau pertanyaan kamu di sini..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                     value={formData.pesan}
                     onChange={(e) => setFormData({ ...formData, pesan: e.target.value })}
                     onMouseEnter={playHover}
@@ -176,12 +178,12 @@ export default function Contact() {
                 >
                   {isSubmitting ? (
                     <>
-                      Mengirim...
+                      {t('contact.form.submittingBtn')}
                       <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                     </>
                   ) : (
                     <>
-                      Kirim Pesan
+                      {t('contact.form.submitBtn')}
                       <Send size={12} />
                     </>
                   )}

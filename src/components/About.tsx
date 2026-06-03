@@ -4,41 +4,10 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Trophy, Palette, GraduationCap, Code2, Rocket } from 'lucide-react';
 import TextReveal from './TextReveal';
-
-const TIMELINE_EVENTS = [
-  {
-    icon: Trophy,
-    year: 'Awal Mula',
-    title: 'Provincial Athlete (POPROV)',
-    desc: 'Sebelum mengenal coding, hidupku dipenuhi latihan fisik. Berkompetisi hingga tingkat POPROV membentuk disiplin, konsistensi, resiliensi, dan mentalitas tangguh yang terus kubawa hingga sekarang.',
-  },
-  {
-    icon: Palette,
-    year: 'Eksplorasi Desain',
-    title: 'Creative Visual Designer',
-    desc: 'Mulai mengeksplorasi komunikasi visual melalui poster, infografis, branding, dan materi promosi untuk komunitas gereja dan bisnis lokal seperti Es Teh Poci.',
-  },
-  {
-    icon: GraduationCap,
-    year: 'Langkah Akademis',
-    title: 'Mahasiswa Manajemen',
-    desc: 'Ketika masuk kuliah, aku memilih jurusan Manajemen. Jujur saja, itu bukan jalur yang dulu aku bayangkan. Tapi dari sini aku belajar berpikir strategis, kepemimpinan, dan penyelesaian masalah bisnis.',
-  },
-  {
-    icon: Code2,
-    year: 'Titik Balik',
-    title: 'Self-Taught Developer',
-    desc: 'Semuanya berubah ketika aku mulai mengenal Roblox dan belajar pemrograman web secara otodidak melalui berbagai project nyata menggunakan React, Next.js, dan AI sebagai akselerator belajar.',
-  },
-  {
-    icon: Rocket,
-    year: 'Masa Depan',
-    title: 'Future Digital Builder',
-    desc: 'Menggabungkan disiplin olahraga, kreativitas visual, pemikiran bisnis, dan teknologi untuk membangun produk digital yang bermakna dan memberikan dampak nyata.',
-  },
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export default function About() {
+  const { t } = useLanguage();
   const containerRef = useRef<HTMLDivElement>(null);
   
   // Track scroll progress of this container to animate the vertical line
@@ -53,13 +22,44 @@ export default function About() {
     restDelta: 0.001,
   });
 
+  const TIMELINE_EVENTS = [
+    {
+      icon: Trophy,
+      year: t('about.timelineEvents.event1.year'),
+      title: t('about.timelineEvents.event1.title'),
+      desc: t('about.timelineEvents.event1.desc'),
+    },
+    {
+      icon: Palette,
+      year: t('about.timelineEvents.event2.year'),
+      title: t('about.timelineEvents.event2.title'),
+      desc: t('about.timelineEvents.event2.desc'),
+    },
+    {
+      icon: GraduationCap,
+      year: t('about.timelineEvents.event3.year'),
+      title: t('about.timelineEvents.event3.title'),
+      desc: t('about.timelineEvents.event3.desc'),
+    },
+    {
+      icon: Code2,
+      year: t('about.timelineEvents.event4.year'),
+      title: t('about.timelineEvents.event4.title'),
+      desc: t('about.timelineEvents.event4.desc'),
+    },
+    {
+      icon: Rocket,
+      year: t('about.timelineEvents.event5.year'),
+      title: t('about.timelineEvents.event5.title'),
+      desc: t('about.timelineEvents.event5.desc'),
+    },
+  ];
+
   return (
     <section id="about" className="relative py-24 border-b border-portfolio-border overflow-hidden">
       {/* Ambient Lights */}
       <div className="absolute top-[20%] left-[10%] w-[350px] h-[350px] bg-accent-primary/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[20%] right-[10%] w-[350px] h-[350px] bg-accent-secondary/5 rounded-full blur-[100px] pointer-events-none" />
-
-
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
@@ -70,7 +70,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="font-space font-extrabold text-4xl md:text-5xl tracking-tight text-white mb-4"
           >
-            <TextReveal text="Perjalanan yang Nggak Direncanakan, Tapi Sangat Berarti." mode="words" />
+            <TextReveal text={t('about.sectionTitle')} mode="words" />
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-text-secondary text-base md:text-lg font-sans"
           >
-            <TextReveal text="Sejak kecil aku selalu penasaran dengan teknologi. Meskipun jalanku sempat berbeda, setiap langkah yang aku ambil justru melengkapi kepingan puzzle untuk masa depanku." mode="fade-up" delay={0.15} />
+            <TextReveal text={t('about.sectionDesc')} mode="fade-up" delay={0.15} />
           </motion.p>
         </div>
 

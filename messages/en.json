@@ -1,0 +1,438 @@
+{
+  "navbar": {
+    "home": "Home",
+    "journey": "Journey",
+    "creativeJourney": "Visual Design",
+    "about": "About",
+    "skills": "Skills",
+    "sports": "Sports",
+    "projects": "Projects",
+    "philosophy": "Philosophy",
+    "future": "Targets"
+  },
+  "hero": {
+    "badge": "Still Learning, Still Growing",
+    "typewriter": {
+      "hello": "Hello, I'm Mybuu.",
+      "tech": "Tech Enthusiast.",
+      "management": "Management Student.",
+      "selfTaught": "Self-Taught Coder."
+    },
+    "title": "A Management Student Seriously Building a Future in the Tech World.",
+    "description": "Transitioning from sports to a management major, then falling in love with programming. Today, I focus on building skills, projects, and experiences to turn curiosity into reality.",
+    "ctaJourney": "See My Journey",
+    "ctaProjects": "Explore Projects",
+    "stats": {
+      "projectsTitle": "Projects Built",
+      "selfTaughtTitle": "Self Study",
+      "selfTaughtValue": "Self-Taught",
+      "sportsTitle": "Sports Achievements",
+      "futureTitle": "Future Focus",
+      "futureValue": "Tangible Value"
+    }
+  },
+  "lanyard": {
+    "studioPass": "STUDIO PASS",
+    "goldPass": "GOLD PASS",
+    "visualDesigner": "Visual Designer",
+    "managementStudent": "Management Student",
+    "developer": "Developer",
+    "tagline": "Building the future through creativity, strategy, and technology",
+    "access": "ACCESS: ALL"
+  },
+  "interactiveJourney": {
+    "sectionTitle": "From Management to Programming",
+    "sectionDesc": "An interactive roadmap of where business management principles and programming logic meet. Click on any milestone node to explore.",
+    "steps": {
+      "step1": {
+        "title": "Provincial Athlete (POPROV)",
+        "label": "POPROV Athlete",
+        "timeline": "Athletics Foundation",
+        "shortDesc": "Developed discipline, consistency, resilience, and a competitive mindset.",
+        "longDesc": "Competing as a provincial athlete taught me that success is a product of long-term dedication, physical and mental discipline, and resilience. I apply this competitive and hard-working mindset to coding and strategy every day."
+      },
+      "step2": {
+        "title": "Creative Visual Designer",
+        "label": "Visual Designer",
+        "timeline": "Visual & Branding Stage",
+        "shortDesc": "Explored visual communication through posters, infographics, branding, and promotional materials.",
+        "longDesc": "Before programming, I developed visual assets for my church community and commercial promotions like Es Teh Poci. Designing taught me the power of layout, color theory, typography, and how to capture user attention."
+      },
+      "step3": {
+        "title": "Management Student",
+        "label": "Management Student",
+        "timeline": "Business Strategy",
+        "shortDesc": "Learned strategic thinking, leadership, decision-making, and problem-solving.",
+        "longDesc": "My management studies at university taught me strategic business thinking, human resource management, and operations. This business logic helps me design digital products that solve real problems."
+      },
+      "step4": {
+        "title": "Self-Taught Developer",
+        "label": "Self-Taught Developer",
+        "timeline": "Programming Pivot",
+        "shortDesc": "Began learning programming and web development independently through real-world projects.",
+        "longDesc": "Independently mastering programming using online resources, documentation, and utilizing AI as a learning accelerator. Building modern, beautiful web projects with HTML, CSS, JavaScript, React, and Next.js."
+      },
+      "step5": {
+        "title": "Future Digital Builder",
+        "label": "Future Builder",
+        "timeline": "Strategic Tech Vision",
+        "shortDesc": "Combining sports discipline, visual creativity, business thinking, and technology.",
+        "longDesc": "Combining all my strengths: sports discipline, visual design, strategic management, and modern programming. I aim to build technology-first solutions that deliver premium value and unforgettable digital experiences."
+      }
+    }
+  },
+  "creativeJourney": {
+    "badge": "Visual Design",
+    "sectionTitle": "Creativity That Shapes My Perspective",
+    "sectionDesc": "Before learning programming and building websites, I deeply explored visual communication and creative design. Through creating posters, infographics, event publications, and promotional materials, I learned that design is not just about visual aesthetics, but about communicating ideas effectively and creating meaningful experiences. This experience continues to influence how I view technology, digital products, and problem-solving today.",
+    "experienceCard1": {
+      "timeline": "Grade 11 – Grade 12 (High School)",
+      "title": "Creative Visual Design",
+      "location": "Church Community",
+      "desc": "Responsible for creating visual assets to support church activities, events, and communication needs.",
+      "projectListTitle": "Projects Undertaken",
+      "projects": [
+        "Event Posters",
+        "Event Banners",
+        "Social Media Content",
+        "Information Infographics",
+        "Promotional Materials",
+        "Event Visual Branding"
+      ],
+      "skillsTitle": "Skills Refined",
+      "skills": [
+        "Visual Communication",
+        "Typography",
+        "Layout Design",
+        "Color Theory",
+        "Visual Hierarchy",
+        "Event Branding",
+        "Creative Thinking"
+      ]
+    },
+    "experienceCard2": {
+      "timeline": "University Days – Present",
+      "title": "Visual Promotional Design",
+      "location": "Es Teh Poci Tenant",
+      "desc": "Contributed to the creation of promotional materials and branding for the Es Teh Poci outlet, one of the most well-known beverage brands in the local area.",
+      "projectListTitle": "Projects Undertaken",
+      "projects": [
+        "Promotional Posters",
+        "Social Media Campaign Assets",
+        "Marketing Visuals",
+        "Sales Support Materials",
+        "Banner Designs",
+        "Brand Communication Content"
+      ],
+      "skillsTitle": "Skills Refined",
+      "skills": [
+        "Marketing Design",
+        "Consumer Attention Grabbers",
+        "Visual Branding",
+        "Commercial Design",
+        "Content Creation",
+        "Brand Consistency"
+      ]
+    },
+    "lessonsTitle": "What I Learned From Design",
+    "lessonsSubtitle": "The Impact of Visual Thinking on My Work",
+    "designCards": {
+      "card1": {
+        "title": "Visual Communication",
+        "desc": "Learning to convey messages clearly through design and visual storytelling."
+      },
+      "card2": {
+        "title": "Creativity",
+        "desc": "Developing a creative mindset and problem-solving through visual challenges."
+      },
+      "card3": {
+        "title": "Branding",
+        "desc": "Understanding how visual identity can shape perception and foster trust."
+      },
+      "card4": {
+        "title": "Audience Interaction",
+        "desc": "Learning how to capture the audience's attention and create memorable experiences."
+      },
+      "card5": {
+        "title": "Storytelling",
+        "desc": "Using design elements to communicate ideas, emotions, and narratives."
+      },
+      "card6": {
+        "title": "Precision Detail",
+        "desc": "Building the habit of focusing on accuracy and quality in every project."
+      }
+    },
+    "techTitle": "From Visual Design to Technology",
+    "techDesc": "The more I explored visual design, the more curious I became about how websites, apps, and digital products are actually made. Design taught me how to create attractive experiences. Programming taught me how to bring those experiences to life. Today, I continue to develop both skills in parallel because I believe great digital products require both creativity and technical execution.",
+    "formula": {
+      "creativity": "🎨 Visual Creativity",
+      "logic": "💻 Programming Logic",
+      "strategic": "📊 Strategic Thinking"
+    },
+    "formulaCaption": "Foundation of a Multidisciplinary Creator"
+  },
+  "about": {
+    "sectionTitle": "An Unplanned Journey, But Highly Meaningful.",
+    "sectionDesc": "Since childhood, I have always been curious about technology. Even though my path diverged, every step I took ended up completing a piece of the puzzle for my future.",
+    "timelineEvents": {
+      "event1": {
+        "year": "The Beginning",
+        "title": "Provincial Athlete (POPROV)",
+        "desc": "Before discovering coding, my life was filled with physical training. Competing up to the POPROV provincial level built the discipline, consistency, resilience, and tough mentality that I still carry with me today."
+      },
+      "event2": {
+        "year": "Design Exploration",
+        "title": "Creative Visual Designer",
+        "desc": "Began exploring visual communication through posters, infographics, branding, and promotional materials for church communities and local businesses like Es Teh Poci."
+      },
+      "event3": {
+        "year": "Academic Step",
+        "title": "Management Student",
+        "desc": "When entering university, I chose Management as my major. Honestly, it wasn't the path I originally envisioned. But from here I learned strategic thinking, leadership, and business problem-solving."
+      },
+      "event4": {
+        "year": "Turning Point",
+        "title": "Self-Taught Developer",
+        "desc": "Everything changed when I got introduced to Roblox and started self-learning web development through various real projects using React, Next.js, and AI as a learning accelerator."
+      },
+      "event5": {
+        "year": "The Future",
+        "title": "Future Digital Builder",
+        "desc": "Combining sports discipline, visual creativity, business thinking, and technology to build digital products that are meaningful and deliver real-world impact."
+      }
+    }
+  },
+  "skills": {
+    "sectionTitle": "Skills I Am Refining",
+    "sectionDesc": "I believe that the learning process is never truly complete. Every project is an opportunity to grow further.",
+    "categories": {
+      "management": "Management Skills",
+      "technical": "Technical Skills",
+      "soft": "Soft Skills"
+    },
+    "managementSkills": {
+      "skill1": {
+        "name": "Strategic Thinking",
+        "desc": "Planning and scaling business solutions."
+      },
+      "skill2": {
+        "name": "Problem Solving",
+        "desc": "Solving obstacles systematically."
+      },
+      "skill3": {
+        "name": "Decision Making",
+        "desc": "Analyzing complex data to take action."
+      },
+      "skill4": {
+        "name": "Leadership",
+        "desc": "Empowering teams to collaborate and deliver results."
+      },
+      "skill5": {
+        "name": "Team Management",
+        "desc": "Building a cohesive and communicative team culture."
+      },
+      "skill6": {
+        "name": "Time Management",
+        "desc": "Maximizing output through sprint-based schedules."
+      }
+    },
+    "technicalSkills": {
+      "skill1": {
+        "name": "HTML & Semantic Code",
+        "desc": "Standard structure for web pages."
+      },
+      "skill2": {
+        "name": "Modern CSS & Layout",
+        "desc": "Responsive styling, Flexbox, Grid, Tailwind CSS."
+      },
+      "skill3": {
+        "name": "JavaScript ES6+",
+        "desc": "Dynamic client-side logic, closures, and async data."
+      },
+      "skill4": {
+        "name": "Responsive Design",
+        "desc": "Flawless rendering on desktop, tablet, and mobile screens."
+      },
+      "skill5": {
+        "name": "UI/UX Basics",
+        "desc": "Clean information hierarchy, visual balance, micro-interactions."
+      },
+      "skill6": {
+        "name": "AI Assisted Development",
+        "desc": "Leveraging AI LLMs to accelerate debugging."
+      },
+      "skill7": {
+        "name": "Roblox Lua Scripting",
+        "desc": "Event-driven scripting, arrays, 3D math, game mechanics."
+      },
+      "skill8": {
+        "name": "Website Building",
+        "desc": "Building functional static and dynamic websites."
+      }
+    },
+    "softSkills": {
+      "skill1": {
+        "name": "Adaptability",
+        "desc": "Quickly adjusting when technologies and targets shift."
+      },
+      "skill2": {
+        "name": "Consistency",
+        "desc": "Committed to practicing daily to master new skills."
+      },
+      "skill3": {
+        "name": "Fast Learner",
+        "desc": "Grasping concepts and documentation in a short time."
+      },
+      "skill4": {
+        "name": "Creativity",
+        "desc": "Designing unique visual and structural solutions."
+      },
+      "skill5": {
+        "name": "Discipline",
+        "desc": "Focusing on self-study with a disciplined schedule."
+      }
+    }
+  },
+  "sports": {
+    "sectionTitle": "Lessons From the World of Sports",
+    "cardTitle": "POPROV Athlete",
+    "cardDesc": "Before diving into technology, I learned a lot from the world of sports. Competing up to the POPROV provincial level provided me with valuable lessons that I still carry with me today.",
+    "sidebarDesc": "Sports taught me that physical strength is less important than mental toughness. I bring this disciplined and resilient mindset into the world of coding.",
+    "lessons": {
+      "lesson1": {
+        "title": "Discipline",
+        "desc": "Hard physical training shaped daily discipline, which I now apply to stay focused on learning and writing quality code every day."
+      },
+      "lesson2": {
+        "title": "Consistency",
+        "desc": "Repeating athletic movements thousands of times taught me that mastering complex programming technologies is only achieved through constant practice."
+      },
+      "lesson3": {
+        "title": "Mental Toughness",
+        "desc": "Staying calm under competitive pressure trained me to think logically and systematically when solving problems or fixing system bugs."
+      },
+      "lesson4": {
+        "title": "Teamwork",
+        "desc": "Understanding players' roles and building trust on the sports field is just as important as collaborating in a developer team."
+      },
+      "lesson5": {
+        "title": "Never Give Up",
+        "desc": "The desire to always exceed yesterday's limits drives me to continually explore modern technologies and creative solutions."
+      },
+      "lesson6": {
+        "title": "Target Focus",
+        "desc": "Determining tactical steps to win a match builds the habit of planning coding project sprints in a highly targeted manner."
+      }
+    }
+  },
+  "projects": {
+    "sectionTitle": "A Few Things I've Built",
+    "sectionDesc": "Most of these projects were born out of curiosity, experimentation, and a desire to keep learning new things.",
+    "projectNumberLabel": "Project 0{id}",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "projectList": {
+      "project1": {
+        "title": "Personal Portfolio Website",
+        "tagline": "Personal Website",
+        "desc": "A premium personal portfolio website designed with minimalist cards, cursor tracking, and physics-based timeline integration. Built to represent the creator's identity."
+      },
+      "project2": {
+        "title": "Modern Landing Page",
+        "tagline": "Modern Landing Page",
+        "desc": "A modern premium landing page designed for agencies or SaaS products. Features grid animations, cursor hover effects, and responsive design."
+      },
+      "project3": {
+        "title": "UI/UX Exploration",
+        "tagline": "UI/UX Exploration",
+        "desc": "Visual user interface concepts combining ease of navigation with modern aesthetics. Balances high-contrast color schemes and information readability."
+      },
+      "project4": {
+        "title": "Roblox Learning Project",
+        "tagline": "Roblox Learning Project",
+        "desc": "Game exploration project in Roblox Studio using the Lua programming language. Handles event logic, 3D object behaviors, and gameplay mechanics."
+      }
+    }
+  },
+  "philosophy": {
+    "sectionTitle": "How I View the Process",
+    "quote": "\"Major determines where we start, but does not dictate how far we can grow.\"",
+    "quoteAuthor": "My Belief",
+    "managementBlock": {
+      "title": "Management Strategy",
+      "desc": "Management taught me how to understand problems. It gives me a broad perspective on operational strategy, leadership, and how to manage projects with clear direction.",
+      "footer": "Strategic Framework"
+    },
+    "programmingBlock": {
+      "title": "Programming Execution",
+      "desc": "Programming taught me how to build tangible solutions. It trains my logic, tactical problem-solving, and turning ideas into well-functioning products.",
+      "footer": "Technical Execution"
+    },
+    "closingStatement": "When both are combined, I can see challenges from a broader perspective."
+  },
+  "future": {
+    "sectionTitle": "Next Targets",
+    "sectionDesc": "A strategic roadmap for my future achievements and technology ambitions.",
+    "targetNode": "Target Node",
+    "goals": {
+      "goal1": {
+        "year": "2025",
+        "title": "Deepening Web Development Skills",
+        "desc": "Mastering modern frameworks (Next.js, React), styling layers (Tailwind, CSS), and programming logic. Committed to writing standard, clean code."
+      },
+      "goal2": {
+        "year": "2026",
+        "title": "Working on Real-World Projects",
+        "desc": "Building projects utilized by many users. Handling performance optimization, rendering speeds, and stable data integration."
+      },
+      "goal3": {
+        "year": "2027",
+        "title": "Integrating Business & Technology",
+        "desc": "Directly merging management business strategy with software development to construct strategic and tangible digital solutions."
+      },
+      "goal4": {
+        "year": "Future",
+        "title": "Building Impactful Digital Products",
+        "desc": "Creating independent digital products that yield wide positive impacts on society, industries, and simplify everyday life."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "sectionTitle": "Let's Connect",
+    "sectionDesc": "I am always open to discussions, collaborations, or just chatting about technology, business, and new ideas.",
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "email@example.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Write your message or question here...",
+      "submitBtn": "Send Message",
+      "submittingBtn": "Sending..."
+    },
+    "success": {
+      "title": "Message Sent!",
+      "desc": "Thank you so much for taking the time to drop by and write a message. I will get back to your email shortly!",
+      "resetBtn": "Send Another Message"
+    }
+  },
+  "footer": {
+    "title": "Thank you for dropping by.",
+    "subtitle": "Still so much to learn, still so much to build.",
+    "copyright": "© Mybuu. Built using Next.js & Tailwind CSS.",
+    "backToTop": "Back to Top"
+  },
+  "loader": {
+    "steps": [
+      "PREPARING PREMIUM EXPERIENCE...",
+      "LOADING ASSETS...",
+      "BUILDING LAYOUT...",
+      "OPTIMIZING GRAPHICS...",
+      "ALMOST DONE...",
+      "SYSTEM READY."
+    ],
+    "secureBoot": "SECURE_BOOT: ACTIVE",
+    "coreTemp": "CORE_TEMP: NORMAL"
+  }
+}

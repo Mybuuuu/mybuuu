@@ -15,42 +15,50 @@ import {
   ShoppingBag
 } from 'lucide-react';
 import useSoundEffects from '../hooks/useSoundEffects';
-
-const DESIGN_CARDS = [
-  {
-    icon: MessageSquare,
-    title: 'Komunikasi Visual',
-    desc: 'Belajar menyampaikan pesan secara jelas melalui desain dan storytelling visual.'
-  },
-  {
-    icon: Lightbulb,
-    title: 'Kreativitas',
-    desc: 'Mengembangkan pola pikir kreatif dan penyelesaian masalah melalui tantangan visual.'
-  },
-  {
-    icon: Shield,
-    title: 'Branding',
-    desc: 'Memahami bagaimana identitas visual dapat membentuk persepsi dan rasa percaya.'
-  },
-  {
-    icon: Target,
-    title: 'Interaksi Audiens',
-    desc: 'Belajar cara menarik perhatian audiens dan menciptakan pengalaman yang berkesan.'
-  },
-  {
-    icon: BookOpen,
-    title: 'Storytelling',
-    desc: 'Menggunakan elemen desain untuk mengomunikasikan ide, emosi, dan narasi.'
-  },
-  {
-    icon: CheckCircle,
-    title: 'Detail yang Presisi',
-    desc: 'Membangun kebiasaan fokus pada akurasi dan kualitas di setiap project.'
-  }
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export default function CreativeJourney() {
+  const { t } = useLanguage();
   const { playHover } = useSoundEffects();
+
+  const DESIGN_CARDS = [
+    {
+      icon: MessageSquare,
+      title: t('creativeJourney.designCards.card1.title'),
+      desc: t('creativeJourney.designCards.card1.desc')
+    },
+    {
+      icon: Lightbulb,
+      title: t('creativeJourney.designCards.card2.title'),
+      desc: t('creativeJourney.designCards.card2.desc')
+    },
+    {
+      icon: Shield,
+      title: t('creativeJourney.designCards.card3.title'),
+      desc: t('creativeJourney.designCards.card3.desc')
+    },
+    {
+      icon: Target,
+      title: t('creativeJourney.designCards.card4.title'),
+      desc: t('creativeJourney.designCards.card4.desc')
+    },
+    {
+      icon: BookOpen,
+      title: t('creativeJourney.designCards.card5.title'),
+      desc: t('creativeJourney.designCards.card5.desc')
+    },
+    {
+      icon: CheckCircle,
+      title: t('creativeJourney.designCards.card6.title'),
+      desc: t('creativeJourney.designCards.card6.desc')
+    }
+  ];
+
+  const card1Projects = [0, 1, 2, 3, 4, 5].map(i => t(`creativeJourney.experienceCard1.projects.${i}`));
+  const card1Skills = [0, 1, 2, 3, 4, 5, 6].map(i => t(`creativeJourney.experienceCard1.skills.${i}`));
+  
+  const card2Projects = [0, 1, 2, 3, 4, 5].map(i => t(`creativeJourney.experienceCard2.projects.${i}`));
+  const card2Skills = [0, 1, 2, 3, 4, 5].map(i => t(`creativeJourney.experienceCard2.skills.${i}`));
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -87,7 +95,7 @@ export default function CreativeJourney() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-portfolio-border bg-portfolio-surface text-[10px] font-bold tracking-widest text-text-secondary uppercase font-space mb-6"
           >
             <Palette size={10} />
-            Desain Visual
+            {t('creativeJourney.badge')}
           </motion.div>
  
           <motion.h2
@@ -97,7 +105,7 @@ export default function CreativeJourney() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-space font-extrabold text-4xl md:text-5xl tracking-tight text-white mb-6"
           >
-            Kreativitas yang Membentuk Sudut Pandangku
+            {t('creativeJourney.sectionTitle')}
           </motion.h2>
 
           <motion.p
@@ -107,7 +115,7 @@ export default function CreativeJourney() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-text-secondary text-base md:text-lg leading-relaxed font-sans"
           >
-            Sebelum belajar pemrograman dan membangun website, aku sangat mendalami komunikasi visual dan desain kreatif. Lewat pembuatan poster, infografis, publikasi acara, hingga materi promosi, aku belajar bahwa desain bukan cuma soal estetika visual, tapi tentang menyampaikan gagasan secara efektif dan menciptakan pengalaman yang bermakna. Pengalaman ini terus memengaruhi caraku melihat teknologi, produk digital, dan penyelesaian masalah hari ini.
+            {t('creativeJourney.sectionDesc')}
           </motion.p>
         </div>
 
@@ -128,48 +136,37 @@ export default function CreativeJourney() {
             <div className="flex justify-between items-start flex-wrap gap-4 mb-6">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-accent-secondary font-mono">
-                  Kelas 11 – Kelas 12 (SMA)
+                  {t('creativeJourney.experienceCard1.timeline')}
                 </span>
                 <h3 className="font-space font-extrabold text-2xl text-white mt-1">
-                  Desain Visual Kreatif
+                  {t('creativeJourney.experienceCard1.title')}
                 </h3>
                 <p className="text-text-secondary text-sm font-semibold uppercase tracking-wider mt-1 flex items-center gap-1.5">
                   <Users size={14} className="text-accent-primary" />
-                  Komunitas Gereja
+                  {t('creativeJourney.experienceCard1.location')}
                 </p>
               </div>
             </div>
 
             <p className="text-text-secondary text-sm leading-relaxed mb-6 font-sans">
-              Bertanggung jawab membuat aset visual untuk mendukung kegiatan, acara, dan kebutuhan komunikasi gereja.
+              {t('creativeJourney.experienceCard1.desc')}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-portfolio-border">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3 font-space">
-                  Proyek yang Dikerjakan
+                  {t('creativeJourney.experienceCard1.projectListTitle')}
                 </h4>
                 <ul className="space-y-1.5 text-xs text-text-secondary list-disc pl-4 font-sans">
-                  <li>Poster Acara</li>
-                  <li>Banner Acara</li>
-                  <li>Konten Media Sosial</li>
-                  <li>Infografis Informasi</li>
-                  <li>Materi Promosi</li>
-                  <li>Visual Branding Acara</li>
+                  {card1Projects.map((p, i) => <li key={i}>{p}</li>)}
                 </ul>
               </div>
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3 font-space">
-                  Skill yang Diasah
+                  {t('creativeJourney.experienceCard1.skillsTitle')}
                 </h4>
                 <ul className="space-y-1.5 text-xs text-text-secondary list-disc pl-4 font-sans">
-                  <li>Komunikasi Visual</li>
-                  <li>Tipografi</li>
-                  <li>Desain Tata Letak</li>
-                  <li>Teori Warna</li>
-                  <li>Hierarki Visual</li>
-                  <li>Branding Acara</li>
-                  <li>Cara Berpikir Kreatif</li>
+                  {card1Skills.map((s, i) => <li key={i}>{s}</li>)}
                 </ul>
               </div>
             </div>
@@ -184,47 +181,37 @@ export default function CreativeJourney() {
             <div className="flex justify-between items-start flex-wrap gap-4 mb-6">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-accent-secondary font-mono">
-                  Masa Kuliah – Sekarang
+                  {t('creativeJourney.experienceCard2.timeline')}
                 </span>
                 <h3 className="font-space font-extrabold text-2xl text-white mt-1">
-                  Desain Promosi Visual
+                  {t('creativeJourney.experienceCard2.title')}
                 </h3>
                 <p className="text-text-secondary text-sm font-semibold uppercase tracking-wider mt-1 flex items-center gap-1.5">
                   <ShoppingBag size={14} className="text-accent-secondary" />
-                  Tenant Es Teh Poci
+                  {t('creativeJourney.experienceCard2.location')}
                 </p>
               </div>
             </div>
 
             <p className="text-text-secondary text-sm leading-relaxed mb-6 font-sans">
-              Berkontribusi dalam pembuatan materi promosi dan branding untuk outlet Es Teh Poci, salah satu brand minuman paling dikenal oleh masyarakat sekitar.
+              {t('creativeJourney.experienceCard2.desc')}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-portfolio-border">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3 font-space">
-                  Proyek yang Dikerjakan
+                  {t('creativeJourney.experienceCard2.projectListTitle')}
                 </h4>
                 <ul className="space-y-1.5 text-xs text-text-secondary list-disc pl-4 font-sans">
-                  <li>Poster Promosi</li>
-                  <li>Aset Kampanye Media Sosial</li>
-                  <li>Visual Pemasaran</li>
-                  <li>Materi Pendukung Penjualan</li>
-                  <li>Desain Banner</li>
-                  <li>Konten Komunikasi Brand</li>
+                  {card2Projects.map((p, i) => <li key={i}>{p}</li>)}
                 </ul>
               </div>
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3 font-space">
-                  Skill yang Diasah
+                  {t('creativeJourney.experienceCard2.skillsTitle')}
                 </h4>
                 <ul className="space-y-1.5 text-xs text-text-secondary list-disc pl-4 font-sans">
-                  <li>Desain Pemasaran</li>
-                  <li>Desain Penarik Perhatian Konsumen</li>
-                  <li>Visual Branding</li>
-                  <li>Desain Komersial</li>
-                  <li>Konten Kreator</li>
-                  <li>Konsistensi Brand</li>
+                  {card2Skills.map((s, i) => <li key={i}>{s}</li>)}
                 </ul>
               </div>
             </div>
@@ -241,10 +228,10 @@ export default function CreativeJourney() {
               transition={{ duration: 0.5 }}
               className="font-space font-extrabold text-3xl tracking-tight text-white mb-4"
             >
-              Apa yang Aku Pelajari dari Desain
+              {t('creativeJourney.lessonsTitle')}
             </motion.h3>
             <p className="text-text-secondary text-xs font-bold uppercase tracking-wider font-space">
-              Dampak Berpikir Visual pada Pekerjaanku
+              {t('creativeJourney.lessonsSubtitle')}
             </p>
           </div>
 
@@ -301,30 +288,30 @@ export default function CreativeJourney() {
             </motion.div>
 
             <h3 className="font-space font-extrabold text-3xl md:text-4xl text-white mb-6">
-              Dari Desain Visual ke Teknologi
+              {t('creativeJourney.techTitle')}
             </h3>
 
             <p className="text-text-secondary text-sm md:text-base leading-relaxed mb-8 max-w-2xl font-sans">
-              Semakin aku mengeksplorasi desain visual, semakin aku penasaran bagaimana sebuah website, aplikasi, dan produk digital sebenarnya dibuat. Desain mengajarkanku cara menciptakan pengalaman yang menarik. Pemrograman mengajarkanku cara menghidupkan pengalaman itu. Sekarang, aku terus mengembangkan kedua skill ini secara bersamaan karena aku percaya produk digital yang hebat butuh kreativitas sekaligus eksekusi teknis.
+              {t('creativeJourney.techDesc')}
             </p>
 
             {/* Formula Visual Grid */}
             <div className="flex flex-col md:flex-row items-center gap-4 bg-black/40 px-6 py-4 rounded-2xl border border-portfolio-border shadow-inner max-w-2xl w-full justify-center">
               <div className="text-xs font-extrabold uppercase tracking-widest text-white font-space">
-                🎨 Kreativitas Visual
+                {t('creativeJourney.formula.creativity')}
               </div>
               <span className="text-accent-primary font-bold text-lg">+</span>
               <div className="text-xs font-extrabold uppercase tracking-widest text-white font-space">
-                💻 Logika Pemrograman
+                {t('creativeJourney.formula.logic')}
               </div>
               <span className="text-accent-secondary font-bold text-lg">+</span>
               <div className="text-xs font-extrabold uppercase tracking-widest text-white font-space">
-                📊 Pemikiran Strategis
+                {t('creativeJourney.formula.strategic')}
               </div>
             </div>
 
             <p className="text-[10px] font-semibold text-accent-secondary uppercase tracking-widest font-mono mt-6">
-              Pondasi Kreator Multidisiplin
+              {t('creativeJourney.formulaCaption')}
             </p>
           </div>
         </motion.div>

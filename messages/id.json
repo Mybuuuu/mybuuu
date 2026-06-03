@@ -1,0 +1,438 @@
+{
+  "navbar": {
+    "home": "Beranda",
+    "journey": "Perjalanan",
+    "creativeJourney": "Desain Visual",
+    "about": "Tentang",
+    "skills": "Skill",
+    "sports": "Olahraga",
+    "projects": "Project",
+    "philosophy": "Filosofi",
+    "future": "Target"
+  },
+  "hero": {
+    "badge": "Sedang Belajar, Sedang Bertumbuh",
+    "typewriter": {
+      "hello": "Halo, Aku Mybuu.",
+      "tech": "Tech Enthusiast.",
+      "management": "Manajemen Student.",
+      "selfTaught": "Self-Taught Coder."
+    },
+    "title": "Mahasiswa Manajemen yang Lagi Serius Bangun Masa Depan di Dunia Teknologi.",
+    "description": "Dari dunia olahraga, masuk ke jurusan manajemen, lalu jatuh cinta lagi sama pemrograman. Sekarang aku fokus membangun skill, proyek, dan pengalaman untuk mengubah rasa penasaran menjadi karya nyata.",
+    "ctaJourney": "Lihat Perjalananku",
+    "ctaProjects": "Jelajahi Project",
+    "stats": {
+      "projectsTitle": "Proyek Dibangun",
+      "selfTaughtTitle": "Belajar Mandiri",
+      "selfTaughtValue": "Otodidak",
+      "sportsTitle": "Prestasi Olahraga",
+      "futureTitle": "Target Masa Depan",
+      "futureValue": "Karya Nyata"
+    }
+  },
+  "lanyard": {
+    "studioPass": "STUDIO PASS",
+    "goldPass": "GOLD PASS",
+    "visualDesigner": "Desainer Visual",
+    "managementStudent": "Mahasiswa Manajemen",
+    "developer": "Developer",
+    "tagline": "Membangun masa depan melalui kreativitas, strategi, dan teknologi",
+    "access": "AKSES: SEMUA"
+  },
+  "interactiveJourney": {
+    "sectionTitle": "Dari Manajemen ke Pemrograman",
+    "sectionDesc": "Peta jalan interaktif bagaimana konsep manajemen dan logika pemrograman bertemu. Klik pada setiap node milstone untuk menjelajah cerita.",
+    "steps": {
+      "step1": {
+        "title": "Atlet Provinsi (POPROV)",
+        "label": "Atlet POPROV",
+        "timeline": "Fondasi Atletik",
+        "shortDesc": "Mengembangkan disiplin, konsistensi, resiliensi, dan pola pikir kompetitif.",
+        "longDesc": "Berkompetisi sebagai atlet provinsi mengajarkan saya bahwa kesuksesan adalah hasil dedikasi jangka panjang, disiplin fisik dan mental, serta ketahanan. Saya menerapkan pola pikir kompetitif dan kerja keras ini ke dalam pemrograman dan strategi setiap hari."
+      },
+      "step2": {
+        "title": "Desainer Visual Kreatif",
+        "label": "Desainer Visual",
+        "timeline": "Tahap Visual & Branding",
+        "shortDesc": "Mengeksplorasi komunikasi visual melalui poster, infografis, branding, dan materi promosi.",
+        "longDesc": "Sebelum belajar pemrograman, saya mengembangkan aset visual untuk komunitas gereja dan promosi komersial seperti Es Teh Poci. Mendesain mengajarkan saya kekuatan tata letak, teori warna, tipografi, dan cara menarik perhatian pengguna."
+      },
+      "step3": {
+        "title": "Mahasiswa Manajemen",
+        "label": "Mahasiswa Manajemen",
+        "timeline": "Strategi Bisnis",
+        "shortDesc": "Mempelajari pemikiran strategis, kepemimpinan, pengambilan keputusan, dan penyelesaian masalah.",
+        "longDesc": "Studi manajemen saya di universitas mengajarkan saya pemikiran bisnis strategis, manajemen sumber daya manusia, dan operasional. Logika bisnis ini membantu saya merancang produk digital yang memecahkan masalah nyata."
+      },
+      "step4": {
+        "title": "Developer Otodidak",
+        "label": "Developer Otodidak",
+        "timeline": "Poros Pemrograman",
+        "shortDesc": "Mulai mempelajari pemrograman dan pengembangan web secara mandiri melalui proyek nyata.",
+        "longDesc": "Menguasai pemrograman secara mandiri menggunakan sumber daya online, dokumentasi, dan memanfaatkan AI sebagai akselerator pembelajaran. Membangun proyek web modern dan indah menggunakan HTML, CSS, JavaScript, React, dan Next.js."
+      },
+      "step5": {
+        "title": "Pembangun Digital Masa Depan",
+        "label": "Pembangun Masa Depan",
+        "timeline": "Visi Teknologi Strategis",
+        "shortDesc": "Menggabungkan disiplin olahraga, kreativitas visual, pemikiran bisnis, dan teknologi.",
+        "longDesc": "Menggabungkan semua kekuatan saya: disiplin olahraga, desain visual, manajemen strategis, dan pemrograman modern. Saya bertujuan untuk membangun solusi berbasis teknologi yang memberikan nilai premium dan pengalaman digital yang tidak terlupakan."
+      }
+    }
+  },
+  "creativeJourney": {
+    "badge": "Desain Visual",
+    "sectionTitle": "Kreativitas yang Membentuk Sudut Pandangku",
+    "sectionDesc": "Sebelum belajar pemrograman dan membangun website, aku sangat mendalami komunikasi visual dan desain kreatif. Lewat pembuatan poster, infografis, publikasi acara, hingga materi promosi, aku belajar bahwa desain bukan cuma soal estetika visual, tapi tentang menyampaikan gagasan secara efektif dan menciptakan pengalaman yang bermakna. Pengalaman ini terus memengaruhi caraku melihat teknologi, produk digital, dan penyelesaian masalah hari ini.",
+    "experienceCard1": {
+      "timeline": "Kelas 11 – Kelas 12 (SMA)",
+      "title": "Desain Visual Kreatif",
+      "location": "Komunitas Gereja",
+      "desc": "Bertanggung jawab membuat aset visual untuk mendukung kegiatan, acara, dan kebutuhan komunikasi gereja.",
+      "projectListTitle": "Proyek yang Dikerjakan",
+      "projects": [
+        "Poster Acara",
+        "Banner Acara",
+        "Konten Media Sosial",
+        "Infografis Informasi",
+        "Materi Promosi",
+        "Visual Branding Acara"
+      ],
+      "skillsTitle": "Skill yang Diasah",
+      "skills": [
+        "Komunikasi Visual",
+        "Tipografi",
+        "Desain Tata Letak",
+        "Teori Warna",
+        "Hierarki Visual",
+        "Branding Acara",
+        "Cara Berpikir Kreatif"
+      ]
+    },
+    "experienceCard2": {
+      "timeline": "Masa Kuliah – Sekarang",
+      "title": "Desain Promosi Visual",
+      "location": "Tenant Es Teh Poci",
+      "desc": "Berkontribusi dalam pembuatan materi promosi dan branding untuk outlet Es Teh Poci, salah satu brand minuman paling dikenal oleh masyarakat sekitar.",
+      "projectListTitle": "Proyek yang Dikerjakan",
+      "projects": [
+        "Poster Promosi",
+        "Aset Kampanye Media Sosial",
+        "Visual Pemasaran",
+        "Materi Pendukung Penjualan",
+        "Desain Banner",
+        "Konten Komunikasi Brand"
+      ],
+      "skillsTitle": "Skill yang Diasah",
+      "skills": [
+        "Desain Pemasaran",
+        "Desain Penarik Perhatian Konsumen",
+        "Visual Branding",
+        "Desain Komersial",
+        "Konten Kreator",
+        "Konsistensi Brand"
+      ]
+    },
+    "lessonsTitle": "Apa yang Aku Pelajari dari Desain",
+    "lessonsSubtitle": "Dampak Berpikir Visual pada Pekerjaanku",
+    "designCards": {
+      "card1": {
+        "title": "Komunikasi Visual",
+        "desc": "Belajar menyampaikan pesan secara jelas melalui desain dan storytelling visual."
+      },
+      "card2": {
+        "title": "Kreativitas",
+        "desc": "Mengembangkan pola pikir kreatif dan penyelesaian masalah melalui tantangan visual."
+      },
+      "card3": {
+        "title": "Branding",
+        "desc": "Memahami bagaimana identitas visual dapat membentuk persepsi dan rasa percaya."
+      },
+      "card4": {
+        "title": "Interaksi Audiens",
+        "desc": "Belajar cara menarik perhatian audiens dan menciptakan pengalaman yang berkesan."
+      },
+      "card5": {
+        "title": "Storytelling",
+        "desc": "Menggunakan elemen desain untuk mengomunikasikan ide, emosi, dan narasi."
+      },
+      "card6": {
+        "title": "Detail yang Presisi",
+        "desc": "Membangun kebiasaan fokus pada akurasi dan kualitas di setiap project."
+      }
+    },
+    "techTitle": "Dari Desain Visual ke Teknologi",
+    "techDesc": "Semakin aku mengeksplorasi desain visual, semakin aku penasaran bagaimana sebuah website, aplikasi, dan produk digital sebenarnya dibuat. Desain mengajarkanku cara menciptakan pengalaman yang menarik. Pemrograman mengajarkanku cara menghidupkan pengalaman itu. Sekarang, aku terus mengembangkan kedua skill ini secara bersamaan karena aku percaya produk digital yang hebat butuh kreativitas sekaligus eksekusi teknis.",
+    "formula": {
+      "creativity": "🎨 Kreativitas Visual",
+      "logic": "💻 Logika Pemrograman",
+      "strategic": "📊 Pemikiran Strategis"
+    },
+    "formulaCaption": "Pondasi Kreator Multidisiplin"
+  },
+  "about": {
+    "sectionTitle": "Perjalanan yang Nggak Direncanakan, Tapi Sangat Berarti.",
+    "sectionDesc": "Sejak kecil aku selalu penasaran dengan teknologi. Meskipun jalanku sempat berbeda, setiap langkah yang aku ambil justru melengkapi kepingan puzzle untuk masa depanku.",
+    "timelineEvents": {
+      "event1": {
+        "year": "Awal Mula",
+        "title": "Provincial Athlete (POPROV)",
+        "desc": "Sebelum mengenal coding, hidupku dipenuhi latihan fisik. Berkompetisi hingga tingkat POPROV membentuk disiplin, konsistensi, resiliensi, dan mentalitas tangguh yang terus kubawa hingga sekarang."
+      },
+      "event2": {
+        "year": "Eksplorasi Desain",
+        "title": "Creative Visual Designer",
+        "desc": "Mulai mengeksplorasi komunikasi visual melalui poster, infografis, branding, dan materi promosi untuk komunitas gereja dan bisnis lokal seperti Es Teh Poci."
+      },
+      "event3": {
+        "year": "Langkah Akademis",
+        "title": "Mahasiswa Manajemen",
+        "desc": "Ketika masuk kuliah, aku memilih jurusan Manajemen. Jujur saja, itu bukan jalur yang dulu aku bayangkan. Tapi dari sini aku belajar berpikir strategis, kepemimpinan, dan penyelesaian masalah bisnis."
+      },
+      "event4": {
+        "year": "Titik Balik",
+        "title": "Self-Taught Developer",
+        "desc": "Semuanya berubah ketika aku mulai mengenal Roblox dan belajar pemrograman web secara otodidak melalui berbagai project nyata menggunakan React, Next.js, dan AI sebagai akselerator belajar."
+      },
+      "event5": {
+        "year": "Masa Depan",
+        "title": "Future Digital Builder",
+        "desc": "Menggabungkan disiplin olahraga, kreativitas visual, pemikiran bisnis, dan teknologi untuk membangun produk digital yang bermakna dan memberikan dampak nyata."
+      }
+    }
+  },
+  "skills": {
+    "sectionTitle": "Skill yang Sedang Aku Asah",
+    "sectionDesc": "Aku percaya bahwa proses belajar nggak pernah benar-benar selesai. Setiap project adalah kesempatan untuk berkembang lebih jauh.",
+    "categories": {
+      "management": "Management Skills",
+      "technical": "Technical Skills",
+      "soft": "Soft Skills"
+    },
+    "managementSkills": {
+      "skill1": {
+        "name": "Pemikiran Strategis",
+        "desc": "Merencanakan dan menskalakan solusi bisnis."
+      },
+      "skill2": {
+        "name": "Penyelesaian Masalah",
+        "desc": "Memecahkan hambatan secara sistematis."
+      },
+      "skill3": {
+        "name": "Pengambilan Keputusan",
+        "desc": "Menganalisis data kompleks untuk mengambil tindakan."
+      },
+      "skill4": {
+        "name": "Kepemimpinan",
+        "desc": "Memberdayakan tim untuk berkolaborasi dan memberikan hasil."
+      },
+      "skill5": {
+        "name": "Manajemen Tim",
+        "desc": "Membangun budaya tim yang kompak dan komunikatif."
+      },
+      "skill6": {
+        "name": "Manajemen Waktu",
+        "desc": "Memaksimalkan hasil melalui jadwal berbasis sprint."
+      }
+    },
+    "technicalSkills": {
+      "skill1": {
+        "name": "HTML & Kode Semantik",
+        "desc": "Struktur standar untuk halaman web."
+      },
+      "skill2": {
+        "name": "CSS Modern & Layout",
+        "desc": "Responsive styling, Flexbox, Grid, Tailwind CSS."
+      },
+      "skill3": {
+        "name": "JavaScript ES6+",
+        "desc": "Logika dinamis pada client, closures, dan async data."
+      },
+      "skill4": {
+        "name": "Desain Responsif",
+        "desc": "Tampilan sempurna di desktop, tablet, dan HP."
+      },
+      "skill5": {
+        "name": "Dasar UI/UX",
+        "desc": "Hierarki informasi bersih, keseimbangan visual, mikro-interaksi."
+      },
+      "skill6": {
+        "name": "AI Assisted Development",
+        "desc": "Memanfaatkan AI LLM untuk mempercepat debugging."
+      },
+      "skill7": {
+        "name": "Roblox Lua Scripting",
+        "desc": "Scripting event-driven, array, 3D math, mekanik game."
+      },
+      "skill8": {
+        "name": "Website Building",
+        "desc": "Membangun website statis dan dinamis secara fungsional."
+      }
+    },
+    "softSkills": {
+      "skill1": {
+        "name": "Adaptabilitas",
+        "desc": "Cepat menyesuaikan diri saat teknologi dan target bergeser."
+      },
+      "skill2": {
+        "name": "Konsistensi",
+        "desc": "Berkomitmen latihan setiap hari untuk menguasai skill baru."
+      },
+      "skill3": {
+        "name": "Belajar Cepat",
+        "desc": "Memahami konsep dan dokumentasi dalam waktu singkat."
+      },
+      "skill4": {
+        "name": "Kreativitas",
+        "desc": "Merancang solusi visual dan struktural yang unik."
+      },
+      "skill5": {
+        "name": "Disiplin",
+        "desc": "Fokus belajar secara mandiri dengan jadwal yang disiplin."
+      }
+    }
+  },
+  "sports": {
+    "sectionTitle": "Pelajaran dari Dunia Olahraga",
+    "cardTitle": "Atlet POPROV",
+    "cardDesc": "Sebelum mendalami teknologi, aku banyak belajar dari dunia olahraga. Pernah berkompetisi hingga tingkat POPROV dan mendapatkan banyak pelajaran berharga yang masih aku bawa sampai sekarang.",
+    "sidebarDesc": "Olahraga mengajariku bahwa kekuatan fisik kalah penting dibanding ketangguhan mental. Aku membawa mentalitas disiplin dan pantang menyerah ini ke dalam dunia coding.",
+    "lessons": {
+      "lesson1": {
+        "title": "Disiplin",
+        "desc": "Latihan fisik keras membentuk disiplin harian, yang kini kuterapkan untuk terus fokus belajar dan menulis kode berkualitas setiap hari."
+      },
+      "lesson2": {
+        "title": "Konsisten",
+        "desc": "Mengulang gerakan olahraga ribuan kali mengajariku bahwa penguasaan teknologi pemrograman kompleks hanya bisa dicapai lewat latihan terus-menerus."
+      },
+      "lesson3": {
+        "title": "Mental Tangguh",
+        "desc": "Tetap tenang di bawah tekanan kompetisi melatihku untuk berpikir logis dan sistematis saat memecahkan masalah atau memperbaiki bug sistem."
+      },
+      "lesson4": {
+        "title": "Kerja Sama Tim",
+        "desc": "Memahami peran pemain dan membangun rasa percaya di lapangan olahraga sama pentingnya dengan berkolaborasi dalam tim developer."
+      },
+      "lesson5": {
+        "title": "Pantang Menyerah",
+        "desc": "Keinginan untuk selalu melampaui batas kemampuan kemarin mendorongku untuk terus mengeksplorasi teknologi modern dan solusi kreatif."
+      },
+      "lesson6": {
+        "title": "Fokus pada Target",
+        "desc": "Menentukan langkah taktis untuk memenangkan pertandingan membentuk kebiasaan merencanakan sprint proyek coding secara terarah."
+      }
+    }
+  },
+  "projects": {
+    "sectionTitle": "Beberapa Hal yang Sudah Aku Bangun",
+    "sectionDesc": "Sebagian besar project ini lahir dari rasa penasaran, eksperimen, dan keinginan untuk terus belajar hal baru.",
+    "projectNumberLabel": "Project 0{id}",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "projectList": {
+      "project1": {
+        "title": "Personal Portfolio Website",
+        "tagline": "Website Personal",
+        "desc": "Website personal portfolio premium yang dirancang dengan kartu minimalis, pelacakan kursor, dan integrasi timeline pergerakan. Dibuat untuk merepresentasikan identitas kreator."
+      },
+      "project2": {
+        "title": "Modern Landing Page",
+        "tagline": "Landing Page Modern",
+        "desc": "Landing page modern premium yang dirancang untuk kebutuhan agensi atau SaaS. Dilengkapi dengan animasi grid, efek hover kursor, dan desain responsif."
+      },
+      "project3": {
+        "title": "Eksplorasi UI/UX",
+        "tagline": "Eksplorasi UI/UX",
+        "desc": "Konsep visual antarmuka pengguna yang menggabungkan kemudahan navigasi dengan estetika modern. Menyeimbangkan skema warna kontras tinggi dan keterbacaan info."
+      },
+      "project4": {
+        "title": "Project Belajar Roblox",
+        "tagline": "Project Belajar Roblox",
+        "desc": "Project eksplorasi game di Roblox Studio menggunakan bahasa pemrograman Lua. Mengatur logika event, perilaku objek 3D, dan mekanisme gameplay."
+      }
+    }
+  },
+  "philosophy": {
+    "sectionTitle": "Cara Aku Melihat Proses",
+    "quote": "\"Jurusan mungkin menentukan tempat kita memulai, tapi bukan menentukan sejauh apa kita bisa berkembang.\"",
+    "quoteAuthor": "Keyakinanku",
+    "managementBlock": {
+      "title": "Strategi Manajemen",
+      "desc": "Manajemen mengajarkanku cara memahami masalah. Ini memberiku sudut pandang luas tentang strategi operasional, kepemimpinan, dan bagaimana mengelola proyek secara terarah.",
+      "footer": "Kerangka Berpikir Strategis"
+    },
+    "programmingBlock": {
+      "title": "Eksekusi Pemrograman",
+      "desc": "Pemrograman mengajarkanku cara membangun solusi nyata. Ini melatih logika, memecahkan masalah secara taktis, dan mewujudkan ide menjadi produk yang berfungsi dengan baik.",
+      "footer": "Eksekusi Teknis"
+    },
+    "closingStatement": "Ketika keduanya digabungkan, aku bisa melihat tantangan dari sudut pandang yang lebih luas."
+  },
+  "future": {
+    "sectionTitle": "Target Selanjutnya",
+    "sectionDesc": "Rencana strategis untuk pencapaian dan ambisi teknologi saya ke depan.",
+    "targetNode": "Target Node",
+    "goals": {
+      "goal1": {
+        "year": "2025",
+        "title": "Memperdalam Skill Web Development",
+        "desc": "Menguasai framework modern (Next.js, React), styling layers (Tailwind, CSS), dan logika pemrograman. Berkomitmen menulis kode yang terstandarisasi dan bersih."
+      },
+      "goal2": {
+        "year": "2026",
+        "title": "Mengerjakan Proyek Nyata",
+        "desc": "Mengerjakan project yang digunakan oleh banyak orang. Menangani optimasi performa, kecepatan rendering, dan integrasi data yang stabil."
+      },
+      "goal3": {
+        "year": "2027",
+        "title": "Menggabungkan Bisnis & Teknologi",
+        "desc": "Menggabungkan strategi bisnis manajemen dengan pengembangan software secara langsung untuk membangun solusi digital yang nyata dan strategis."
+      },
+      "goal4": {
+        "year": "Masa Depan",
+        "title": "Membangun Produk Digital Berdampak",
+        "desc": "Membangun produk digital mandiri yang memberikan dampak positif luas bagi masyarakat, industri, dan mempermudah kehidupan sehari-hari."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Hubungi Aku",
+    "sectionTitle": "Yuk Terhubung",
+    "sectionDesc": "Aku selalu terbuka untuk diskusi, kolaborasi, maupun sekadar ngobrol tentang teknologi, bisnis, dan ide-ide baru.",
+    "form": {
+      "nameLabel": "Nama",
+      "namePlaceholder": "Masukkan nama kamu",
+      "emailLabel": "Email",
+      "emailPlaceholder": "email@example.com",
+      "messageLabel": "Pesan",
+      "messagePlaceholder": "Tulis pesan atau pertanyaan kamu di sini...",
+      "submitBtn": "Kirim Pesan",
+      "submittingBtn": "Mengirim..."
+    },
+    "success": {
+      "title": "Pesan Terkirim!",
+      "desc": "Terima kasih banyak sudah menyempatkan waktu untuk mampir dan menulis pesan. Aku akan segera membalas email kamu!",
+      "resetBtn": "Kirim Pesan Lain"
+    }
+  },
+  "footer": {
+    "title": "Terima kasih sudah mampir.",
+    "subtitle": "Masih banyak yang ingin aku pelajari, masih banyak yang ingin aku bangun.",
+    "copyright": "© Mybuu. Dibuat menggunakan Next.js & Tailwind CSS.",
+    "backToTop": "Kembali ke Atas"
+  },
+  "loader": {
+    "steps": [
+      "SEDANG MENYIAPKAN PENGALAMAN TERBAIK...",
+      "LOADING ASSETS...",
+      "MEMBANGUN TAMPILAN...",
+      "MENGOPTIMALKAN GRAFIK...",
+      "HAMPIR SELESAI...",
+      "SISTEM SIAP."
+    ],
+    "secureBoot": "SECURE_BOOT: ACTIVE",
+    "coreTemp": "CORE_TEMP: NORMAL"
+  }
+}

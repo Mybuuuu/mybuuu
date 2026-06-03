@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 
 const FORMATS = [
-  '/profile/avatar.webp',
   '/profile/avatar.png',
+  '/profile/avatar.webp',
   '/profile/avatar.jpg',
   '/profile/avatar.jpeg',
 ];

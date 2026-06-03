@@ -3,57 +3,62 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Palette, GraduationCap, Code2, Rocket } from 'lucide-react';
-
-const STEPS = [
-  {
-    id: 1,
-    title: 'Provincial Athlete (POPROV)',
-    label: 'POPROV Athlete',
-    icon: Trophy,
-    timeline: 'Athletics Foundation',
-    shortDesc: 'Developed discipline, consistency, resilience, and a competitive mindset.',
-    longDesc: 'Competing as a provincial athlete taught me that success is a product of long-term dedication, physical and mental discipline, and resilience. I apply this competitive and hard-working mindset to coding and strategy every day.',
-  },
-  {
-    id: 2,
-    title: 'Creative Visual Designer',
-    label: 'Visual Designer',
-    icon: Palette,
-    timeline: 'Visual & Branding Stage',
-    shortDesc: 'Explored visual communication through posters, infographics, branding, and promotional materials.',
-    longDesc: 'Before programming, I developed visual assets for my church community and commercial promotions like Es Teh Poci. Designing taught me the power of layout, color theory, typography, and how to capture user attention.',
-  },
-  {
-    id: 3,
-    title: 'Management Student',
-    label: 'Management Student',
-    icon: GraduationCap,
-    timeline: 'Business Strategy',
-    shortDesc: 'Learned strategic thinking, leadership, decision-making, and problem-solving.',
-    longDesc: 'My management studies at university taught me strategic business thinking, human resource management, and operations. This business logic helps me design digital products that solve real problems.',
-  },
-  {
-    id: 4,
-    title: 'Self-Taught Developer',
-    label: 'Self-Taught Developer',
-    icon: Code2,
-    timeline: 'Programming Pivot',
-    shortDesc: 'Began learning programming and web development independently through real-world projects.',
-    longDesc: 'Independently mastering programming using online resources, documentation, and utilizing AI as a learning accelerator. Building modern, beautiful web projects with HTML, CSS, JavaScript, React, and Next.js.',
-  },
-  {
-    id: 5,
-    title: 'Future Digital Builder',
-    label: 'Future Builder',
-    icon: Rocket,
-    timeline: 'Strategic Tech Vision',
-    shortDesc: 'Combining sports discipline, visual creativity, business thinking, and technology.',
-    longDesc: 'Combining all my strengths: sports discipline, visual design, strategic management, and modern programming. I aim to build technology-first solutions that deliver premium value and unforgettable digital experiences.',
-  },
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export default function InteractiveJourney() {
+  const { t } = useLanguage();
   const [activeStep, setActiveStep] = useState(3); // Start with Roblox Developer active as it's the pivot!
+
+  const STEPS = [
+    {
+      id: 1,
+      title: t('interactiveJourney.steps.step1.title'),
+      label: t('interactiveJourney.steps.step1.label'),
+      icon: Trophy,
+      timeline: t('interactiveJourney.steps.step1.timeline'),
+      shortDesc: t('interactiveJourney.steps.step1.shortDesc'),
+      longDesc: t('interactiveJourney.steps.step1.longDesc'),
+    },
+    {
+      id: 2,
+      title: t('interactiveJourney.steps.step2.title'),
+      label: t('interactiveJourney.steps.step2.label'),
+      icon: Palette,
+      timeline: t('interactiveJourney.steps.step2.timeline'),
+      shortDesc: t('interactiveJourney.steps.step2.shortDesc'),
+      longDesc: t('interactiveJourney.steps.step2.longDesc'),
+    },
+    {
+      id: 3,
+      title: t('interactiveJourney.steps.step3.title'),
+      label: t('interactiveJourney.steps.step3.label'),
+      icon: GraduationCap,
+      timeline: t('interactiveJourney.steps.step3.timeline'),
+      shortDesc: t('interactiveJourney.steps.step3.shortDesc'),
+      longDesc: t('interactiveJourney.steps.step3.longDesc'),
+    },
+    {
+      id: 4,
+      title: t('interactiveJourney.steps.step4.title'),
+      label: t('interactiveJourney.steps.step4.label'),
+      icon: Code2,
+      timeline: t('interactiveJourney.steps.step4.timeline'),
+      shortDesc: t('interactiveJourney.steps.step4.shortDesc'),
+      longDesc: t('interactiveJourney.steps.step4.longDesc'),
+    },
+    {
+      id: 5,
+      title: t('interactiveJourney.steps.step5.title'),
+      label: t('interactiveJourney.steps.step5.label'),
+      icon: Rocket,
+      timeline: t('interactiveJourney.steps.step5.timeline'),
+      shortDesc: t('interactiveJourney.steps.step5.shortDesc'),
+      longDesc: t('interactiveJourney.steps.step5.longDesc'),
+    },
+  ];
+
+  const currentStep = STEPS.find((step) => step.id === activeStep) || STEPS[2];
+  const CurrentIcon = currentStep.icon;
 
   return (
     <section id="journey" className="relative py-24 border-b border-portfolio-border overflow-hidden">
@@ -69,7 +74,7 @@ export default function InteractiveJourney() {
             transition={{ duration: 0.6 }}
             className="font-space font-extrabold text-4xl md:text-5xl tracking-tight text-white mb-4"
           >
-            Dari Manajemen ke Pemrograman
+            {t('interactiveJourney.sectionTitle')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -78,7 +83,7 @@ export default function InteractiveJourney() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-text-secondary text-base md:text-lg"
           >
-            Peta jalan interaktif bagaimana konsep manajemen dan logika pemrograman bertemu. Klik pada setiap node milstone untuk menjelajah cerita.
+            {t('interactiveJourney.sectionDesc')}
           </motion.p>
         </div>
 
@@ -148,97 +153,89 @@ export default function InteractiveJourney() {
         <div className="md:hidden relative flex flex-col space-y-8 pl-8 mb-12">
           {/* Vertical Connection Line */}
           <div className="absolute left-[15px] top-4 bottom-4 w-[2px] bg-portfolio-border z-0">
-            <motion.div 
-              className="w-full bg-white/20"
-              initial={{ height: '0%' }}
-              animate={{ height: `${(activeStep - 1) * 25}%` }}
-              transition={{ duration: 0.6 }}
-              style={{ maxHeight: '100%' }}
+            <div 
+              className="absolute top-0 left-0 w-full bg-white/30 transition-all duration-500" 
+              style={{ height: `${(activeStep - 1) * 25}%` }}
             />
           </div>
 
           {STEPS.map((step) => {
             const IconComponent = step.icon;
             const isActive = activeStep === step.id;
+            const isPassed = step.id < activeStep;
 
             return (
-              <button
-                key={step.id}
+              <div 
+                key={step.id} 
                 onClick={() => setActiveStep(step.id)}
-                className={`relative flex items-start text-left gap-4 p-4 rounded-2xl border transition-all duration-300 w-full cursor-pointer ${
-                  isActive 
-                    ? 'glass-card border-white/15 bg-white/[0.02]' 
-                    : 'border-transparent bg-transparent'
-                }`}
+                className="flex items-center gap-4 text-left relative z-10 cursor-pointer group"
               >
-                {/* Vertical Node Icon wrapper */}
-                <div className={`absolute left-[-29px] w-[26px] h-[26px] rounded-full flex items-center justify-center border z-10 bg-portfolio-bg transition-colors ${
+                {/* Node circle */}
+                <div className={`w-8 h-8 rounded-full border flex items-center justify-center flex-shrink-0 transition-all duration-300 -ml-8 bg-portfolio-bg ${
                   isActive 
                     ? 'border-white text-white' 
-                    : 'border-portfolio-border text-text-secondary'
+                    : isPassed 
+                      ? 'border-white/30 text-white/85' 
+                      : 'border-portfolio-border text-text-secondary'
                 }`}>
                   <IconComponent size={12} />
                 </div>
-
-                <div className="flex-1">
-                  <span className="text-[9px] font-bold uppercase tracking-widest text-text-secondary block mb-1">
+                <div>
+                  <span className={`text-[8px] font-mono uppercase tracking-widest block transition-colors ${
+                    isActive ? 'text-accent-secondary' : 'text-text-secondary'
+                  }`}>
                     {step.timeline}
                   </span>
-                  <h3 className={`font-space font-bold text-base transition-colors ${
-                    isActive ? 'text-white' : 'text-text-secondary'
+                  <h3 className={`font-space font-bold text-sm leading-tight transition-colors ${
+                    isActive ? 'text-white font-extrabold' : 'text-text-secondary group-hover:text-white'
                   }`}>
                     {step.title}
                   </h3>
-                  <p className="text-xs text-text-secondary leading-relaxed mt-1">
-                    {step.shortDesc}
-                  </p>
                 </div>
-              </button>
+              </div>
             );
           })}
         </div>
 
-        {/* Selected Milestone Detail Display Panel */}
-        <div className="max-w-4xl mx-auto">
+        {/* Dynamic Descriptive Content Panel (Framer Motion Cross-Dissolve on step change) */}
+        <div className="max-w-4xl mx-auto glass-card p-8 md:p-10 rounded-[32px] border border-portfolio-border/60 relative overflow-hidden bg-portfolio-surface/30">
+          <div className="absolute top-[-100px] right-[-100px] w-48 h-48 bg-accent-secondary/5 rounded-full blur-[80px]" />
+          
           <AnimatePresence mode="wait">
             <motion.div
               key={activeStep}
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.4 }}
-              className="glass-card p-8 md:p-10 rounded-3xl relative overflow-hidden text-left"
+              initial={{ opacity: 0, y: 15, filter: 'blur(4px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              exit={{ opacity: 0, y: -15, filter: 'blur(4px)' }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-left"
             >
-              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start relative z-10">
-                {/* Left Mini Icon Indicator */}
-                <div className="p-3.5 bg-portfolio-surface border border-portfolio-border rounded-2xl text-text-secondary flex-shrink-0">
-                  {React.createElement(STEPS[activeStep - 1].icon, { size: 28 })}
+              {/* Left Column icon */}
+              <div className="md:col-span-3 flex justify-center">
+                <div className="w-20 h-20 md:w-28 md:h-28 rounded-3xl border border-portfolio-border bg-portfolio-surface-secondary flex items-center justify-center text-accent-primary shadow-xl">
+                  <CurrentIcon size={44} className="md:size-52" />
                 </div>
+              </div>
 
-                {/* Right Description */}
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <span className="px-2.5 py-0.5 rounded-full bg-portfolio-surface border border-portfolio-border text-[10px] font-bold uppercase tracking-widest text-text-secondary font-space">
-                      {STEPS[activeStep - 1].timeline}
-                    </span>
-                  </div>
-                  
-                  <h3 className="font-space font-extrabold text-2xl md:text-3xl text-white mb-4">
-                    {STEPS[activeStep - 1].title}
-                  </h3>
-                  
-                  <p className="text-white/80 font-medium text-sm md:text-base leading-relaxed mb-4 border-l-2 border-white/20 pl-4">
-                    {STEPS[activeStep - 1].shortDesc}
-                  </p>
-                  
-                  <p className="text-text-secondary text-sm md:text-base leading-relaxed font-sans">
-                    {STEPS[activeStep - 1].longDesc}
-                  </p>
-                </div>
+              {/* Right Column content details */}
+              <div className="md:col-span-9 flex flex-col items-start">
+                <span className="text-[10px] font-bold font-space uppercase tracking-widest text-accent-secondary mb-2">
+                  {currentStep.timeline}
+                </span>
+                <h2 className="font-space font-extrabold text-2xl md:text-3xl text-white mb-4">
+                  {currentStep.title}
+                </h2>
+                <h4 className="text-xs font-semibold uppercase tracking-wider text-text-secondary/70 mb-4 bg-portfolio-surface border border-portfolio-border px-3 py-1 rounded-full font-space">
+                  {currentStep.shortDesc}
+                </h4>
+                <p className="text-text-secondary text-sm md:text-base leading-relaxed font-sans">
+                  {currentStep.longDesc}
+                </p>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
+
       </div>
     </section>
   );

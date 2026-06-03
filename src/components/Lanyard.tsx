@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import ProfileImage from './ProfileImage';
+import { useLanguage } from '../context/LanguageContext';
 
 interface Point {
   x: number;
@@ -22,6 +23,7 @@ interface LanyardProps {
 }
 
 export default function Lanyard({ isReady = true }: LanyardProps) {
+  const { t } = useLanguage();
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const badgeRef = useRef<HTMLDivElement>(null);
@@ -69,10 +71,22 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
 
     const handleResize = () => {
       if (!container || !canvas) return;
+      
+      const oldPinX = canvas.width >= 1024 ? canvas.width * 0.65 : (canvas.width >= 768 ? canvas.width * 0.58 : canvas.width / 2);
+      
       width = container.clientWidth;
       height = container.clientHeight;
       canvas.width = width;
       canvas.height = height;
+      
+      const newPinX = width >= 1024 ? width * 0.65 : (width >= 768 ? width * 0.58 : width / 2);
+      const dx = newPinX - oldPinX;
+      
+      // Shift all points to avoid physics explosion/stretching on resize
+      points.forEach((p) => {
+        p.x += dx;
+        p.px += dx;
+      });
     };
     window.addEventListener('resize', handleResize);
 
@@ -82,11 +96,16 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
     const points: Point[] = [];
     const constraints: Constraint[] = [];
 
-    // Pin position (hanging from the top center of the screen)
-    const pinX = width / 2;
+    // Pin position (hanging from the top center or offset right on desktop)
+    let initialPinX = width / 2;
+    if (width >= 1024) {
+      initialPinX = width * 0.65;
+    } else if (width >= 768) {
+      initialPinX = width * 0.58;
+    }
 
     for (let i = 0; i < ropeSegments; i++) {
-      const x = pinX;
+      const x = initialPinX;
       // Initialize all points relaxed and hanging straight down from -600px
       // This ensures 0 initial constraint tension to prevent physics engine explosion (NaN values)
       const y = -600 + i * segmentLength;
@@ -237,7 +256,12 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
     let animationId: number;
 
     const updatePhysics = () => {
-      const currentPinX = canvas.width / 2;
+      let currentPinX = canvas.width / 2;
+      if (canvas.width >= 1024) {
+        currentPinX = canvas.width * 0.65; // Shifted right on desktop to prevent covering text
+      } else if (canvas.width >= 768) {
+        currentPinX = canvas.width * 0.58; // Shifted slightly on tablet
+      }
       points[0].x = currentPinX;
 
       // Handle pin Y position transition for smooth physical drop
@@ -478,7 +502,7 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
               Pass 2026
             </div>
             <div className="text-[5.5px] font-space font-extrabold text-accent-gold border border-accent-gold/25 bg-accent-gold/5 px-1.5 py-[0.5px] rounded-[2px] uppercase scale-90 leading-none">
-              GOLD PASS
+              {t('lanyard.goldPass')}
             </div>
           </div>
           <div className="h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent w-full mt-1" />
@@ -501,13 +525,13 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
           {/* Professional Credentials Tags */}
           <div className="flex flex-col gap-1 items-center mt-1.5">
             <span className="text-[6.5px] font-space font-bold bg-accent-primary/10 text-accent-primary border border-accent-primary/15 px-2 py-[1px] rounded-[4px] uppercase tracking-wider leading-none">
-              Visual Designer
+              {t('lanyard.visualDesigner')}
             </span>
             <span className="text-[6.5px] font-space font-bold bg-accent-secondary/10 text-accent-secondary border border-accent-secondary/15 px-2 py-[1px] rounded-[4px] uppercase tracking-wider leading-none">
-              Management Student
+              {t('lanyard.managementStudent')}
             </span>
             <span className="text-[6.5px] font-space font-bold bg-white/5 text-white/60 border border-white/8 px-2 py-[1px] rounded-[4px] uppercase tracking-wider leading-none">
-              Developer
+              {t('lanyard.developer')}
             </span>
           </div>
 
@@ -515,7 +539,7 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
           <div className="mt-2 text-center">
             {/* Decorative layout tagline */}
             <div className="text-[5.5px] text-text-secondary/55 font-sans leading-snug px-1.5 mb-1.5 max-w-[130px] mx-auto italic">
-              {"\"Building the future through creativity, strategy, and technology\""}
+              {"\"" + t('lanyard.tagline') + "\""}
             </div>
 
             <div className="h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent w-full mb-1.5" />
@@ -537,7 +561,7 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
 
             <div className="flex justify-between w-full text-[5px] font-mono text-text-secondary/70 mt-1 leading-none px-1 tracking-wider">
               <span>ID: #88-MB-99</span>
-              <span>ACCESS: ALL</span>
+              <span>{t('lanyard.access')}</span>
             </div>
           </div>
         </div>

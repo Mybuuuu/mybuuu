@@ -4,8 +4,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Compass, Cpu } from 'lucide-react';
 import TextReveal from './TextReveal';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Philosophy() {
+  const { t } = useLanguage();
+
   return (
     <section id="philosophy" className="relative py-24 border-b border-portfolio-border overflow-hidden">
       {/* Ambient Lights */}
@@ -20,7 +23,7 @@ export default function Philosophy() {
             transition={{ duration: 0.6 }}
             className="font-space font-extrabold text-4xl md:text-5xl tracking-tight text-white mb-4"
           >
-            <TextReveal text="Cara Aku Melihat Proses" mode="words" />
+            <TextReveal text={t('philosophy.sectionTitle')} mode="words" />
           </motion.h2>
         </div>
 
@@ -33,10 +36,10 @@ export default function Philosophy() {
           className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden mb-12"
         >
           <p className="font-space font-medium italic text-xl md:text-3xl lg:text-4xl text-white leading-relaxed relative z-10 mb-6">
-            <TextReveal text='"Jurusan mungkin menentukan tempat kita memulai, tapi bukan menentukan sejauh apa kita bisa berkembang."' mode="words" delay={0.1} />
+            <TextReveal text={t('philosophy.quote')} mode="words" delay={0.1} />
           </p>
           <span className="text-text-secondary font-bold uppercase tracking-widest text-xs md:text-sm font-space">
-            — Keyakinanku
+            — {t('philosophy.quoteAuthor')}
           </span>
         </motion.div>
 
@@ -54,13 +57,13 @@ export default function Philosophy() {
               <div className="p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-text-secondary w-fit mb-6">
                 <Compass size={20} />
               </div>
-              <h3 className="font-space font-extrabold text-xl text-white mb-3">Strategi Manajemen</h3>
+              <h3 className="font-space font-extrabold text-xl text-white mb-3">{t('philosophy.managementBlock.title')}</h3>
               <p className="text-text-secondary text-sm md:text-base leading-relaxed font-sans">
-                Manajemen mengajarkanku cara memahami masalah. Ini memberiku sudut pandang luas tentang strategi operasional, kepemimpinan, dan bagaimana mengelola proyek secara terarah.
+                {t('philosophy.managementBlock.desc')}
               </p>
             </div>
             <div className="mt-8 border-t border-portfolio-border pt-4 text-xs font-bold uppercase tracking-widest text-text-secondary font-space">
-              Kerangka Berpikir Strategis
+              {t('philosophy.managementBlock.footer')}
             </div>
           </motion.div>
 
@@ -76,13 +79,13 @@ export default function Philosophy() {
               <div className="p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-text-secondary w-fit mb-6">
                 <Cpu size={20} />
               </div>
-              <h3 className="font-space font-extrabold text-xl text-white mb-3">Eksekusi Pemrograman</h3>
+              <h3 className="font-space font-extrabold text-xl text-white mb-3">{t('philosophy.programmingBlock.title')}</h3>
               <p className="text-text-secondary text-sm md:text-base leading-relaxed font-sans">
-                Pemrograman mengajarkanku cara membangun solusi nyata. Ini melatih logika, memecahkan masalah secara taktis, dan mewujudkan ide menjadi produk yang berfungsi dengan baik.
+                {t('philosophy.programmingBlock.desc')}
               </p>
             </div>
             <div className="mt-8 border-t border-portfolio-border pt-4 text-xs font-bold uppercase tracking-widest text-text-secondary font-space">
-              Eksekusi Teknis
+              {t('philosophy.programmingBlock.footer')}
             </div>
           </motion.div>
         </div>
@@ -95,7 +98,7 @@ export default function Philosophy() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-12 text-text-secondary text-sm md:text-base font-space font-bold uppercase tracking-widest"
         >
-          Ketika keduanya digabungkan, aku bisa melihat tantangan dari sudut pandang yang lebih luas.
+          {t('philosophy.closingStatement')}
         </motion.div>
       </div>
     </section>

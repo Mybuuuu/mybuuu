@@ -8,12 +8,14 @@ import Magnetic from './Magnetic';
 import InteractivePortrait from './InteractivePortrait';
 import TextReveal from './TextReveal';
 import Typewriter from './Typewriter';
+import { useLanguage } from '../context/LanguageContext';
 
 interface HeroProps {
   introComplete?: boolean;
 }
 
 export default function Hero({ introComplete = true }: HeroProps) {
+  const { t } = useLanguage();
   // Framer Motion Scroll hooks
   const { scrollY } = useScroll();
 
@@ -97,7 +99,7 @@ export default function Hero({ introComplete = true }: HeroProps) {
               variants={itemVariants}
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-portfolio-border bg-portfolio-surface text-[10px] font-bold tracking-widest text-text-secondary uppercase font-space mb-6"
             >
-              Sedang Belajar, Sedang Bertumbuh
+              {t('hero.badge')}
             </motion.div>
 
             <motion.h1 
@@ -106,10 +108,10 @@ export default function Hero({ introComplete = true }: HeroProps) {
             >
               <Typewriter 
                 texts={[
-                  "Halo, Aku Mybuu.",
-                  "Tech Enthusiast.",
-                  "Manajemen Student.",
-                  "Self-Taught Coder."
+                  t('hero.typewriter.hello'),
+                  t('hero.typewriter.tech'),
+                  t('hero.typewriter.management'),
+                  t('hero.typewriter.selfTaught')
                 ]}
                 delay={200}
                 speed={80}
@@ -124,14 +126,14 @@ export default function Hero({ introComplete = true }: HeroProps) {
               variants={itemVariants}
               className="text-xl md:text-2xl font-space font-medium text-white mb-6 leading-snug"
             >
-              <TextReveal text="Mahasiswa Manajemen yang Lagi Serius Bangun Masa Depan di Dunia Teknologi." mode="words" />
+              <TextReveal text={t('hero.title')} mode="words" />
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
               className="text-text-secondary text-base md:text-lg leading-relaxed max-w-xl mb-8 font-sans"
             >
-              <TextReveal text="Dari dunia olahraga, masuk ke jurusan manajemen, lalu jatuh cinta lagi sama pemrograman. Sekarang aku fokus membangun skill, proyek, dan pengalaman untuk mengubah rasa penasaran menjadi karya nyata." mode="fade-up" delay={0.2} />
+              <TextReveal text={t('hero.description')} mode="fade-up" delay={0.2} />
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 w-full sm:w-auto">
@@ -140,7 +142,7 @@ export default function Hero({ introComplete = true }: HeroProps) {
                   onClick={handleScrollToJourney}
                   className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-accent-primary text-white text-sm font-semibold uppercase tracking-wider hover:bg-accent-primary/90 active:scale-95 transition-all duration-300 cursor-pointer w-full sm:w-auto font-space"
                 >
-                  Lihat Perjalananku
+                  {t('hero.ctaJourney')}
                   <ArrowRight size={16} />
                 </button>
               </Magnetic>
@@ -150,7 +152,7 @@ export default function Hero({ introComplete = true }: HeroProps) {
                   onClick={handleScrollToProjects}
                   className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full border border-accent-gold/25 hover:border-accent-gold/50 text-accent-gold text-sm font-semibold uppercase tracking-wider hover:bg-accent-gold/5 active:scale-95 transition-all duration-300 cursor-pointer w-full sm:w-auto font-space"
                 >
-                  Jelajahi Project
+                  {t('hero.ctaProjects')}
                   <Download size={16} />
                 </button>
               </Magnetic>
@@ -176,7 +178,7 @@ export default function Hero({ introComplete = true }: HeroProps) {
             </div>
             <div className="text-left">
               <h4 className="font-space font-bold text-2xl text-white">10+</h4>
-              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1">Proyek Dibangun</p>
+              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1">{t('hero.stats.projectsTitle')}</p>
             </div>
           </div>
 
@@ -186,8 +188,8 @@ export default function Hero({ introComplete = true }: HeroProps) {
               <Cpu size={18} />
             </div>
             <div className="text-left">
-              <h4 className="font-space font-bold text-xl text-white">Otodidak</h4>
-              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1.5">Belajar Mandiri</p>
+              <h4 className="font-space font-bold text-xl text-white">{t('hero.stats.selfTaughtValue')}</h4>
+              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1.5">{t('hero.stats.selfTaughtTitle')}</p>
             </div>
           </div>
 
@@ -198,7 +200,7 @@ export default function Hero({ introComplete = true }: HeroProps) {
             </div>
             <div className="text-left">
               <h4 className="font-space font-bold text-2xl text-white">POPROV</h4>
-              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1">Prestasi Olahraga</p>
+              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1">{t('hero.stats.sportsTitle')}</p>
             </div>
           </div>
 
@@ -208,8 +210,8 @@ export default function Hero({ introComplete = true }: HeroProps) {
               <Target size={18} />
             </div>
             <div className="text-left">
-              <h4 className="font-space font-bold text-xl text-white">Karya Nyata</h4>
-              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1.5">Target Masa Depan</p>
+              <h4 className="font-space font-bold text-xl text-white">{t('hero.stats.futureValue')}</h4>
+              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1.5">{t('hero.stats.futureTitle')}</p>
             </div>
           </div>
         </motion.div>

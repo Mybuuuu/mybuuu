@@ -8,36 +8,39 @@ import {
   Layers, FileCode, Cpu, Gamepad2, Smartphone, Terminal, Globe, Paintbrush,
   Compass, Award, Puzzle, Clock, Users, Heart
 } from 'lucide-react';
-
-const MANAGEMENT_SKILLS = [
-  { name: 'Pemikiran Strategis', icon: Compass, desc: 'Merencanakan dan menskalakan solusi bisnis.' },
-  { name: 'Penyelesaian Masalah', icon: Puzzle, desc: 'Memecahkan hambatan secara sistematis.' },
-  { name: 'Pengambilan Keputusan', icon: Award, desc: 'Menganalisis data kompleks untuk mengambil tindakan.' },
-  { name: 'Kepemimpinan', icon: Users, desc: 'Memberdayakan tim untuk berkolaborasi dan memberikan hasil.' },
-  { name: 'Manajemen Tim', icon: Heart, desc: 'Membangun budaya tim yang kompak dan komunikatif.' },
-  { name: 'Manajemen Waktu', icon: Clock, desc: 'Memaksimalkan hasil melalui jadwal berbasis sprint.' },
-];
-
-const TECHNICAL_SKILLS = [
-  { name: 'HTML & Kode Semantik', icon: FileCode, desc: 'Struktur standar untuk halaman web.' },
-  { name: 'CSS Modern & Layout', icon: Paintbrush, desc: 'Responsive styling, Flexbox, Grid, Tailwind CSS.' },
-  { name: 'JavaScript ES6+', icon: Terminal, desc: 'Logika dinamis pada client, closures, dan async data.' },
-  { name: 'Desain Responsif', icon: Smartphone, desc: 'Tampilan sempurna di desktop, tablet, dan HP.' },
-  { name: 'Dasar UI/UX', icon: Layers, desc: 'Hierarki informasi bersih, keseimbangan visual, mikro-interaksi.' },
-  { name: 'AI Assisted Development', icon: Cpu, desc: 'Memanfaatkan AI LLM untuk mempercepat debugging.' },
-  { name: 'Roblox Lua Scripting', icon: Gamepad2, desc: 'Scripting event-driven, array, 3D math, mekanik game.' },
-  { name: 'Website Building', icon: Globe, desc: 'Membangun website statis dan dinamis secara fungsional.' },
-];
-
-const SOFT_SKILLS = [
-  { name: 'Adaptabilitas', icon: TrendingUp, desc: 'Cepat menyesuaikan diri saat teknologi dan target bergeser.' },
-  { name: 'Konsistensi', icon: CheckCircle, desc: 'Berkomitmen latihan setiap hari untuk menguasai skill baru.' },
-  { name: 'Belajar Cepat', icon: Zap, desc: 'Memahami konsep dan dokumentasi dalam waktu singkat.' },
-  { name: 'Kreativitas', icon: Lightbulb, desc: 'Merancang solusi visual dan struktural yang unik.' },
-  { name: 'Disiplin', icon: Shield, desc: 'Fokus belajar secara mandiri dengan jadwal yang disiplin.' },
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Skills() {
+  const { t } = useLanguage();
+
+  const MANAGEMENT_SKILLS = [
+    { name: t('skills.managementSkills.skill1.name'), icon: Compass, desc: t('skills.managementSkills.skill1.desc') },
+    { name: t('skills.managementSkills.skill2.name'), icon: Puzzle, desc: t('skills.managementSkills.skill2.desc') },
+    { name: t('skills.managementSkills.skill3.name'), icon: Award, desc: t('skills.managementSkills.skill3.desc') },
+    { name: t('skills.managementSkills.skill4.name'), icon: Users, desc: t('skills.managementSkills.skill4.desc') },
+    { name: t('skills.managementSkills.skill5.name'), icon: Heart, desc: t('skills.managementSkills.skill5.desc') },
+    { name: t('skills.managementSkills.skill6.name'), icon: Clock, desc: t('skills.managementSkills.skill6.desc') },
+  ];
+
+  const TECHNICAL_SKILLS = [
+    { name: t('skills.technicalSkills.skill1.name'), icon: FileCode, desc: t('skills.technicalSkills.skill1.desc') },
+    { name: t('skills.technicalSkills.skill2.name'), icon: Paintbrush, desc: t('skills.technicalSkills.skill2.desc') },
+    { name: t('skills.technicalSkills.skill3.name'), icon: Terminal, desc: t('skills.technicalSkills.skill3.desc') },
+    { name: t('skills.technicalSkills.skill4.name'), icon: Smartphone, desc: t('skills.technicalSkills.skill4.desc') },
+    { name: t('skills.technicalSkills.skill5.name'), icon: Layers, desc: t('skills.technicalSkills.skill5.desc') },
+    { name: t('skills.technicalSkills.skill6.name'), icon: Cpu, desc: t('skills.technicalSkills.skill6.desc') },
+    { name: t('skills.technicalSkills.skill7.name'), icon: Gamepad2, desc: t('skills.technicalSkills.skill7.desc') },
+    { name: t('skills.technicalSkills.skill8.name'), icon: Globe, desc: t('skills.technicalSkills.skill8.desc') },
+  ];
+
+  const SOFT_SKILLS = [
+    { name: t('skills.softSkills.skill1.name'), icon: TrendingUp, desc: t('skills.softSkills.skill1.desc') },
+    { name: t('skills.softSkills.skill2.name'), icon: CheckCircle, desc: t('skills.softSkills.skill2.desc') },
+    { name: t('skills.softSkills.skill3.name'), icon: Zap, desc: t('skills.softSkills.skill3.desc') },
+    { name: t('skills.softSkills.skill4.name'), icon: Lightbulb, desc: t('skills.softSkills.skill4.desc') },
+    { name: t('skills.softSkills.skill5.name'), icon: Shield, desc: t('skills.softSkills.skill5.desc') },
+  ];
+
   const containerVariants = {
     hidden: {},
     visible: {
@@ -73,7 +76,7 @@ export default function Skills() {
             transition={{ duration: 0.6 }}
             className="font-space font-extrabold text-4xl md:text-5xl tracking-tight text-white mb-4"
           >
-            <TextReveal text="Skill yang Sedang Aku Asah" mode="words" />
+            <TextReveal text={t('skills.sectionTitle')} mode="words" />
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -82,7 +85,7 @@ export default function Skills() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-text-secondary text-base md:text-lg font-sans"
           >
-            <TextReveal text="Aku percaya bahwa proses belajar nggak pernah benar-benar selesai. Setiap project adalah kesempatan untuk berkembang lebih jauh." mode="fade-up" delay={0.15} />
+            <TextReveal text={t('skills.sectionDesc')} mode="fade-up" delay={0.15} />
           </motion.p>
         </div>
 
@@ -93,7 +96,7 @@ export default function Skills() {
             <div className="flex items-center gap-3 mb-8">
               <span className="h-px w-8 bg-accent-primary" />
               <h3 className="font-space font-extrabold text-xl md:text-2xl text-white uppercase tracking-wider">
-                Management Skills
+                {t('skills.categories.management')}
               </h3>
             </div>
             
@@ -130,7 +133,7 @@ export default function Skills() {
             <div className="flex items-center gap-3 mb-8">
               <span className="h-px w-8 bg-accent-secondary" />
               <h3 className="font-space font-extrabold text-xl md:text-2xl text-white uppercase tracking-wider">
-                Technical Skills
+                {t('skills.categories.technical')}
               </h3>
             </div>
 
@@ -165,7 +168,7 @@ export default function Skills() {
             <div className="flex items-center gap-3 mb-8">
               <span className="h-px w-8 bg-white/20" />
               <h3 className="font-space font-extrabold text-xl md:text-2xl text-white uppercase tracking-wider">
-                Soft Skills
+                {t('skills.categories.soft')}
               </h3>
             </div>
 

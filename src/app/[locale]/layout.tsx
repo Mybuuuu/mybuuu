@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
+import { LanguageProvider } from "../../context/LanguageContext";
 
 export const metadata: Metadata = {
   title: "Mybuu | Management Student & Self-Taught Web Developer",
@@ -8,15 +9,21 @@ export const metadata: Metadata = {
   authors: [{ name: "Mybuu" }],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
   return (
-    <html lang="en" className="h-full scroll-smooth antialiased">
+    <html lang={locale} className="h-full scroll-smooth antialiased">
       <body className="min-h-full flex flex-col bg-portfolio-bg text-white">
-        {children}
+        <LanguageProvider locale={locale}>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

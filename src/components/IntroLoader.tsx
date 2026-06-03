@@ -2,23 +2,25 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const STEPS = [
-  'SEDANG MENYIAPKAN PENGALAMAN TERBAIK...',
-  'LOADING ASSETS...',
-  'MEMBANGUN TAMPILAN...',
-  'MENGOPTIMALKAN GRAFIK...',
-  'HAMPIR SELESAI...',
-  'SISTEM SIAP.'
-];
+import { useLanguage } from '../context/LanguageContext';
 
 interface IntroLoaderProps {
   onComplete: () => void;
 }
 
 export default function IntroLoader({ onComplete }: IntroLoaderProps) {
+  const { t } = useLanguage();
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(true);
+
+  const STEPS = [
+    t('loader.steps.0'),
+    t('loader.steps.1'),
+    t('loader.steps.2'),
+    t('loader.steps.3'),
+    t('loader.steps.4'),
+    t('loader.steps.5')
+  ];
 
   useEffect(() => {
     // Animate progress percentage smoothly
@@ -110,8 +112,8 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
 
             {/* Bottom status codes */}
             <div className="w-full flex justify-between items-center mt-6 text-[8px] font-mono text-text-secondary opacity-40 uppercase tracking-widest">
-              <span>CORE_TEMP: NORMAL</span>
-              <span>SECURE_BOOT: ACTIVE</span>
+              <span>{t('loader.coreTemp')}</span>
+              <span>{t('loader.secureBoot')}</span>
             </div>
           </div>
         </motion.div>

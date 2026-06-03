@@ -4,41 +4,44 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import TextReveal from './TextReveal';
 import { Award, ShieldCheck, Dumbbell, Users, Target, Zap, ShieldAlert } from 'lucide-react';
-
-const LESSONS = [
-  {
-    title: 'Disiplin',
-    icon: ShieldCheck,
-    desc: 'Latihan fisik keras membentuk disiplin harian, yang kini kuterapkan untuk terus fokus belajar dan menulis kode berkualitas setiap hari.',
-  },
-  {
-    title: 'Konsisten',
-    icon: Dumbbell,
-    desc: 'Mengulang gerakan olahraga ribuan kali mengajariku bahwa penguasaan teknologi pemrograman kompleks hanya bisa dicapai lewat latihan terus-menerus.',
-  },
-  {
-    title: 'Mental Tangguh',
-    icon: ShieldAlert,
-    desc: 'Tetap tenang di bawah tekanan kompetisi melatihku untuk berpikir logis dan sistematis saat memecahkan masalah atau memperbaiki bug sistem.',
-  },
-  {
-    title: 'Kerja Sama Tim',
-    icon: Users,
-    desc: 'Memahami peran pemain dan membangun rasa percaya di lapangan olahraga sama pentingnya dengan berkolaborasi dalam tim developer.',
-  },
-  {
-    title: 'Pantang Menyerah',
-    icon: Zap,
-    desc: 'Keinginan untuk selalu melampaui batas kemampuan kemarin mendorongku untuk terus mengeksplorasi teknologi modern dan solusi kreatif.',
-  },
-  {
-    title: 'Fokus pada Target',
-    icon: Target,
-    desc: 'Menentukan langkah taktis untuk memenangkan pertandingan membentuk kebiasaan merencanakan sprint proyek coding secara terarah.',
-  },
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export default function SportsAchievement() {
+  const { t } = useLanguage();
+
+  const LESSONS = [
+    {
+      title: t('sports.lessons.lesson1.title'),
+      icon: ShieldCheck,
+      desc: t('sports.lessons.lesson1.desc'),
+    },
+    {
+      title: t('sports.lessons.lesson2.title'),
+      icon: Dumbbell,
+      desc: t('sports.lessons.lesson2.desc'),
+    },
+    {
+      title: t('sports.lessons.lesson3.title'),
+      icon: ShieldAlert,
+      desc: t('sports.lessons.lesson3.desc'),
+    },
+    {
+      title: t('sports.lessons.lesson4.title'),
+      icon: Users,
+      desc: t('sports.lessons.lesson4.desc'),
+    },
+    {
+      title: t('sports.lessons.lesson5.title'),
+      icon: Zap,
+      desc: t('sports.lessons.lesson5.desc'),
+    },
+    {
+      title: t('sports.lessons.lesson6.title'),
+      icon: Target,
+      desc: t('sports.lessons.lesson6.desc'),
+    },
+  ];
+
   const containerVariants = {
     hidden: {},
     visible: {
@@ -74,21 +77,21 @@ export default function SportsAchievement() {
             </div>
             
             <h2 className="font-space font-extrabold text-4xl md:text-5xl tracking-tight text-white mb-6">
-              <TextReveal text="Pelajaran dari Dunia Olahraga" mode="words" />
+              <TextReveal text={t('sports.sectionTitle')} mode="words" />
             </h2>
             
             <div className="glass-card p-6 rounded-2xl mb-6 w-full">
               <h3 className="font-space font-extrabold text-lg text-white mb-2 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent-primary" />
-                <TextReveal text="Atlet POPROV" mode="words" />
+                <TextReveal text={t('sports.cardTitle')} mode="words" />
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed font-sans">
-                <TextReveal text="Sebelum mendalami teknologi, aku banyak belajar dari dunia olahraga. Pernah berkompetisi hingga tingkat POPROV dan mendapatkan banyak pelajaran berharga yang masih aku bawa sampai sekarang." mode="fade-up" delay={0.1} />
+                <TextReveal text={t('sports.cardDesc')} mode="fade-up" delay={0.1} />
               </p>
             </div>
 
             <p className="text-text-secondary text-base leading-relaxed font-sans">
-              <TextReveal text="Olahraga mengajariku bahwa kekuatan fisik kalah penting dibanding ketangguhan mental. Aku membawa mentalitas disiplin dan pantang menyerah ini ke dalam dunia coding." mode="fade-up" delay={0.15} />
+              <TextReveal text={t('sports.sidebarDesc')} mode="fade-up" delay={0.15} />
             </p>
           </div>
 

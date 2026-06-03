@@ -1,0 +1,438 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "journey": "Parcours",
+    "creativeJourney": "Design Visuel",
+    "about": "À Propos",
+    "skills": "Compétences",
+    "sports": "Sport",
+    "projects": "Projets",
+    "philosophy": "Philosophie",
+    "future": "Objectifs"
+  },
+  "hero": {
+    "badge": "Apprendre et Grandir Chaque Jour",
+    "typewriter": {
+      "hello": "Bonjour, je suis Mybuu.",
+      "tech": "Passionné de Tech.",
+      "management": "Étudiant en Management.",
+      "selfTaught": "Développeur Autodidacte."
+    },
+    "title": "Un étudiant en management qui bâtit avec sérieux son avenir dans la tech.",
+    "description": "Issu de l'athlétisme de haut niveau, je me suis orienté vers le management avant de me passionner pour la programmation. Aujourd'hui, je me consacre au développement de mes compétences, à la création de projets et à l'acquisition d'expériences pour donner vie à mes idées.",
+    "ctaJourney": "Découvrir mon Parcours",
+    "ctaProjects": "Explorer mes Projets",
+    "stats": {
+      "projectsTitle": "Projets Réalisés",
+      "selfTaughtTitle": "Apprentissage Libre",
+      "selfTaughtValue": "Autodidacte",
+      "sportsTitle": "Palmarès Sportif",
+      "futureTitle": "Axe de Développement",
+      "futureValue": "Valeur Réelle"
+    }
+  },
+  "lanyard": {
+    "studioPass": "PASS STUDIO",
+    "goldPass": "PASS OR",
+    "visualDesigner": "Designer Visuel",
+    "managementStudent": "Étudiant en Management",
+    "developer": "Développeur",
+    "tagline": "Bâtir l'avenir par la créativité, la stratégie et la technologie",
+    "access": "ACCÈS : TOTAL"
+  },
+  "interactiveJourney": {
+    "sectionTitle": "De la Stratégie à la Programmation",
+    "sectionDesc": "Une frise interactive où s'unissent les principes du management et la logique algorithmique. Cliquez sur un jalon pour explorer les détails.",
+    "steps": {
+      "step1": {
+        "title": "Athlète Provincial (POPROV)",
+        "label": "Athlète POPROV",
+        "timeline": "Fondation Athlétique",
+        "shortDesc": "Développement de la discipline, de la cohérence, de la résilience et d'un esprit de compétition.",
+        "longDesc": "La compétition en tant qu'athlète provincial m'a appris que le succès est le fruit d'un dévouement à long terme, d'une discipline physique et mentale et de la résilience. J'applique chaque jour cet esprit de compétition et de travail rigoureux au code et à la stratégie."
+      },
+      "step2": {
+        "title": "Designer Visuel Créatif",
+        "label": "Designer Visuel",
+        "timeline": "Étape Visuel & Branding",
+        "shortDesc": "Exploration de la communication visuelle à travers des affiches, infographies, branding et supports promotionnels.",
+        "longDesc": "Avant de programmer, j'ai développé des visuels pour ma communauté paroissiale et des promotions commerciales comme Es Teh Poci. Le design m'a enseigné la force de la mise en page, de la théorie des couleurs, de la typographie et l'art de capter l'attention de l'utilisateur."
+      },
+      "step3": {
+        "title": "Étudiant en Management",
+        "label": "Étudiant en Management",
+        "timeline": "Stratégie d'Entreprise",
+        "shortDesc": "Apprentissage de la pensée stratégique, du leadership, de la prise de décision et de la résolution de problèmes.",
+        "longDesc": "Mes études de management à l'université m'ont appris la pensée stratégique d'entreprise, la gestion des ressources humaines et les opérations. Cette logique d'affaires m'aide à concevoir des produits numériques qui résolvent de vrais problèmes."
+      },
+      "step4": {
+        "title": "Développeur Autodidacte",
+        "label": "Développeur Autodidacte",
+        "timeline": "Pivot vers la Programmation",
+        "shortDesc": "Début de l'apprentissage de la programmation et du développement web de manière indépendante à travers des projets réels.",
+        "longDesc": "Maîtrise de la programmation de façon autonome à l'aide de ressources en ligne, de documentations, et en utilisant l'IA comme accélérateur d'apprentissage. Création de projets web modernes et esthétiques avec HTML, CSS, JavaScript, React et Next.js."
+      },
+      "step5": {
+        "title": "Futur Bâtisseur Numérique",
+        "label": "Futur Bâtisseur",
+        "timeline": "Vision Tech Stratégique",
+        "shortDesc": "Associer la discipline sportive, la créativité visuelle, la vision d'affaires et la technologie.",
+        "longDesc": "Combiner toutes mes forces : discipline sportive, design visuel, gestion stratégique et programmation moderne. Mon but est de concevoir des solutions technologiques de pointe qui apportent une valeur d'exception et des expériences numériques mémorables."
+      }
+    }
+  },
+  "creativeJourney": {
+    "badge": "Design Visuel",
+    "sectionTitle": "La Créativité qui Forme ma Perspective",
+    "sectionDesc": "Avant d'apprendre la programmation et de construire des sites web, j'ai approfondi ma maîtrise de la communication visuelle et du design créatif. À travers la réalisation d'affiches, d'infographies, de publications d'événements et de supports promotionnels, j'ai compris que le design ne se limite pas à l'esthétique, mais sert à exprimer des idées efficacement et à générer des expériences pleines de sens. Cette pratique continue d'influencer ma façon d'aborder la technologie, les produits numériques et la résolution de problèmes aujourd'hui.",
+    "experienceCard1": {
+      "timeline": "De la 1ère à la Terminale (Lycée)",
+      "title": "Design Visuel Créatif",
+      "location": "Communauté Paroissiale",
+      "desc": "Responsable de la création de visuels pour soutenir les activités, événements et besoins de communication de la paroisse.",
+      "projectListTitle": "Projets Réalisés",
+      "projects": [
+        "Affiches d'Événements",
+        "Bannières d'Événements",
+        "Contenu pour Réseaux Sociaux",
+        "Infographies Informatives",
+        "Supports Promotionnels",
+        "Branding Visuel d'Événements"
+      ],
+      "skillsTitle": "Compétences Développées",
+      "skills": [
+        "Communication Visuelle",
+        "Typographie",
+        "Mise en Page",
+        "Théorie des Couleurs",
+        "Hiérarchie Visuelle",
+        "Branding d'Événements",
+        "Esprit Créatif"
+      ]
+    },
+    "experienceCard2": {
+      "timeline": "Années Universitaires – Présent",
+      "title": "Design Promotionnel Visuel",
+      "location": "Point de Vente Es Teh Poci",
+      "desc": "Contribution à la production de supports promotionnels et de branding pour le stand Es Teh Poci, une marque de boisson très populaire localement.",
+      "projectListTitle": "Projets Réalisés",
+      "projects": [
+        "Affiches Promotionnelles",
+        "Visuels de Campagnes sur les Réseaux Sociaux",
+        "Visuels de Marketing",
+        "Supports d'Aide à la Vente",
+        "Modèles de Bannières",
+        "Contenu de Communication de Marque"
+      ],
+      "skillsTitle": "Compétences Développées",
+      "skills": [
+        "Design Marketing",
+        "Attraction de l'Attention des Clients",
+        "Branding Visuel",
+        "Design Commercial",
+        "Création de Contenu",
+        "Cohérence de Marque"
+      ]
+    },
+    "lessonsTitle": "Ce que le Design m'a Appris",
+    "lessonsSubtitle": "L'Impact de la Pensée Visuelle sur mon Travail",
+    "designCards": {
+      "card1": {
+        "title": "Communication Visuelle",
+        "desc": "Apprendre à transmettre clairement un message par le design et le storytelling visuel."
+      },
+      "card2": {
+        "title": "Créativité",
+        "desc": "Développer une démarche créative et résoudre des problèmes à l'aide de défis visuels."
+      },
+      "card3": {
+        "title": "Branding",
+        "desc": "Comprendre comment l'identité visuelle façonne les perceptions et suscite la confiance."
+      },
+      "card4": {
+        "title": "Interaction avec le Public",
+        "desc": "Apprendre à capter l'attention du public et concevoir des expériences marquantes."
+      },
+      "card5": {
+        "title": "Storytelling",
+        "desc": "Exploiter les codes du design pour communiquer des idées, des émotions et des récits."
+      },
+      "card6": {
+        "title": "Détail et Précision",
+        "desc": "Prendre l'habitude de se concentrer sur la justesse et la qualité dans chaque projet."
+      }
+    },
+    "techTitle": "Du Design Visuel à la Technologie",
+    "techDesc": "Plus j'explorais le design visuel, plus je me demandais comment un site web, une application ou un produit digital était réellement programmé. Le design m'a appris à concevoir des expériences attrayantes. La programmation m'a appris à leur donner vie. Aujourd'hui, je continue à perfectionner ces deux compétences en parallèle car je suis convaincu qu'un excellent produit numérique exige à la fois de la créativité et de la rigueur technique.",
+    "formula": {
+      "creativity": "🎨 Créativité Visuelle",
+      "logic": "💻 Logique de Programmation",
+      "strategic": "📊 Pensée Stratégique"
+    },
+    "formulaCaption": "Fondement d'un Créateur Multidisciplinaire"
+  },
+  "about": {
+    "sectionTitle": "Un Parcours Imprévu, Mais Tellement Significatif.",
+    "sectionDesc": "Depuis mon enfance, j'ai toujours été curieux de technologie. Même si mon chemin s'est parfois écarté, chaque étape franchie a fini par assembler les pièces du puzzle de mon avenir.",
+    "timelineEvents": {
+      "event1": {
+        "year": "Origine",
+        "title": "Athlète Provincial (POPROV)",
+        "desc": "Avant de découvrir le code, ma vie était rythmée par l'entraînement physique. Concourir jusqu'au niveau provincial POPROV a forgé la discipline, la régularité, la résilience et le mental solide qui m'accompagnent encore aujourd'hui."
+      },
+      "event2": {
+        "year": "Exploration du Design",
+        "title": "Designer Visuel Créatif",
+        "desc": "Début de l'exploration de la communication visuelle par le biais d'affiches, d'infographies, de branding et de supports de vente pour les paroisses et les commerces locaux comme Es Teh Poci."
+      },
+      "event3": {
+        "year": "Parcours Académique",
+        "title": "Étudiant en Management",
+        "desc": "À mon entrée à l'université, j'ai opté pour la filière Management. Pour être honnête, ce n'était pas la voie que j'imaginais au départ. Cependant, j'y ai appris la pensée stratégique, le leadership et la résolution de problèmes de gestion."
+      },
+      "event4": {
+        "year": "Le Déclic",
+        "title": "Développeur Autodidacte",
+        "desc": "Tout a basculé lorsque j'ai découvert Roblox et appris le développement web en autodidacte, en menant divers projets pratiques sous React, Next.js et en me servant de l'IA comme accélérateur."
+      },
+      "event5": {
+        "year": "L'Avenir",
+        "title": "Futur Bâtisseur Numérique",
+        "desc": "Allier la rigueur du sport, l'imagination visuelle, la logique de gestion et la technologie pour concevoir des produits numériques de valeur et porteurs d'un impact réel."
+      }
+    }
+  },
+  "skills": {
+    "sectionTitle": "Compétences en Cours d'Acquisition",
+    "sectionDesc": "Je crois que le processus d'apprentissage n'est jamais vraiment terminé. Chaque projet est une opportunité de se développer davantage.",
+    "categories": {
+      "management": "Compétences en Management",
+      "technical": "Compétences Techniques",
+      "soft": "Soft Skills"
+    },
+    "managementSkills": {
+      "skill1": {
+        "name": "Pensée Stratégique",
+        "desc": "Planifier et faire évoluer les solutions d'affaires."
+      },
+      "skill2": {
+        "name": "Résolution de Problèmes",
+        "desc": "Résoudre les obstacles de manière systématique."
+      },
+      "skill3": {
+        "name": "Prise de Décision",
+        "desc": "Analyser des données complexes pour agir."
+      },
+      "skill4": {
+        "name": "Leadership",
+        "desc": "Inciter les équipes à collaborer et à obtenir des résultats."
+      },
+      "skill5": {
+        "name": "Gestion d'Équipe",
+        "desc": "Instaurer une culture d'équipe soudée et communicative."
+      },
+      "skill6": {
+        "name": "Gestion du Temps",
+        "desc": "Maximiser les livrables via un calendrier structuré en sprints."
+      }
+    },
+    "technicalSkills": {
+      "skill1": {
+        "name": "HTML & Code Sémantique",
+        "desc": "Structure standard des pages web."
+      },
+      "skill2": {
+        "name": "CSS Moderne & Layout",
+        "desc": "Mise en forme adaptative, Flexbox, Grid, Tailwind CSS."
+      },
+      "skill3": {
+        "name": "JavaScript ES6+",
+        "desc": "Logique dynamique côté client, fermetures et données asynchrones."
+      },
+      "skill4": {
+        "name": "Design Responsif",
+        "desc": "Affichage impeccable sur écrans de PC, tablette et smartphone."
+      },
+      "skill5": {
+        "name": "Bases UI/UX",
+        "desc": "Hiérarchie d'information claire, équilibre visuel, micro-interactions."
+      },
+      "skill6": {
+        "name": "Développement Assisté par IA",
+        "desc": "Exploiter les modèles d'IA pour accélérer le débogage."
+      },
+      "skill7": {
+        "name": "Scripting Roblox Lua",
+        "desc": "Scripting événementiel, tableaux, mathématiques 3D, mécaniques de jeu."
+      },
+      "skill8": {
+        "name": "Création de Sites Web",
+        "desc": "Créer des sites web statiques et dynamiques de manière fonctionnelle."
+      }
+    },
+    "softSkills": {
+      "skill1": {
+        "name": "Adaptabilité",
+        "desc": "S'adapter rapidement lorsque les technologies et les priorités évoluent."
+      },
+      "skill2": {
+        "name": "Régularité",
+        "desc": "S'engager à pratiquer tous les jours pour maîtriser de nouveaux outils."
+      },
+      "skill3": {
+        "name": "Apprentissage Rapide",
+        "desc": "Assimiler des concepts et des documentations en très peu de temps."
+      },
+      "skill4": {
+        "name": "Créativité",
+        "desc": "Imaginer des solutions visuelles et fonctionnelles originales."
+      },
+      "skill5": {
+        "name": "Discipline",
+        "desc": "Se concentrer sur l'auto-apprentissage selon un planning strict."
+      }
+    }
+  },
+  "sports": {
+    "sectionTitle": "Leçons Tirées du Monde du Sport",
+    "cardTitle": "Athlète POPROV",
+    "cardDesc": "Avant d'étudier la technologie, j'ai beaucoup appris à travers le sport. Ma participation aux compétitions jusqu'au niveau provincial POPROV m'a apporté de précieux enseignements que j'applique encore au quotidien.",
+    "sidebarDesc": "Le sport m'a appris que la force physique importe moins que la force mentale. J'apporte cette discipline et cet esprit combatif dans le domaine de la programmation.",
+    "lessons": {
+      "lesson1": {
+        "title": "Discipline",
+        "desc": "L'entraînement physique intensif forge une autodiscipline quotidienne, que j'utilise aujourd'hui pour me concentrer et écrire du code de qualité chaque jour."
+      },
+      "lesson2": {
+        "title": "Régularité",
+        "desc": "Répéter le même geste technique des milliers de fois m'a appris que la maîtrise d'outils informatiques complexes passe uniquement par une pratique constante."
+      },
+      "lesson3": {
+        "title": "Force Mentale",
+        "desc": "Garder son calme sous la pression de la compétition m'a entraîné à penser de façon logique et structurée pour résoudre des incidents ou corriger des bugs."
+      },
+      "lesson4": {
+        "title": "Esprit d'Équipe",
+        "desc": "Comprendre le rôle de chacun et instaurer la confiance sur le terrain est tout aussi primordial que de collaborer efficacement au sein d'une équipe technique."
+      },
+      "lesson5": {
+        "title": "Persévérance",
+        "desc": "La volonté de repousser constamment mes limites de la veille me pousse à explorer sans cesse des technologies modernes et des idées innovantes."
+      },
+      "lesson6": {
+        "title": "Focus sur l'Objectif",
+        "desc": "Définir des tactiques pour remporter un match structure ma méthode pour planifier les sprints de mes projets de développement."
+      }
+    }
+  },
+  "projects": {
+    "sectionTitle": "Quelques-unes de mes Créations",
+    "sectionDesc": "La plupart de ces projets sont nés de la curiosité, de l'expérimentation et de l'envie d'apprendre sans cesse.",
+    "projectNumberLabel": "Projet 0{id}",
+    "liveDemo": "Démo en Direct",
+    "sourceCode": "Code Source",
+    "projectList": {
+      "project1": {
+        "title": "Site de Portfolio Personnel",
+        "tagline": "Site Personnel",
+        "desc": "Un site de portfolio personnel haut de gamme, conçu avec des cartes minimalistes, un suivi du curseur et une frise interactive dynamique. Créé pour illustrer l'identité du concepteur."
+      },
+      "project2": {
+        "title": "Landing Page Moderne",
+        "tagline": "Page d'Atterrissage Moderne",
+        "desc": "Une page de destination moderne conçue pour les agences ou les applications SaaS. Intègre des animations de grille, des effets au survol du curseur et un design responsif."
+      },
+      "project3": {
+        "title": "Exploration UI/UX",
+        "tagline": "Recherche UI/UX",
+        "desc": "Concepts d'interfaces visuelles mêlant simplicité de navigation et esthétique moderne. Un bon compromis entre couleurs contrastées et lisibilité de l'information."
+      },
+      "project4": {
+        "title": "Projet d'Apprentissage Roblox",
+        "tagline": "Projet d'Étude Roblox",
+        "desc": "Projet d'expérimentation de jeu dans Roblox Studio à l'aide du langage de programmation Lua. Gestion de la logique événementielle, du comportement d'objets 3D et du gameplay."
+      }
+    }
+  },
+  "philosophy": {
+    "sectionTitle": "Ma Vision du Processus",
+    "quote": "\"Le choix des études détermine notre point de départ, mais pas les sommets que nous pouvons atteindre.\"",
+    "quoteAuthor": "Ma Conviction",
+    "managementBlock": {
+      "title": "Stratégie de Management",
+      "desc": "Le management m'a appris à cerner les enjeux. Il m'apporte une perspective globale sur la stratégie opérationnelle, le leadership et l'art de piloter un projet avec rigueur.",
+      "footer": "Cadre de Réflexion Stratégique"
+    },
+    "programmingBlock": {
+      "title": "Exécution Informatique",
+      "desc": "La programmation m'a appris à concevoir des solutions tangibles. Elle exerce mon esprit logique, ma gestion tactique des pannes et concrétise des idées en produits fiables.",
+      "footer": "Exécution Technique"
+    },
+    "closingStatement": "En associant ces deux approches, j'aborde les obstacles sous un angle bien plus large."
+  },
+  "future": {
+    "sectionTitle": "Mes Prochains Objectifs",
+    "sectionDesc": "Plan stratégique de mes réalisations futures et de mes ambitions technologiques.",
+    "targetNode": "Noeud Objectif",
+    "goals": {
+      "goal1": {
+        "year": "2025",
+        "title": "Approfondir le Développement Web",
+        "desc": "Maîtriser les frameworks modernes (Next.js, React), le style (Tailwind, CSS) et l'algorithmique. S'engager à écrire un code propre et normalisé."
+      },
+      "goal2": {
+        "year": "2026",
+        "title": "Réaliser des Projets Grand Public",
+        "desc": "Participer à des projets utilisés par de nombreuses personnes. Travailler sur l'optimisation des performances, de l'affichage et de flux de données stables."
+      },
+      "goal3": {
+        "year": "2027",
+        "title": "Associer Management & Technologie",
+        "desc": "Combiner la vision stratégique d'entreprise avec le développement logiciel pour bâtir des solutions numériques d'envergure."
+      },
+      "goal4": {
+        "year": "Avenir",
+        "title": "Créer des Produits Numériques à Impact",
+        "desc": "Concevoir et déployer des applications autonomes qui génèrent des effets positifs durables dans l'industrie et facilitent le quotidien."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Me Contacter",
+    "sectionTitle": "Restons en Contact",
+    "sectionDesc": "Je suis toujours ravi d'échanger, de collaborer ou simplement de discuter de technologie, d'affaires et de projets innovants.",
+    "form": {
+      "nameLabel": "Nom",
+      "namePlaceholder": "Entrez votre nom",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "email@example.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Écrivez votre message ou votre question ici...",
+      "submitBtn": "Envoyer",
+      "submittingBtn": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Message Envoyé !",
+      "desc": "Merci infiniment d'avoir pris le temps de me laisser un message. Je vous répondrai par e-mail dans les plus brefs délais !",
+      "resetBtn": "Envoyer un autre message"
+    }
+  },
+  "footer": {
+    "title": "Merci de votre visite.",
+    "subtitle": "Encore tant de choses à apprendre, encore tant de choses à bâtir.",
+    "copyright": "© Mybuu. Réalisé avec Next.js & Tailwind CSS.",
+    "backToTop": "Retour en Haut"
+  },
+  "loader": {
+    "steps": [
+      "PRÉPARATION DE L'EXPÉRIENCE HAUT DE GAMME...",
+      "CHARGEMENT DES RESSOURCES...",
+      "CONSTRUCTION DU DESIGN...",
+      "OPTIMISATION DES GRAPHISMES...",
+      "PRESQUE TERMINÉ...",
+      "SYSTÈME PRÊT."
+    ],
+    "secureBoot": "DÉMARRAGE_SÉCURISÉ : ACTIF",
+    "coreTemp": "TEMP_PROCESSEUR : NORMALE"
+  }
+}
