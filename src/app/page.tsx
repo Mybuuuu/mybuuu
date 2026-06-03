@@ -7,7 +7,7 @@ import BackgroundEffects from '../components/BackgroundEffects';
 import SmoothScroll from '../components/SmoothScroll';
 import IntroLoader from '../components/IntroLoader';
 import ScrollProgress from '../components/ScrollProgress';
-import Marquee from '../components/Marquee';
+import BrandingStrips from '../components/BrandingStrips';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import InteractiveJourney from '../components/InteractiveJourney';
@@ -46,6 +46,9 @@ export default function Home() {
       {/* Fixed Futuristic Grid Background Overlay */}
       <div className="grid-background" />
 
+      {/* Premium Vertical Branding Ribbon/Lanyard Strips */}
+      <BrandingStrips />
+
       {/* Sticky Floating Navbar */}
       <Navbar />
 
@@ -61,13 +64,6 @@ export default function Home() {
         {/* Home / Hero Section */}
         <Hero introComplete={introComplete} />
 
-        {/* Seamless Loop Marquee 1 (Forward, between Hero and Journey) */}
-        <Marquee 
-          items={['BELAJAR', 'MEMBANGUN', 'TUMBUH', 'BERKREASI']} 
-          direction="forward" 
-          speed="normal" 
-          separator="•" 
-        />
 
         {/* Interactive Journey Map Milestone */}
         <InteractiveJourney />
@@ -81,13 +77,6 @@ export default function Home() {
         {/* Skills Cards Grid */}
         <Skills />
 
-        {/* Seamless Loop Marquee 2 (Reverse, between Skills and Sports) */}
-        <Marquee 
-          items={['MANAJEMEN', 'TEKNOLOGI', 'INOVASI', 'STRATEGI']} 
-          direction="reverse" 
-          speed="slow" 
-          separator="×" 
-        />
 
         {/* POPROV Sports Milestone Section */}
         <SportsAchievement />
@@ -98,13 +87,6 @@ export default function Home() {
         {/* Conceptual Philosophy Quote Panel */}
         <Philosophy />
 
-        {/* Seamless Loop Marquee 3 (Forward, between Philosophy and Future) */}
-        <Marquee 
-          items={['SELF-TAUGHT DEVELOPER', 'WIRAUSAHAWAN MASA DEPAN', 'FUTURE BUILDER']} 
-          direction="forward" 
-          speed="slow" 
-          separator="•" 
-        />
 
         {/* Strategic Futures Goals Roadmap */}
         <FutureGoals />
