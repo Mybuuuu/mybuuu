@@ -111,7 +111,7 @@ export default function InteractivePortrait() {
         y: scrollParallaxY,
         willChange: 'transform',
       }}
-      className="lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[38vw] lg:h-[550px] max-lg:absolute max-lg:top-1/2 max-lg:-translate-y-1/2 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:w-full max-lg:max-w-[280px] max-lg:h-[280px] max-lg:opacity-30 pointer-events-none select-none z-0 overflow-visible flex items-center justify-center"
+      className="lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[38vw] lg:h-[550px] max-lg:absolute max-lg:top-[44%] max-lg:-translate-y-1/2 max-lg:left-[54%] max-lg:-translate-x-1/2 max-lg:w-full max-lg:max-w-[280px] max-lg:h-[280px] max-lg:opacity-30 pointer-events-none select-none z-0 overflow-visible flex items-center justify-center"
     >
       {/* Behind-portrait static aurora glow */}
       <div className="absolute inset-0 flex items-center justify-center overflow-visible opacity-15 blur-[100px] z-0">

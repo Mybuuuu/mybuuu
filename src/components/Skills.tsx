@@ -230,7 +230,7 @@ export default function Skills() {
           <div className="flex items-center gap-3 mb-12 justify-center lg:justify-start">
             <span className="h-px w-8 bg-accent-primary" />
             <h3 className="font-space font-extrabold text-lg md:text-xl text-white uppercase tracking-wider">
-              {t('skills.subsections.learningJourneyTitle')}
+              {t('skills.ecosystem.journey.title')}
             </h3>
           </div>
 
@@ -296,7 +296,7 @@ export default function Skills() {
           <div className="flex items-center gap-3 mb-10 justify-center lg:justify-start">
             <span className="h-px w-8 bg-accent-secondary" />
             <h3 className="font-space font-extrabold text-lg md:text-xl text-white uppercase tracking-wider">
-              {t('skills.subsections.workflowsTitle')}
+              {t('skills.ecosystem.workflows.title')}
             </h3>
           </div>
 
