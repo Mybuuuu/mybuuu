@@ -208,7 +208,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-portfolio-border bg-portfolio-surface text-[10px] font-bold tracking-widest text-text-secondary uppercase font-space mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-portfolio-border bg-portfolio-surface text-[9px] tracking-wider sm:text-[10px] sm:tracking-widest font-bold text-text-secondary uppercase font-space mb-6"
           >
             <Sparkles size={10} className="text-accent-secondary animate-pulse" />
             {t('skills.sectionTitle')}

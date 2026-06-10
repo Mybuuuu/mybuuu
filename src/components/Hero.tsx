@@ -109,7 +109,7 @@ export default function Hero({ introComplete = true }: HeroProps) {
 
             <motion.h1 
               variants={itemVariants}
-              className="font-space font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight text-white mb-4 py-1 min-h-[1.2em] flex items-center justify-center lg:justify-start w-full"
+              className="font-space font-extrabold text-3xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight text-white mb-4 py-1 min-h-[1.2em] flex items-center justify-center lg:justify-start w-full"
             >
               <Typewriter 
                 texts={[
@@ -168,7 +168,7 @@ export default function Hero({ introComplete = true }: HeroProps) {
           </motion.div>
 
           {/* Right Column (Shows Portrait stacked on mobile, acts as spacer on desktop) */}
-          <div className="col-span-1 lg:col-span-5 w-full flex items-center justify-center pointer-events-none relative h-[310px] lg:h-auto mt-2 lg:mt-0">
+          <div className="col-span-1 lg:col-span-5 w-full flex items-center justify-center pointer-events-none max-lg:absolute max-lg:inset-0 max-lg:h-full max-lg:z-0 lg:relative lg:h-auto mt-2 lg:mt-0">
             <InteractivePortrait />
           </div>
         </motion.div>
