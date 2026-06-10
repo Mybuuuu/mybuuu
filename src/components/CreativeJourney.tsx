@@ -108,7 +108,7 @@ export default function CreativeJourney() {
                   {t('creativeJourney.experienceCard1.desc')}
                 </p>
 
-                <div className="grid grid-cols-2 gap-4 pt-6 border-t border-portfolio-border/40">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-portfolio-border/40">
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-2.5 font-space">
                       {t('creativeJourney.experienceCard1.projectListTitle')}
@@ -170,7 +170,7 @@ export default function CreativeJourney() {
                   {t('creativeJourney.experienceCard2.desc')}
                 </p>
 
-                <div className="grid grid-cols-2 gap-4 pt-6 border-t border-portfolio-border/40">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-portfolio-border/40">
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-2.5 font-space">
                       {t('creativeJourney.experienceCard2.projectListTitle')}

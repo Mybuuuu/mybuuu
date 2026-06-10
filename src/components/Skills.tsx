@@ -33,7 +33,7 @@ const ToolCard = React.memo(({ tool }: { tool: ToolConfig }) => {
       onMouseLeave={() => setIsHovered(false)}
       whileHover={{ y: -3, scale: 1.02 }}
       transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-      className="glass-card p-5 rounded-2xl border border-portfolio-border/60 hover:border-white/15 transition-all text-left flex flex-col justify-between relative overflow-hidden group select-none h-full"
+      className="glass-card p-4 sm:p-5 rounded-2xl border border-portfolio-border/60 hover:border-white/15 transition-all text-left flex flex-col justify-between relative overflow-hidden group select-none h-full"
       style={{
         boxShadow: isHovered 
           ? `0 10px 30px -10px rgba(0,0,0,0.8), 0 0 20px -3px ${tool.color}35` 
@@ -51,10 +51,11 @@ const ToolCard = React.memo(({ tool }: { tool: ToolConfig }) => {
         {/* Logo container */}
         <div className="flex items-center justify-between mb-4">
           <div 
-            className="p-3 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl group-hover:scale-110 transition-transform duration-300 flex items-center justify-center"
+            className="p-2 sm:p-3 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl group-hover:scale-110 transition-transform duration-300 flex items-center justify-center"
             style={{ borderColor: isHovered ? `${tool.color}30` : 'rgba(255, 255, 255, 0.08)' }}
           >
-            <IconComponent size={20} className="group-hover:brightness-110 transition-all" />
+            <IconComponent size={16} className="sm:hidden" />
+            <IconComponent size={20} className="hidden sm:block group-hover:brightness-110 transition-all" />
           </div>
 
           {/* Experience mini badge */}
@@ -65,18 +66,18 @@ const ToolCard = React.memo(({ tool }: { tool: ToolConfig }) => {
           )}
         </div>
 
-        <h4 className="font-space font-bold text-white text-base mb-1.5 group-hover:text-white transition-colors">
+        <h4 className="font-space font-bold text-white text-sm sm:text-base mb-1.5 group-hover:text-white transition-colors">
           {tool.name}
         </h4>
         
-        <p className="text-text-secondary text-xs leading-relaxed font-sans min-h-[3.2em]">
+        <p className="text-text-secondary text-[11px] sm:text-xs leading-relaxed font-sans min-h-[3.2em]">
           {desc}
         </p>
       </div>
 
       {/* Hover overlay detail block */}
       {tool.hasStats && (
-        <div className="mt-4 pt-3 border-t border-portfolio-border/40 flex items-center justify-between text-[9px] font-mono text-text-secondary/60">
+        <div className="mt-4 pt-3 border-t border-portfolio-border/40 flex items-center justify-between text-[8px] sm:text-[9px] font-mono text-text-secondary/60">
           <span className="flex items-center gap-1">
             <Info size={9} /> Exp: {level}
           </span>

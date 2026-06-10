@@ -445,7 +445,7 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
   return (
     <div 
       ref={containerRef} 
-      className="absolute inset-0 w-full h-full select-none pointer-events-none overflow-visible z-20"
+      className="hidden md:block absolute inset-0 w-full h-full select-none pointer-events-none overflow-visible z-20"
     >
       {/* Verlet Simulation Ribbon Canvas */}
       <canvas 

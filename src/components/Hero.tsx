@@ -182,46 +182,50 @@ export default function Hero({ introComplete = true }: HeroProps) {
           className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-20"
         >
           {/* Card 01 */}
-          <div className="glass-card p-5 rounded-2xl flex items-start gap-4">
-            <div className="p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-text-secondary">
-              <Cpu size={18} />
+          <div className="glass-card p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row items-start gap-3 sm:gap-4 h-full">
+            <div className="p-2 sm:p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-text-secondary flex-shrink-0">
+              <Cpu size={16} className="sm:hidden" />
+              <Cpu size={18} className="hidden sm:block" />
             </div>
             <div className="text-left">
-              <h4 className="font-space font-bold text-2xl text-white">10+</h4>
-              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1">{t('hero.stats.projectsTitle')}</p>
+              <h4 className="font-space font-bold text-xl sm:text-2xl text-white leading-tight">10+</h4>
+              <p className="text-[9px] sm:text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1 leading-snug">{t('hero.stats.projectsTitle')}</p>
             </div>
           </div>
 
           {/* Card 02 */}
-          <div className="glass-card p-5 rounded-2xl flex items-start gap-4">
-            <div className="p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-text-secondary">
-              <Cpu size={18} />
+          <div className="glass-card p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row items-start gap-3 sm:gap-4 h-full">
+            <div className="p-2 sm:p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-text-secondary flex-shrink-0">
+              <Cpu size={16} className="sm:hidden" />
+              <Cpu size={18} className="hidden sm:block" />
             </div>
             <div className="text-left">
-              <h4 className="font-space font-bold text-xl text-white">{t('hero.stats.selfTaughtValue')}</h4>
-              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1.5">{t('hero.stats.selfTaughtTitle')}</p>
+              <h4 className="font-space font-bold text-lg sm:text-xl text-white leading-tight">{t('hero.stats.selfTaughtValue')}</h4>
+              <p className="text-[9px] sm:text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1 leading-snug">{t('hero.stats.selfTaughtTitle')}</p>
             </div>
           </div>
 
           {/* Card 03 */}
-          <div className="glass-card p-5 rounded-2xl flex items-start gap-4 hover:border-accent-gold/25 transition-all duration-300">
-            <div className="p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-accent-gold">
-              <Award size={18} />
+          <div className="glass-card p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row items-start gap-3 sm:gap-4 hover:border-accent-gold/25 transition-all duration-300 h-full">
+            <div className="p-2 sm:p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-accent-gold flex-shrink-0">
+              <Award size={16} className="sm:hidden" />
+              <Award size={18} className="hidden sm:block" />
             </div>
             <div className="text-left">
-              <h4 className="font-space font-bold text-2xl text-white">POPROV</h4>
-              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1">{t('hero.stats.sportsTitle')}</p>
+              <h4 className="font-space font-bold text-xl sm:text-2xl text-white leading-tight">POPROV</h4>
+              <p className="text-[9px] sm:text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1 leading-snug">{t('hero.stats.sportsTitle')}</p>
             </div>
           </div>
 
           {/* Card 04 */}
-          <div className="glass-card p-5 rounded-2xl flex items-start gap-4">
-            <div className="p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-text-secondary">
-              <Target size={18} />
+          <div className="glass-card p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row items-start gap-3 sm:gap-4 h-full">
+            <div className="p-2 sm:p-2.5 bg-portfolio-surface-secondary border border-portfolio-border rounded-xl text-text-secondary flex-shrink-0">
+              <Target size={16} className="sm:hidden" />
+              <Target size={18} className="hidden sm:block" />
             </div>
             <div className="text-left">
-              <h4 className="font-space font-bold text-xl text-white">{t('hero.stats.futureValue')}</h4>
-              <p className="text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1.5">{t('hero.stats.futureTitle')}</p>
+              <h4 className="font-space font-bold text-lg sm:text-xl text-white leading-tight">{t('hero.stats.futureValue')}</h4>
+              <p className="text-[9px] sm:text-[10px] text-text-secondary font-semibold uppercase tracking-wider mt-1 leading-snug">{t('hero.stats.futureTitle')}</p>
             </div>
           </div>
         </motion.div>

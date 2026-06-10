@@ -211,6 +211,7 @@ export default function BrandingStrips() {
       bgClass: 'bg-[#080808]',
       stitchClass: 'ribbon-stitch-gold',
       parallaxStrength: { x: 15, y: 10 },
+      hiddenOnMobile: true,
       items: [
         { type: 'barcode', text: 'MYBUUU.DEPT-1', colorTheme: 'white' },
         { type: 'title', text: 'MYBUUU', colorTheme: 'gold' },
