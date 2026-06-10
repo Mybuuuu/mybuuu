@@ -261,7 +261,9 @@ export default function Skills() {
 
                     {/* Stage Content Card */}
                     <div className="w-full md:w-[45%] glass-card p-6 rounded-2xl text-left relative overflow-hidden group hover:border-accent-primary/20 transition-all duration-300">
-                      <div className="absolute top-0 left-0 bottom-0 w-[3px] bg-gradient-to-b from-accent-primary to-accent-secondary opacity-60" />
+                      <div className={`absolute top-0 bottom-0 w-[3px] bg-gradient-to-b from-accent-primary to-accent-secondary opacity-60 ${
+                        isEven ? 'right-0' : 'left-0'
+                      }`} />
                       
                       <h4 className="font-space font-bold text-white text-base md:text-lg mb-2">
                         {title}

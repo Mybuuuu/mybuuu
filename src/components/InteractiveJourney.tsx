@@ -97,12 +97,12 @@ export default function InteractiveJourney() {
             <motion.line
               x1="0"
               y1="1"
-              x2={`${(activeStep - 1) * 25 + 12.5}%`}
+              x2={`${(activeStep - 1) * 20 + 10}%`}
               y2="1"
               stroke="rgba(255,255,255,0.25)"
               strokeWidth="2"
-              initial={{ x2: '12.5%' }}
-              animate={{ x2: `${(activeStep - 1) * 25 + 12.5}%` }}
+              initial={{ x2: '10%' }}
+              animate={{ x2: `${(activeStep - 1) * 20 + 10}%` }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
             />
           </svg>
