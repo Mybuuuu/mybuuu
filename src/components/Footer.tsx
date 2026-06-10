@@ -52,14 +52,14 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Left - Copyright Metadata */}
-          <div className="text-left order-2 sm:order-1">
+          <div className="text-center sm:text-left order-2 sm:order-1 w-full sm:w-auto">
             <p className="text-xs font-mono text-text-secondary">
               {t('footer.copyright')}
             </p>
           </div>
 
           {/* Right - Back to Top Button */}
-          <div className="text-right order-1 sm:order-2">
+          <div className="text-center sm:text-right order-1 sm:order-2 w-full sm:w-auto flex justify-center sm:justify-end">
             <button
               onClick={scrollToTop}
               className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-text-secondary hover:text-white glass-card px-4 py-2 rounded-full cursor-pointer transition-all duration-300"

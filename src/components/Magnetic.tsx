@@ -6,9 +6,10 @@ import { motion } from 'framer-motion';
 interface MagneticProps {
   children: React.ReactElement;
   range?: number;
+  className?: string;
 }
 
-export default function Magnetic({ children, range = 45 }: MagneticProps) {
+export default function Magnetic({ children, range = 45, className = 'w-full sm:w-auto sm:inline-block' }: MagneticProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -53,7 +54,7 @@ export default function Magnetic({ children, range = 45 }: MagneticProps) {
       onMouseLeave={handleMouseLeave}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: 'spring', ...springConfig }}
-      className="inline-block"
+      className={className}
     >
       {children}
     </motion.div>

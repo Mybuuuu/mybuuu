@@ -262,23 +262,29 @@ export default function Navbar() {
                     Language / Bahasa
                   </span>
                   <div className="grid grid-cols-2 gap-2">
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => {
-                          changeLanguage(lang.code);
-                          setMobileMenuOpen(false);
-                        }}
-                        className={`flex items-center gap-2 px-3 py-3 rounded-xl border text-xs font-space transition-all cursor-pointer justify-center min-h-[44px] ${
-                          locale === lang.code
-                            ? 'border-accent-primary/50 bg-accent-primary/10 text-white font-bold'
-                            : 'border-portfolio-border bg-portfolio-surface/40 text-text-secondary hover:text-white hover:border-white/10'
-                        }`}
-                      >
-                        <span>{lang.flag}</span>
-                        <span>{lang.shortName}</span>
-                      </button>
-                    ))}
+                    {languages.map((lang, idx) => {
+                      const isLast = idx === languages.length - 1;
+                      const isOdd = languages.length % 2 !== 0;
+                      return (
+                        <button
+                          key={lang.code}
+                          onClick={() => {
+                            changeLanguage(lang.code);
+                            setMobileMenuOpen(false);
+                          }}
+                          className={`flex items-center gap-2 px-3 py-3 rounded-xl border text-xs font-space transition-all cursor-pointer justify-center min-h-[44px] ${
+                            isLast && isOdd ? 'col-span-2' : ''
+                          } ${
+                            locale === lang.code
+                              ? 'border-accent-primary/50 bg-accent-primary/10 text-white font-bold'
+                              : 'border-portfolio-border bg-portfolio-surface/40 text-text-secondary hover:text-white hover:border-white/10'
+                          }`}
+                        >
+                          <span>{lang.flag}</span>
+                          <span>{lang.shortName}</span>
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               </div>

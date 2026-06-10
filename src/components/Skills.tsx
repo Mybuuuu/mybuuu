@@ -60,7 +60,7 @@ const ToolCard = React.memo(({ tool }: { tool: ToolConfig }) => {
 
           {/* Experience mini badge */}
           {tool.hasStats && (
-            <span className="text-[8px] font-bold font-space uppercase tracking-widest text-text-secondary/60 border border-portfolio-border px-2 py-0.5 rounded-md">
+            <span className="text-[8.5px] font-bold font-space uppercase tracking-widest text-text-secondary/60 border border-portfolio-border px-2 py-0.5 rounded-md">
               {level}
             </span>
           )}
@@ -77,7 +77,7 @@ const ToolCard = React.memo(({ tool }: { tool: ToolConfig }) => {
 
       {/* Hover overlay detail block */}
       {tool.hasStats && (
-        <div className="mt-4 pt-3 border-t border-portfolio-border/40 flex items-center justify-between text-[8px] sm:text-[9px] font-mono text-text-secondary/60">
+        <div className="mt-4 pt-3 border-t border-portfolio-border/40 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between text-[8px] sm:text-[9px] font-mono text-text-secondary/60">
           <span className="flex items-center gap-1">
             <Info size={9} /> Exp: {level}
           </span>
@@ -234,9 +234,9 @@ export default function Skills() {
             </h3>
           </div>
 
-          <div className="relative pl-8 md:pl-0">
+          <div className="relative pl-10 md:pl-0">
             {/* Center Vertical Connect Line (Desktop: center, Mobile: left) */}
-            <div className="absolute left-[16px] md:left-1/2 top-4 bottom-4 w-[2px] bg-portfolio-border -translate-x-1/2 z-0" />
+            <div className="absolute left-[20px] md:left-1/2 top-4 bottom-4 w-[2px] bg-portfolio-border -translate-x-1/2 z-0" />
 
             <div className="space-y-12">
               {JOURNEY_STAGES.map((stage, idx) => {
@@ -252,7 +252,7 @@ export default function Skills() {
                     }`}
                   >
                     {/* Stage Timeline Center Node */}
-                    <div className={`absolute left-[16px] md:left-1/2 top-1 w-8 h-8 rounded-full flex items-center justify-center border border-portfolio-border bg-[#0F0F0F] text-xs font-mono font-bold text-text-secondary z-20 -translate-x-1/2 shadow-lg ${stage.glow}`}>
+                    <div className={`absolute left-[20px] md:left-1/2 top-1 w-8 h-8 rounded-full flex items-center justify-center border border-portfolio-border bg-[#0F0F0F] text-xs font-mono font-bold text-text-secondary z-20 -translate-x-1/2 shadow-lg ${stage.glow}`}>
                       0{idx + 1}
                     </div>
 
@@ -324,11 +324,7 @@ export default function Skills() {
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    <span className="text-white/20 group-hover:text-accent-secondary transition-colors duration-300">
-                      <ChevronRight size={14} className="translate-x-1 group-hover:translate-x-2 transition-transform duration-300" />
-                    </span>
-
+                  <div className="flex items-center gap-3">
                     {/* Horizontal stack of tools */}
                     <div className="flex -space-x-2.5 overflow-hidden">
                       {wf.tools.map((ToolIcon, idx) => (
@@ -340,6 +336,10 @@ export default function Skills() {
                         </div>
                       ))}
                     </div>
+
+                    <span className="text-white/20 group-hover:text-accent-secondary transition-colors duration-300">
+                      <ChevronRight size={14} className="translate-x-1 group-hover:translate-x-2 transition-transform duration-300" />
+                    </span>
                   </div>
                 </div>
               );

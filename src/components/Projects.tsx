@@ -329,7 +329,7 @@ export default function Projects() {
               </div>
               <div className="flex gap-1.5 pl-3">
                 <span className="text-accent-secondary">if</span>
-                <span className="text-white">part.Parent:FindFirstChild()</span>
+                <span className="text-white">part:Destroy()</span>
               </div>
               <div className="w-1/2 h-1 bg-white/10 rounded pl-6" />
               <div className="flex gap-1.5 pl-3">

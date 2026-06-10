@@ -225,7 +225,7 @@ export default function InteractiveJourney() {
                 <h2 className="font-space font-extrabold text-2xl md:text-3xl text-white mb-4">
                   {currentStep.title}
                 </h2>
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-text-secondary/70 mb-4 bg-portfolio-surface border border-portfolio-border px-3 py-1 rounded-full font-space">
+                <h4 className="text-xs font-semibold uppercase tracking-wider text-text-secondary/70 mb-4 bg-portfolio-surface border border-portfolio-border px-3 py-1 rounded-xl font-space">
                   {currentStep.shortDesc}
                 </h4>
                 <p className="text-text-secondary text-sm md:text-base leading-relaxed font-sans">
