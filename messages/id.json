@@ -3,12 +3,8 @@
     "home": "Beranda",
     "journey": "Perjalanan",
     "creativeJourney": "Desain Visual",
-    "about": "Tentang",
     "skills": "Skill",
-    "sports": "Olahraga",
-    "projects": "Project",
-    "philosophy": "Filosofi",
-    "future": "Target"
+    "projects": "Project"
   },
   "hero": {
     "badge": "Sedang Belajar, Sedang Bertumbuh",
@@ -203,93 +199,117 @@
     }
   },
   "skills": {
-    "sectionTitle": "Skill yang Sedang Aku Asah",
-    "sectionDesc": "Aku percaya bahwa proses belajar nggak pernah benar-benar selesai. Setiap project adalah kesempatan untuk berkembang lebih jauh.",
-    "categories": {
-      "management": "Management Skills",
-      "technical": "Technical Skills",
-      "soft": "Soft Skills"
-    },
-    "managementSkills": {
-      "skill1": {
-        "name": "Pemikiran Strategis",
-        "desc": "Merencanakan dan menskalakan solusi bisnis."
+    "sectionTitle": "Ekosistem Keahlian & Teknologi",
+    "sectionDesc": "Representasi visual dari alat, teknologi, dan platform yang saya gunakan dalam perjalanan belajar saya.",
+    "ecosystem": {
+      "categories": {
+        "creative": "Toolkit Desain Kreatif",
+        "development": "Stack Pengembangan",
+        "workflow": "Alur Kerja Pengembangan",
+        "productivity": "Produktivitas Modern & AI"
       },
-      "skill2": {
-        "name": "Penyelesaian Masalah",
-        "desc": "Memecahkan hambatan secara sistematis."
+      "journey": {
+        "title": "Perkembangan Perjalanan Belajar",
+        "stage1": {
+          "title": "Desain Kreatif",
+          "desc": "Desain visual dasar dan komposisi tata letak menggunakan alat mobile dan desktop."
+        },
+        "stage2": {
+          "title": "Komunikasi Visual",
+          "desc": "Mengembangkan media promosi, elemen branding, dan publikasi visual komunitas."
+        },
+        "stage3": {
+          "title": "Eksplorasi UI",
+          "desc": "Memahami tata letak, hierarki tipografi, dan prototipe digital interaktif."
+        },
+        "stage4": {
+          "title": "Pengembangan Web",
+          "desc": "Mempelajari logika pemrograman dasar, standar web, struktur semantik, dan styling."
+        },
+        "stage5": {
+          "title": "Pengembangan Frontend Modern",
+          "desc": "Membangun aplikasi web dinamis berbasis komponen dengan teknik rendering modern."
+        },
+        "stage6": {
+          "title": "Pembangun Digital Masa Depan",
+          "desc": "Menggabungkan kreativitas visual, strategi bisnis, dan pengembangan teknologi."
+        }
       },
-      "skill3": {
-        "name": "Pengambilan Keputusan",
-        "desc": "Menganalisis data kompleks untuk mengambil tindakan."
+      "workflows": {
+        "title": "Visualisasi Pengalaman Desain",
+        "desc": "Menghubungkan tugas desain dengan alat spesifik yang digunakan dalam proyek kreatif:",
+        "poster": "Desain Poster",
+        "infographic": "Desain Infografis",
+        "social": "Konten Media Sosial",
+        "motion": "Motion Grafis",
+        "church": "Publikasi Gereja",
+        "poci": "Branding Es Teh Poci"
       },
-      "skill4": {
-        "name": "Kepemimpinan",
-        "desc": "Memberdayakan tim untuk berkolaborasi dan memberikan hasil."
-      },
-      "skill5": {
-        "name": "Manajemen Tim",
-        "desc": "Membangun budaya tim yang kompak dan komunikatif."
-      },
-      "skill6": {
-        "name": "Manajemen Waktu",
-        "desc": "Memaksimalkan hasil melalui jadwal berbasis sprint."
-      }
-    },
-    "technicalSkills": {
-      "skill1": {
-        "name": "HTML & Kode Semantik",
-        "desc": "Struktur standar untuk halaman web."
-      },
-      "skill2": {
-        "name": "CSS Modern & Layout",
-        "desc": "Responsive styling, Flexbox, Grid, Tailwind CSS."
-      },
-      "skill3": {
-        "name": "JavaScript ES6+",
-        "desc": "Logika dinamis pada client, closures, dan async data."
-      },
-      "skill4": {
-        "name": "Desain Responsif",
-        "desc": "Tampilan sempurna di desktop, tablet, dan HP."
-      },
-      "skill5": {
-        "name": "Dasar UI/UX",
-        "desc": "Hierarki informasi bersih, keseimbangan visual, mikro-interaksi."
-      },
-      "skill6": {
-        "name": "AI Assisted Development",
-        "desc": "Memanfaatkan AI LLM untuk mempercepat debugging."
-      },
-      "skill7": {
-        "name": "Roblox Lua Scripting",
-        "desc": "Scripting event-driven, array, 3D math, mekanik game."
-      },
-      "skill8": {
-        "name": "Website Building",
-        "desc": "Membangun website statis dan dinamis secara fungsional."
-      }
-    },
-    "softSkills": {
-      "skill1": {
-        "name": "Adaptabilitas",
-        "desc": "Cepat menyesuaikan diri saat teknologi dan target bergeser."
-      },
-      "skill2": {
-        "name": "Konsistensi",
-        "desc": "Berkomitmen latihan setiap hari untuk menguasai skill baru."
-      },
-      "skill3": {
-        "name": "Belajar Cepat",
-        "desc": "Memahami konsep dan dokumentasi dalam waktu singkat."
-      },
-      "skill4": {
-        "name": "Kreativitas",
-        "desc": "Merancang solusi visual dan struktural yang unik."
-      },
-      "skill5": {
-        "name": "Disiplin",
-        "desc": "Fokus belajar secara mandiri dengan jadwal yang disiplin."
+      "tools": {
+        "canva": {
+          "desc": "Platform konten visual untuk pembuatan tata letak dan materi branding secara cepat.",
+          "level": "Menengah",
+          "use": "3 Tahun"
+        },
+        "photoshop": {
+          "desc": "Manipulasi foto, raster graphics editing, dan pembuatan mockup visual tingkat lanjut.",
+          "level": "Lanjut",
+          "use": "4 Tahun"
+        },
+        "illustrator": {
+          "desc": "Desain aset berbasis vektor, logo, branding visual, dan tata letak media cetak.",
+          "level": "Menengah",
+          "use": "2 Tahun"
+        },
+        "alight": {
+          "desc": "Motion graphics editing, animasi keyframe, efek transisi, dan filter video lewat HP.",
+          "level": "Menengah",
+          "use": "2 Tahun"
+        },
+        "capcut": {
+          "desc": "Video editing di HP, pemotongan klip, sinkronisasi audio, transisi, dan visual efek.",
+          "level": "Lanjut",
+          "use": "3 Tahun"
+        },
+        "html": {
+          "desc": "Struktur markup semantik untuk halaman web yang ramah SEO dan mudah diakses."
+        },
+        "css": {
+          "desc": "Desain tata letak responsif, flexbox, grid, animasi transisi, dan custom styling."
+        },
+        "js": {
+          "desc": "Logika pemrograman client-side, manipulasi DOM, pemrosesan data, dan rendering dinamis."
+        },
+        "ts": {
+          "desc": "Type-safety untuk skalabilitas kode, pencegahan error statis, dan integrasi editor."
+        },
+        "react": {
+          "desc": "Pembangunan antarmuka berbasis komponen, manajemen state, dan siklus render virtual."
+        },
+        "nextjs": {
+          "desc": "Framework React untuk server-side rendering, optimasi rute, dan kompilasi static site."
+        },
+        "tailwind": {
+          "desc": "Utility-first CSS framework untuk pembuatan layout cepat, konsisten, dan responsif."
+        },
+        "node": {
+          "desc": "Runtime environment JavaScript untuk kebutuhan build tooling dan penulisan skrip backend."
+        },
+        "git": {
+          "desc": "Sistem pengontrol versi kode secara terdistribusi untuk melacak histori perubahan."
+        },
+        "github": {
+          "desc": "Platform hosting kode kolaboratif, review perubahan, dan pipeline deployment."
+        },
+        "vscode": {
+          "desc": "Editor kode premium dengan dukungan ekstensi workspace dan terminal terintegrasi."
+        },
+        "vercel": {
+          "desc": "Hosting cloud instan untuk static site dengan optimasi edge network global."
+        },
+        "ai": {
+          "desc": "Pembuat prompt taktis untuk debugging cepat dan percepatan penulisan logika kode."
+        }
       }
     }
   },

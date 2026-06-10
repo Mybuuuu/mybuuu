@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, useTransition } from 'react';
+import React, { createContext, useContext, useState, useEffect, useTransition, useCallback, useMemo } from 'react';
 import idTranslations from '../../messages/id.json';
 
 interface LanguageContextType {
@@ -81,7 +81,7 @@ export const LanguageProvider = ({
     loadDict();
   }, [locale]);
 
-  const changeLanguage = (lang: string) => {
+  const changeLanguage = useCallback((lang: string) => {
     startTransition(() => {
       // Save user preference
       localStorage.setItem('portfolio_locale', lang);
@@ -94,16 +94,23 @@ export const LanguageProvider = ({
       // Update state to trigger client-side re-render
       setLocale(lang);
     });
-  };
+  }, []);
 
-  const t = (key: string): string => {
+  const t = useCallback((key: string): string => {
     const val = getNestedValue(dictionary, key);
     // If it's an array, return it as string or let key handle it (fallback)
     return typeof val === 'string' ? val : key;
-  };
+  }, [dictionary]);
+
+  const contextValue = useMemo(() => ({
+    locale,
+    t,
+    changeLanguage,
+    isPending
+  }), [locale, t, changeLanguage, isPending]);
 
   return (
-    <LanguageContext.Provider value={{ locale, t, changeLanguage, isPending }}>
+    <LanguageContext.Provider value={contextValue}>
       {children}
     </LanguageContext.Provider>
   );

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ExternalLink, Code, Layout, Laptop, Gamepad } from 'lucide-react';
 import TextReveal from './TextReveal';
@@ -19,7 +19,7 @@ interface ProjectItem {
   previewMockup: React.ReactNode;
 }
 
-function ProjectCard({ project, cardVariants }: { project: ProjectItem; cardVariants: import('framer-motion').Variants }) {
+const ProjectCard = React.memo(function ProjectCard({ project, cardVariants }: { project: ProjectItem; cardVariants: import('framer-motion').Variants }) {
   const { t } = useLanguage();
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -105,11 +105,11 @@ function ProjectCard({ project, cardVariants }: { project: ProjectItem; cardVari
 
       {/* Card Content body */}
       <div 
-        className="p-6 md:p-8 flex flex-col flex-1"
+        className="p-5 md:p-8 flex flex-col flex-1"
         style={{ transform: 'translateZ(20px)', transformStyle: 'preserve-3d' }}
       >
         <div className="flex items-center justify-between gap-4 mb-2">
-          <span className="text-[10px] font-bold uppercase tracking-widest font-space text-accent-secondary">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-accent-secondary">
             {project.tagline}
           </span>
           <span className="text-[10px] font-mono text-text-secondary">
@@ -138,17 +138,17 @@ function ProjectCard({ project, cardVariants }: { project: ProjectItem; cardVari
         </div>
 
         {/* Buttons */}
-        <div className="flex items-center gap-4 mt-auto border-t border-portfolio-border pt-4 z-30">
+        <div className="flex items-center gap-6 mt-auto border-t border-portfolio-border pt-2 z-30">
           <a
             href={project.demoUrl}
-            className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-accent-primary transition-colors cursor-pointer"
+            className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-accent-primary transition-colors cursor-pointer py-3.5 min-h-[48px]"
           >
             <ExternalLink size={14} />
             {t('projects.liveDemo')}
           </a>
           <a
             href={project.codeUrl}
-            className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-text-secondary hover:text-white transition-colors cursor-pointer"
+            className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-text-secondary hover:text-white transition-colors cursor-pointer py-3.5 min-h-[48px]"
           >
             <svg className="w-[14px] h-[14px] fill-current" viewBox="0 0 24 24">
               <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
@@ -159,12 +159,13 @@ function ProjectCard({ project, cardVariants }: { project: ProjectItem; cardVari
       </div>
     </motion.div>
   );
-}
+});
+ProjectCard.displayName = 'ProjectCard';
 
 export default function Projects() {
   const { t } = useLanguage();
 
-  const PROJECTS = [
+  const PROJECTS = useMemo(() => [
     {
       id: 1,
       title: t('projects.projectList.project1.title'),
@@ -342,7 +343,7 @@ export default function Projects() {
         </div>
       ),
     },
-  ];
+  ], [t]);
 
   const containerVariants = {
     hidden: {},
@@ -378,7 +379,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-space font-extrabold text-4xl md:text-5xl tracking-tight text-white mb-4"
+            className="font-space font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight text-white mb-4"
           >
             <TextReveal text={t('projects.sectionTitle')} mode="words" />
           </motion.h2>

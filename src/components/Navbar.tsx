@@ -25,32 +25,36 @@ export default function Navbar() {
     { label: t('navbar.home'), id: 'home' },
     { label: t('navbar.journey'), id: 'journey' },
     { label: t('navbar.creativeJourney'), id: 'creative-journey' },
-    { label: t('navbar.about'), id: 'about' },
     { label: t('navbar.skills'), id: 'skills' },
-    { label: t('navbar.sports'), id: 'sports' },
     { label: t('navbar.projects'), id: 'projects' },
-    { label: t('navbar.philosophy'), id: 'philosophy' },
-    { label: t('navbar.future'), id: 'future' },
   ], [t]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+    let ticking = false;
 
-      const scrollPos = window.scrollY + 150;
-      for (const item of NAV_ITEMS) {
-        const el = document.getElementById(item.id);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + height) {
-            setActiveItem(item.id);
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+
+          const scrollPos = window.scrollY + 150;
+          for (const item of NAV_ITEMS) {
+            const el = document.getElementById(item.id);
+            if (el) {
+              const top = el.offsetTop;
+              const height = el.offsetHeight;
+              if (scrollPos >= top && scrollPos < top + height) {
+                setActiveItem(item.id);
+              }
+            }
           }
-        }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [NAV_ITEMS]);
 
@@ -62,7 +66,7 @@ export default function Navbar() {
       }
     };
     if (dropdownOpen) {
-      document.addEventListener('mousedown', handleOutsideClick);
+      document.addEventListener('mousedown', handleOutsideClick, { passive: true });
     }
     return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, [dropdownOpen]);
@@ -203,70 +207,83 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu Sidebar */}
+      {/* Mobile Menu Sidebar & Backdrop Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-y-0 right-0 w-full max-w-xs z-50 bg-portfolio-surface border-l border-portfolio-border backdrop-blur-lg flex flex-col p-6 shadow-2xl shadow-black/80 lg:hidden"
-          >
-            <div className="flex items-center justify-between border-b border-portfolio-border pb-4 mb-6">
-              <span className="font-space font-bold text-xl tracking-wider bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent">
-                MENU
-              </span>
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-2 text-text-secondary hover:text-white transition-colors cursor-pointer"
-              >
-                <X size={24} />
-              </button>
-            </div>
+          <>
+            {/* Backdrop Overlay to dim page content and blur details */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+              transition={{ duration: 0.3 }}
+            />
 
-            <div className="flex flex-col space-y-2 flex-1 overflow-y-auto pr-1">
-              {NAV_ITEMS.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all cursor-pointer ${
-                    activeItem === item.id
-                      ? 'bg-accent-primary/20 text-white border-l-4 border-accent-primary font-space'
-                      : 'text-text-secondary hover:text-white hover:bg-portfolio-border/40 font-space'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-
-              {/* Mobile Language Switcher inside Drawer */}
-              <div className="border-t border-portfolio-border pt-6 mt-4">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary/60 block mb-3 font-space">
-                  Language / Bahasa
+            {/* Navigation Drawer */}
+            <motion.div
+              initial={{ opacity: 0, x: '100%' }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: '100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
+              className="fixed inset-y-0 right-0 w-full max-w-xs z-50 bg-[#0c0c0e]/95 border-l border-portfolio-border backdrop-blur-xl flex flex-col pt-[calc(1.5rem+env(safe-area-inset-top))] pb-[calc(1.5rem+env(safe-area-inset-bottom))] px-6 shadow-2xl shadow-black/90 lg:hidden"
+            >
+              <div className="flex items-center justify-between border-b border-portfolio-border pb-4 mb-6">
+                <span className="font-space font-bold text-xl tracking-wider bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent">
+                  MENU
                 </span>
-                <div className="grid grid-cols-2 gap-2">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        changeLanguage(lang.code);
-                        setMobileMenuOpen(false);
-                      }}
-                      className={`flex items-center gap-2 px-3 py-2.5 rounded-xl border text-xs font-space transition-all cursor-pointer justify-center ${
-                        locale === lang.code
-                          ? 'border-accent-primary/50 bg-accent-primary/10 text-white font-bold'
-                          : 'border-portfolio-border bg-portfolio-surface/40 text-text-secondary hover:text-white hover:border-white/10'
-                      }`}
-                    >
-                      <span>{lang.flag}</span>
-                      <span>{lang.shortName}</span>
-                    </button>
-                  ))}
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 text-text-secondary hover:text-white transition-colors cursor-pointer"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+
+              <div className="flex flex-col space-y-2.5 flex-1 overflow-y-auto pr-1">
+                {NAV_ITEMS.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`w-full text-left px-4 py-3.5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all cursor-pointer min-h-[48px] ${
+                      activeItem === item.id
+                        ? 'bg-accent-primary/20 text-white border-l-4 border-accent-primary font-space'
+                        : 'text-text-secondary hover:text-white hover:bg-portfolio-border/40 font-space'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+
+                {/* Mobile Language Switcher inside Drawer */}
+                <div className="border-t border-portfolio-border pt-6 mt-4 mb-4">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary/60 block mb-3 font-space">
+                    Language / Bahasa
+                  </span>
+                  <div className="grid grid-cols-2 gap-2">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          changeLanguage(lang.code);
+                          setMobileMenuOpen(false);
+                        }}
+                        className={`flex items-center gap-2 px-3 py-3 rounded-xl border text-xs font-space transition-all cursor-pointer justify-center min-h-[44px] ${
+                          locale === lang.code
+                            ? 'border-accent-primary/50 bg-accent-primary/10 text-white font-bold'
+                            : 'border-portfolio-border bg-portfolio-surface/40 text-text-secondary hover:text-white hover:border-white/10'
+                        }`}
+                      >
+                        <span>{lang.flag}</span>
+                        <span>{lang.shortName}</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

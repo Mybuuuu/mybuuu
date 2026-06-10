@@ -17,6 +17,10 @@ export default function CustomCursor() {
   const ringY = useSpring(mouseY, { stiffness: 90, damping: 20, mass: 0.6 });
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      return;
+    }
+
     const handle = requestAnimationFrame(() => setMounted(true));
     // Add custom cursor active class to document body to hide native cursor
     document.documentElement.classList.add('custom-cursor-active');
@@ -30,45 +34,41 @@ export default function CustomCursor() {
     const handleMouseDown = () => setIsClicked(true);
     const handleMouseUp = () => setIsClicked(false);
 
-    // Event listeners to handle interactive states
-    const addListeners = () => {
-      // Find all interactive items
-      const links = document.querySelectorAll('a, button, [role="button"], .cursor-pointer');
-      const inputs = document.querySelectorAll('input, textarea, select');
-      const projectCards = document.querySelectorAll('#projects .glass-card');
-      const lanyardCard = document.querySelectorAll('.cursor-grab');
+    // Optimized Event Delegation (single mouseover listener on window)
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) {
+        setHoverType('none');
+        return;
+      }
 
-      links.forEach((el) => {
-        el.addEventListener('mouseenter', () => setHoverType('link'));
-        el.addEventListener('mouseleave', () => setHoverType('none'));
-      });
+      if (target.closest('#projects .glass-card')) {
+        setHoverType('project');
+        return;
+      }
 
-      inputs.forEach((el) => {
-        el.addEventListener('mouseenter', () => setHoverType('input'));
-        el.addEventListener('mouseleave', () => setHoverType('none'));
-      });
+      if (target.closest('.cursor-grab')) {
+        setHoverType('lanyard');
+        return;
+      }
 
-      projectCards.forEach((el) => {
-        el.addEventListener('mouseenter', () => setHoverType('project'));
-        el.addEventListener('mouseleave', () => setHoverType('none'));
-      });
+      if (target.closest('input, textarea, select')) {
+        setHoverType('input');
+        return;
+      }
 
-      lanyardCard.forEach((el) => {
-        el.addEventListener('mouseenter', () => setHoverType('lanyard'));
-        el.addEventListener('mouseleave', () => setHoverType('none'));
-      });
+      if (target.closest('a, button, [role="button"], .cursor-pointer')) {
+        setHoverType('link');
+        return;
+      }
+
+      setHoverType('none');
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mousedown', handleMouseDown);
-    window.addEventListener('mouseup', handleMouseUp);
-
-    // Initial query
-    addListeners();
-
-    // Re-bind when DOM updates (dynamic navigation)
-    const observer = new MutationObserver(addListeners);
-    observer.observe(document.body, { childList: true, subtree: true });
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    window.addEventListener('mousedown', handleMouseDown, { passive: true });
+    window.addEventListener('mouseup', handleMouseUp, { passive: true });
+    window.addEventListener('mouseover', handleMouseOver, { passive: true });
 
     return () => {
       cancelAnimationFrame(handle);
@@ -76,7 +76,7 @@ export default function CustomCursor() {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mousedown', handleMouseDown);
       window.removeEventListener('mouseup', handleMouseUp);
-      observer.disconnect();
+      window.removeEventListener('mouseover', handleMouseOver);
     };
   }, [mouseX, mouseY]);
 

@@ -72,14 +72,14 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
     const handleResize = () => {
       if (!container || !canvas) return;
       
-      const oldPinX = canvas.width >= 1024 ? canvas.width * 0.65 : (canvas.width >= 768 ? canvas.width * 0.58 : canvas.width / 2);
+      const oldPinX = canvas.width >= 1024 ? canvas.width * 0.65 : (canvas.width >= 768 ? canvas.width * 0.78 : canvas.width * 0.82);
       
       width = container.clientWidth;
       height = container.clientHeight;
       canvas.width = width;
       canvas.height = height;
       
-      const newPinX = width >= 1024 ? width * 0.65 : (width >= 768 ? width * 0.58 : width / 2);
+      const newPinX = width >= 1024 ? width * 0.65 : (width >= 768 ? width * 0.78 : width * 0.82);
       const dx = newPinX - oldPinX;
       
       // Shift all points to avoid physics explosion/stretching on resize
@@ -88,7 +88,7 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
         p.px += dx;
       });
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize, { passive: true });
 
     // Verlet Physics rope data initialization
     const gravity = 0.52; // realistic downward weight
@@ -97,11 +97,11 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
     const constraints: Constraint[] = [];
 
     // Pin position (hanging from the top center or offset right on desktop)
-    let initialPinX = width / 2;
+    let initialPinX = width * 0.82;
     if (width >= 1024) {
       initialPinX = width * 0.65;
     } else if (width >= 768) {
-      initialPinX = width * 0.58;
+      initialPinX = width * 0.78;
     }
 
     for (let i = 0; i < ropeSegments; i++) {
@@ -156,6 +156,31 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
       ctx.restore();
     };
 
+    // Create offscreen pattern canvas once for micro-weave lines
+    const patternCanvas = typeof document !== 'undefined' ? document.createElement('canvas') : null;
+    let pattern: CanvasPattern | null = null;
+    if (patternCanvas) {
+      patternCanvas.width = 4;
+      patternCanvas.height = strapWidth;
+      const pCtx = patternCanvas.getContext('2d');
+      if (pCtx) {
+        pCtx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+        pCtx.lineWidth = 0.5;
+        pCtx.beginPath();
+        pCtx.moveTo(0, 0);
+        pCtx.lineTo(2.5, strapWidth);
+        pCtx.stroke();
+
+        pCtx.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+        pCtx.beginPath();
+        pCtx.moveTo(1.1, strapWidth);
+        pCtx.lineTo(3.6, 0);
+        pCtx.stroke();
+
+        pattern = ctx.createPattern(patternCanvas, 'repeat-x');
+      }
+    }
+
     const drawStrapSegment = (p1: Point, p2: Point, idx: number) => {
       const dx = p2.x - p1.x;
       const dy = p2.y - p1.y;
@@ -175,22 +200,13 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
       ctx.fillStyle = baseGrad;
       ctx.fillRect(0, -strapWidth / 2, len + 1.2, strapWidth);
 
-      // 2. High-Density Woven Polyester Fabric Grain (Micro-weave lines)
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
-      ctx.lineWidth = 0.5;
-      const fiberSpacing = 2.2;
-      for (let x = 0; x < len + 1; x += fiberSpacing) {
-        ctx.beginPath();
-        ctx.moveTo(x, -strapWidth / 2);
-        ctx.lineTo(x + 2.5, strapWidth / 2);
-        ctx.stroke();
-
-        ctx.strokeStyle = 'rgba(0, 0, 0, 0.15)'; // weave shadow
-        ctx.beginPath();
-        ctx.moveTo(x + 1.1, strapWidth / 2);
-        ctx.lineTo(x + 3.6, -strapWidth / 2);
-        ctx.stroke();
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+      // 2. High-Density Woven Polyester Fabric Grain (Accelerated Canvas Pattern)
+      if (pattern) {
+        ctx.save();
+        ctx.fillStyle = pattern;
+        ctx.translate(0, -strapWidth / 2);
+        ctx.fillRect(0, 0, len + 1.2, strapWidth);
+        ctx.restore();
       }
 
       // 3. Sublimated Premium Patterning
@@ -256,11 +272,11 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
     let animationId: number;
 
     const updatePhysics = () => {
-      let currentPinX = canvas.width / 2;
+      let currentPinX = canvas.width * 0.82;
       if (canvas.width >= 1024) {
         currentPinX = canvas.width * 0.65; // Shifted right on desktop to prevent covering text
       } else if (canvas.width >= 768) {
-        currentPinX = canvas.width * 0.58; // Shifted slightly on tablet
+        currentPinX = canvas.width * 0.78; // Shifted slightly on tablet
       }
       points[0].x = currentPinX;
 
@@ -355,7 +371,9 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
       const targetAngle = Math.atan2(dxBadge, dyBadge) * -(180 / Math.PI) * 0.44;
       badgeAngle += (targetAngle - badgeAngle) * 0.15; // smooth rotation damping
 
-      badge.style.transform = `translate3d(${badgeX}px, ${badgeY}px, 0) translate(-50%, 0) rotate(${badgeAngle}deg)`;
+      const isMobile = canvas.width < 768;
+      const scaleStr = isMobile ? ' scale(0.72)' : '';
+      badge.style.transform = `translate3d(${badgeX}px, ${badgeY}px, 0) translate(-50%, 0) rotate(${badgeAngle}deg)${scaleStr}`;
 
       animationId = requestAnimationFrame(updatePhysics);
     };
@@ -376,7 +394,9 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
     const handlePointerMove = (e: MouseEvent | TouchEvent) => {
       if (!isDragging.current) return;
       pointerPos.current = getPointerCoords(e);
-      if (e.cancelable) e.preventDefault();
+      if ('touches' in e && e.cancelable) {
+        e.preventDefault();
+      }
     };
 
     const handlePointerUp = () => {
@@ -384,10 +404,10 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
     };
 
     // Listeners on window to ensure seamless drag releases even off-badge
-    window.addEventListener('mousemove', handlePointerMove);
-    window.addEventListener('mouseup', handlePointerUp);
+    window.addEventListener('mousemove', handlePointerMove, { passive: true });
+    window.addEventListener('mouseup', handlePointerUp, { passive: true });
     window.addEventListener('touchmove', handlePointerMove, { passive: false });
-    window.addEventListener('touchend', handlePointerUp);
+    window.addEventListener('touchend', handlePointerUp, { passive: true });
 
     return () => {
       cancelAnimationFrame(animationId);

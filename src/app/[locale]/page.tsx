@@ -12,12 +12,8 @@ import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
 import InteractiveJourney from '../../components/InteractiveJourney';
 import CreativeJourney from '../../components/CreativeJourney';
-import About from '../../components/About';
 import Skills from '../../components/Skills';
-import SportsAchievement from '../../components/SportsAchievement';
 import Projects from '../../components/Projects';
-import Philosophy from '../../components/Philosophy';
-import FutureGoals from '../../components/FutureGoals';
 import Footer from '../../components/Footer';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -75,23 +71,11 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
         {/* Creative Visual Design Journey Section */}
         <CreativeJourney />
 
-        {/* Chronological Vertical Timeline About Section */}
-        <About />
-
         {/* Skills Cards Grid */}
         <Skills />
 
-        {/* POPROV Sports Milestone Section */}
-        <SportsAchievement />
-
         {/* Projects Showcase Cards Grid */}
         <Projects />
-
-        {/* Conceptual Philosophy Quote Panel */}
-        <Philosophy />
-
-        {/* Strategic Futures Goals Roadmap */}
-        <FutureGoals />
 
         {/* Footer legal & tagline metadata */}
         <Footer />

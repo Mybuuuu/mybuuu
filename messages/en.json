@@ -3,12 +3,8 @@
     "home": "Home",
     "journey": "Journey",
     "creativeJourney": "Visual Design",
-    "about": "About",
     "skills": "Skills",
-    "sports": "Sports",
-    "projects": "Projects",
-    "philosophy": "Philosophy",
-    "future": "Targets"
+    "projects": "Projects"
   },
   "hero": {
     "badge": "Still Learning, Still Growing",
@@ -203,93 +199,117 @@
     }
   },
   "skills": {
-    "sectionTitle": "Skills I Am Refining",
-    "sectionDesc": "I believe that the learning process is never truly complete. Every project is an opportunity to grow further.",
-    "categories": {
-      "management": "Management Skills",
-      "technical": "Technical Skills",
-      "soft": "Soft Skills"
-    },
-    "managementSkills": {
-      "skill1": {
-        "name": "Strategic Thinking",
-        "desc": "Planning and scaling business solutions."
+    "sectionTitle": "Skills & Tech Ecosystem",
+    "sectionDesc": "A visual representation of the tools, technologies, and platforms utilized throughout my learning journey.",
+    "ecosystem": {
+      "categories": {
+        "creative": "Creative Design Toolkit",
+        "development": "Development Stack",
+        "workflow": "Development Workflow",
+        "productivity": "Modern Productivity & AI"
       },
-      "skill2": {
-        "name": "Problem Solving",
-        "desc": "Solving obstacles systematically."
+      "journey": {
+        "title": "Learning Journey Progression",
+        "stage1": {
+          "title": "Creative Design",
+          "desc": "Foundational visual design and layout composition using mobile and desktop tools."
+        },
+        "stage2": {
+          "title": "Visual Communication",
+          "desc": "Developing marketing collateral, branding elements, and community visual publications."
+        },
+        "stage3": {
+          "title": "UI Exploration",
+          "desc": "Understanding layouts, typography hierarchies, and interactive digital prototypes."
+        },
+        "stage4": {
+          "title": "Web Development",
+          "desc": "Learning core programming logic, web standards, semantic structures, and styling."
+        },
+        "stage5": {
+          "title": "Modern Frontend Development",
+          "desc": "Building highly dynamic, component-driven web applications with modern rendering."
+        },
+        "stage6": {
+          "title": "Future Full Digital Builder",
+          "desc": "Synthesizing visual creativity, strategic strategy, and full-stack software development."
+        }
       },
-      "skill3": {
-        "name": "Decision Making",
-        "desc": "Analyzing complex data to take action."
+      "workflows": {
+        "title": "Design Experience Visualization",
+        "desc": "Connecting design tasks to the specific toolsets utilized in my creative projects:",
+        "poster": "Poster Design",
+        "infographic": "Infographic Design",
+        "social": "Social Media Content",
+        "motion": "Motion Graphics",
+        "church": "Church Publications",
+        "poci": "Es Teh Poci Branding"
       },
-      "skill4": {
-        "name": "Leadership",
-        "desc": "Empowering teams to collaborate and deliver results."
-      },
-      "skill5": {
-        "name": "Team Management",
-        "desc": "Building a cohesive and communicative team culture."
-      },
-      "skill6": {
-        "name": "Time Management",
-        "desc": "Maximizing output through sprint-based schedules."
-      }
-    },
-    "technicalSkills": {
-      "skill1": {
-        "name": "HTML & Semantic Code",
-        "desc": "Standard structure for web pages."
-      },
-      "skill2": {
-        "name": "Modern CSS & Layout",
-        "desc": "Responsive styling, Flexbox, Grid, Tailwind CSS."
-      },
-      "skill3": {
-        "name": "JavaScript ES6+",
-        "desc": "Dynamic client-side logic, closures, and async data."
-      },
-      "skill4": {
-        "name": "Responsive Design",
-        "desc": "Flawless rendering on desktop, tablet, and mobile screens."
-      },
-      "skill5": {
-        "name": "UI/UX Basics",
-        "desc": "Clean information hierarchy, visual balance, micro-interactions."
-      },
-      "skill6": {
-        "name": "AI Assisted Development",
-        "desc": "Leveraging AI LLMs to accelerate debugging."
-      },
-      "skill7": {
-        "name": "Roblox Lua Scripting",
-        "desc": "Event-driven scripting, arrays, 3D math, game mechanics."
-      },
-      "skill8": {
-        "name": "Website Building",
-        "desc": "Building functional static and dynamic websites."
-      }
-    },
-    "softSkills": {
-      "skill1": {
-        "name": "Adaptability",
-        "desc": "Quickly adjusting when technologies and targets shift."
-      },
-      "skill2": {
-        "name": "Consistency",
-        "desc": "Committed to practicing daily to master new skills."
-      },
-      "skill3": {
-        "name": "Fast Learner",
-        "desc": "Grasping concepts and documentation in a short time."
-      },
-      "skill4": {
-        "name": "Creativity",
-        "desc": "Designing unique visual and structural solutions."
-      },
-      "skill5": {
-        "name": "Discipline",
-        "desc": "Focusing on self-study with a disciplined schedule."
+      "tools": {
+        "canva": {
+          "desc": "Visual content platform for rapid layout and branding layout composition.",
+          "level": "Intermediate",
+          "use": "3 Years"
+        },
+        "photoshop": {
+          "desc": "Advanced raster graphics editing, layout design, and photo manipulation.",
+          "level": "Advanced",
+          "use": "4 Years"
+        },
+        "illustrator": {
+          "desc": "Vector graphic asset design, print media layouts, and brand identity.",
+          "level": "Intermediate",
+          "use": "2 Years"
+        },
+        "alight": {
+          "desc": "Mobile motion graphics editing, keyframe animation, and video effects.",
+          "level": "Intermediate",
+          "use": "2 Years"
+        },
+        "capcut": {
+          "desc": "Mobile-first video editing, transitions, and audio sync orchestration.",
+          "level": "Advanced",
+          "use": "3 Years"
+        },
+        "html": {
+          "desc": "Semantic document structuring for accessible, SEO-compliant web pages."
+        },
+        "css": {
+          "desc": "Responsive layouts, transitions, animations, and Tailwind styling grids."
+        },
+        "js": {
+          "desc": "Interactive client-side behaviors, dynamic rendering, and logic execution."
+        },
+        "ts": {
+          "desc": "Type-safe scalability, compiler verification, and developer tooling safety."
+        },
+        "react": {
+          "desc": "Component-driven user interfaces, declarative state, and React Hook lifecycles."
+        },
+        "nextjs": {
+          "desc": "Server-side rendering, routing optimization, and static compile architecture."
+        },
+        "tailwind": {
+          "desc": "Utility-first styling, rapid visual prototyping, and layout consistency."
+        },
+        "node": {
+          "desc": "Backend JavaScript runtime environment for tooling and compilation scripts."
+        },
+        "git": {
+          "desc": "Distributed version control, branch histories, and repository tracking."
+        },
+        "github": {
+          "desc": "Collaborative code management, deployment integration, and action runs."
+        },
+        "vscode": {
+          "desc": "Code editing optimization, workspace custom extensions, and command terminal."
+        },
+        "vercel": {
+          "desc": "Cloud deployment optimization, static edge networks, and instant preview builds."
+        },
+        "ai": {
+          "desc": "Prompt engineering, debugging acceleration, and semantic codebase partner."
+        }
       }
     }
   },

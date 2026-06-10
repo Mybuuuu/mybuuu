@@ -3,12 +3,8 @@
     "home": "Accueil",
     "journey": "Parcours",
     "creativeJourney": "Design Visuel",
-    "about": "À Propos",
     "skills": "Compétences",
-    "sports": "Sport",
-    "projects": "Projets",
-    "philosophy": "Philosophie",
-    "future": "Objectifs"
+    "projects": "Projets"
   },
   "hero": {
     "badge": "Apprendre et Grandir Chaque Jour",
@@ -203,93 +199,117 @@
     }
   },
   "skills": {
-    "sectionTitle": "Compétences en Cours d'Acquisition",
-    "sectionDesc": "Je crois que le processus d'apprentissage n'est jamais vraiment terminé. Chaque projet est une opportunité de se développer davantage.",
-    "categories": {
-      "management": "Compétences en Management",
-      "technical": "Compétences Techniques",
-      "soft": "Soft Skills"
-    },
-    "managementSkills": {
-      "skill1": {
-        "name": "Pensée Stratégique",
-        "desc": "Planifier et faire évoluer les solutions d'affaires."
+    "sectionTitle": "Écosystème de Compétences & Technologies",
+    "sectionDesc": "Une représentation visuelle des outils, technologies et plateformes utilisés tout au long de mon parcours d'apprentissage.",
+    "ecosystem": {
+      "categories": {
+        "creative": "Outils de Design Créatif",
+        "development": "Stack de Développement",
+        "workflow": "Flux de Travail",
+        "productivity": "Productivité & IA"
       },
-      "skill2": {
-        "name": "Résolution de Problèmes",
-        "desc": "Résoudre les obstacles de manière systématique."
+      "journey": {
+        "title": "Progression de l'Apprentissage",
+        "stage1": {
+          "title": "Design Créatif",
+          "desc": "Bases de la conception visuelle et composition de mise en page via des outils mobiles et de bureau."
+        },
+        "stage2": {
+          "title": "Communication Visuelle",
+          "desc": "Création de supports marketing, d'éléments de marque et de publications visuelles communautaires."
+        },
+        "stage3": {
+          "title": "Exploration UI",
+          "desc": "Compréhension des grilles, de la hiérarchie typographique et des prototypes numériques interactifs."
+        },
+        "stage4": {
+          "title": "Développement Web",
+          "desc": "Apprentissage de la logique de programmation, des standards du web et de l'intégration de style."
+        },
+        "stage5": {
+          "title": "Développement Frontend Moderne",
+          "desc": "Construction d'applications web dynamiques basées sur des composants modernes."
+        },
+        "stage6": {
+          "title": "Futur Bâtisseur Digital",
+          "desc": "Synthèse entre créativité visuelle, stratégie d'entreprise et ingénierie logicielle full-stack."
+        }
       },
-      "skill3": {
-        "name": "Prise de Décision",
-        "desc": "Analyser des données complexes pour agir."
+      "workflows": {
+        "title": "Visualisation de l'Expérience Design",
+        "desc": "Association des projets créatifs aux outils spécifiques utilisés :",
+        "poster": "Design de Poster",
+        "infographic": "Design d'Infographie",
+        "social": "Contenu pour Réseaux Sociaux",
+        "motion": "Motion Design",
+        "church": "Publications Paroissiales",
+        "poci": "Branding Es Teh Poci"
       },
-      "skill4": {
-        "name": "Leadership",
-        "desc": "Inciter les équipes à collaborer et à obtenir des résultats."
-      },
-      "skill5": {
-        "name": "Gestion d'Équipe",
-        "desc": "Instaurer une culture d'équipe soudée et communicative."
-      },
-      "skill6": {
-        "name": "Gestion du Temps",
-        "desc": "Maximiser les livrables via un calendrier structuré en sprints."
-      }
-    },
-    "technicalSkills": {
-      "skill1": {
-        "name": "HTML & Code Sémantique",
-        "desc": "Structure standard des pages web."
-      },
-      "skill2": {
-        "name": "CSS Moderne & Layout",
-        "desc": "Mise en forme adaptative, Flexbox, Grid, Tailwind CSS."
-      },
-      "skill3": {
-        "name": "JavaScript ES6+",
-        "desc": "Logique dynamique côté client, fermetures et données asynchrones."
-      },
-      "skill4": {
-        "name": "Design Responsif",
-        "desc": "Affichage impeccable sur écrans de PC, tablette et smartphone."
-      },
-      "skill5": {
-        "name": "Bases UI/UX",
-        "desc": "Hiérarchie d'information claire, équilibre visuel, micro-interactions."
-      },
-      "skill6": {
-        "name": "Développement Assisté par IA",
-        "desc": "Exploiter les modèles d'IA pour accélérer le débogage."
-      },
-      "skill7": {
-        "name": "Scripting Roblox Lua",
-        "desc": "Scripting événementiel, tableaux, mathématiques 3D, mécaniques de jeu."
-      },
-      "skill8": {
-        "name": "Création de Sites Web",
-        "desc": "Créer des sites web statiques et dynamiques de manière fonctionnelle."
-      }
-    },
-    "softSkills": {
-      "skill1": {
-        "name": "Adaptabilité",
-        "desc": "S'adapter rapidement lorsque les technologies et les priorités évoluent."
-      },
-      "skill2": {
-        "name": "Régularité",
-        "desc": "S'engager à pratiquer tous les jours pour maîtriser de nouveaux outils."
-      },
-      "skill3": {
-        "name": "Apprentissage Rapide",
-        "desc": "Assimiler des concepts et des documentations en très peu de temps."
-      },
-      "skill4": {
-        "name": "Créativité",
-        "desc": "Imaginer des solutions visuelles et fonctionnelles originales."
-      },
-      "skill5": {
-        "name": "Discipline",
-        "desc": "Se concentrer sur l'auto-apprentissage selon un planning strict."
+      "tools": {
+        "canva": {
+          "desc": "Outil graphique en ligne pour concevoir rapidement des maquettes marketing.",
+          "level": "Intermédiaire",
+          "use": "3 Ans"
+        },
+        "photoshop": {
+          "desc": "Manipulation photo avancée, création graphique matricielle et prototypes visuels.",
+          "level": "Avancé",
+          "use": "4 Ans"
+        },
+        "illustrator": {
+          "desc": "Création d'illustrations vectorielles, logos, identités et maquettes imprimées.",
+          "level": "Intermédiaire",
+          "use": "2 Ans"
+        },
+        "alight": {
+          "desc": "Création de graphismes animés, animations clés et édition mobile.",
+          "level": "Intermédiaire",
+          "use": "2 Ans"
+        },
+        "capcut": {
+          "desc": "Montage vidéo sur mobile, synchronisation sonore et transitions fluides.",
+          "level": "Avancé",
+          "use": "3 Ans"
+        },
+        "html": {
+          "desc": "Balisage sémantique structuré pour des pages web accessibles et optimisées pour le SEO."
+        },
+        "css": {
+          "desc": "Mises en page fluides et adaptatives, animations CSS3, flexbox, grid et styles personnalisés."
+        },
+        "js": {
+          "desc": "Développement logique côté client, interactions dynamiques avec le DOM et requêtes async."
+        },
+        "ts": {
+          "desc": "Typage statique sécurisé améliorant la robustesse du code et l'expérience développeur."
+        },
+        "react": {
+          "desc": "Conception d'interfaces utilisateurs modulaires, hooks et réconciliation via DOM virtuel."
+        },
+        "nextjs": {
+          "desc": "Framework d'application web optimisé pour le rendu serveur et le référencement (SEO)."
+        },
+        "tailwind": {
+          "desc": "Intégration de style accélérée et responsive via l'approche utilitaire CSS."
+        },
+        "node": {
+          "desc": "Environnement d'exécution JavaScript pour les scripts locaux et l'outillage frontend."
+        },
+        "git": {
+          "desc": "Suivi des fichiers sources et gestion des embranchements de code distribués."
+        },
+        "github": {
+          "desc": "Hébergement de dépôts distants, automatisation CI/CD et gestion collaborative de projets."
+        },
+        "vscode": {
+          "desc": "Éditeur de code polyvalent doté d'un terminal intégré et d'extensions d'outils."
+        },
+        "vercel": {
+          "desc": "Plateforme de déploiement cloud à haute performance optimisée pour Next.js."
+        },
+        "ai": {
+          "desc": "Utilisation assistée de l'intelligence artificielle pour débugger et optimiser les calculs."
+        }
       }
     }
   },

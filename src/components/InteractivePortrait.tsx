@@ -44,9 +44,29 @@ function HologramFallback() {
   );
 }
 
+const PORTRAIT_FORMATS = [
+  '/karya/portrait.png',
+  '/karya/portrait.webp',
+  '/karya/portrait.jpg',
+  '/karya/portrait.jpeg',
+  '/profile/portrait.png',
+  '/profile/portrait.webp',
+  '/profile/portrait.jpg',
+  '/profile/portrait.jpeg',
+];
+
 export default function InteractivePortrait() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [formatIdx, setFormatIdx] = useState(0);
   const [imageError, setImageError] = useState(false);
+
+  const handleImageError = () => {
+    if (formatIdx < PORTRAIT_FORMATS.length - 1) {
+      setFormatIdx((prev) => prev + 1);
+    } else {
+      setImageError(true);
+    }
+  };
 
   // Mouse normalized coordinates (-0.5 to 0.5)
   const rawMouseX = useMotionValue(0);
@@ -59,22 +79,22 @@ export default function InteractivePortrait() {
 
   // Scroll Parallax hooks
   const { scrollY } = useScroll();
-  // Portrait translates 30% slower than scroll
-  const scrollParallaxY = useTransform(scrollY, [0, 1000], [0, -300]);
+  // Portrait translates 30% slower than scroll (disabled on mobile to avoid overflow issues)
+  const scrollParallaxY = useTransform(
+    scrollY, 
+    [0, 1000], 
+    typeof window !== 'undefined' && window.innerWidth < 1024 ? [0, 0] : [0, -180]
+  );
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) return;
+
     const handleMouseMove = (e: MouseEvent) => {
-      if (window.innerWidth < 768) {
-        // Reduce mouse tracking offset on mobile by 70%
-        rawMouseX.set(((e.clientX / window.innerWidth) - 0.5) * 0.3);
-        rawMouseY.set(((e.clientY / window.innerHeight) - 0.5) * 0.3);
-      } else {
-        rawMouseX.set((e.clientX / window.innerWidth) - 0.5);
-        rawMouseY.set((e.clientY / window.innerHeight) - 0.5);
-      }
+      rawMouseX.set((e.clientX / window.innerWidth) - 0.5);
+      rawMouseY.set((e.clientY / window.innerHeight) - 0.5);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
@@ -91,12 +111,12 @@ export default function InteractivePortrait() {
         y: scrollParallaxY,
         willChange: 'transform',
       }}
-      className="absolute right-0 top-1/2 -translate-y-1/2 w-[90%] md:w-[45vw] lg:w-[38vw] h-[550px] pointer-events-none select-none z-0 overflow-visible flex items-center justify-center"
+      className="lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[38vw] lg:h-[550px] max-lg:relative max-lg:top-0 max-lg:translate-y-0 max-lg:mx-auto max-lg:w-full max-lg:max-w-[280px] max-lg:h-[280px] max-lg:mt-6 max-lg:z-10 pointer-events-none select-none z-0 overflow-visible flex items-center justify-center"
     >
       {/* Behind-portrait static aurora glow */}
       <div className="absolute inset-0 flex items-center justify-center overflow-visible opacity-15 blur-[100px] z-0">
-        <div className="absolute w-[250px] h-[250px] bg-accent-primary/10 rounded-full" />
-        <div className="absolute w-[280px] h-[280px] bg-accent-secondary/5 rounded-full" />
+        <div className="absolute w-[200px] h-[200px] lg:w-[250px] lg:h-[250px] bg-accent-primary/10 rounded-full" />
+        <div className="absolute w-[220px] h-[220px] lg:w-[280px] lg:h-[280px] bg-accent-secondary/5 rounded-full" />
       </div>
 
       {/* Main Single Portrait Layer */}
@@ -124,15 +144,15 @@ export default function InteractivePortrait() {
               <HologramFallback />
             ) : (
               <img
-                src="/profile/portrait.png"
+                src={PORTRAIT_FORMATS[formatIdx]}
                 alt="Mybuu Portrait Backdrop"
-                onError={() => setImageError(true)}
+                onError={handleImageError}
                 className="w-full h-full object-contain"
               />
             )}
 
             {/* Gradient mask at bottom to fade portrait into the background grid */}
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-portfolio-bg via-portfolio-bg/80 to-transparent z-25 pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-20 lg:h-40 bg-gradient-to-t from-portfolio-bg via-portfolio-bg/80 to-transparent z-25 pointer-events-none" />
           </div>
         </motion.div>
       </motion.div>

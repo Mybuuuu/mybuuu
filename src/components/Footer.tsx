@@ -8,10 +8,25 @@ export default function Footer() {
   const { t } = useLanguage();
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    const lenisInstance = (window as unknown as { 
+      lenis?: { 
+        scrollTo?: (target: number | string | HTMLElement, options: { offset: number; duration: number; easing: (t: number) => number }) => void 
+      } 
+    }).lenis;
+    if (lenisInstance && lenisInstance.scrollTo) {
+      const easeInOutExpo = (t: number) =>
+        t === 0 ? 0 : t === 1 ? 1 : t < 0.5 ? Math.pow(2, 20 * t - 10) / 2 : (2 - Math.pow(2, -20 * t + 10)) / 2;
+      lenisInstance.scrollTo(0, {
+        offset: 0,
+        duration: 1.2,
+        easing: easeInOutExpo
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (

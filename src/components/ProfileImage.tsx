@@ -3,6 +3,10 @@
 import React, { useState } from 'react';
 
 const FORMATS = [
+  '/karya/avatar.png',
+  '/karya/avatar.webp',
+  '/karya/avatar.jpg',
+  '/karya/avatar.jpeg',
   '/profile/avatar.png',
   '/profile/avatar.webp',
   '/profile/avatar.jpg',

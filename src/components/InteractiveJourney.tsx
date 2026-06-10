@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Palette, GraduationCap, Code2, Rocket } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -9,7 +9,7 @@ export default function InteractiveJourney() {
   const { t } = useLanguage();
   const [activeStep, setActiveStep] = useState(3); // Start with Roblox Developer active as it's the pivot!
 
-  const STEPS = [
+  const STEPS = useMemo(() => [
     {
       id: 1,
       title: t('interactiveJourney.steps.step1.title'),
@@ -55,7 +55,7 @@ export default function InteractiveJourney() {
       shortDesc: t('interactiveJourney.steps.step5.shortDesc'),
       longDesc: t('interactiveJourney.steps.step5.longDesc'),
     },
-  ];
+  ], [t]);
 
   const currentStep = STEPS.find((step) => step.id === activeStep) || STEPS[2];
   const CurrentIcon = currentStep.icon;
@@ -72,7 +72,7 @@ export default function InteractiveJourney() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-space font-extrabold text-4xl md:text-5xl tracking-tight text-white mb-4"
+            className="font-space font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight text-white mb-4"
           >
             {t('interactiveJourney.sectionTitle')}
           </motion.h2>
@@ -150,9 +150,9 @@ export default function InteractiveJourney() {
         </div>
 
         {/* Vertical Journey Map for Mobile */}
-        <div className="md:hidden relative flex flex-col space-y-8 pl-8 mb-12">
+        <div className="md:hidden relative flex flex-col space-y-8 pl-10 mb-12">
           {/* Vertical Connection Line */}
-          <div className="absolute left-[15px] top-4 bottom-4 w-[2px] bg-portfolio-border z-0">
+          <div className="absolute left-[19px] top-4 bottom-4 w-[2px] bg-portfolio-border z-0">
             <div 
               className="absolute top-0 left-0 w-full bg-white/30 transition-all duration-500" 
               style={{ height: `${(activeStep - 1) * 25}%` }}
@@ -168,17 +168,17 @@ export default function InteractiveJourney() {
               <div 
                 key={step.id} 
                 onClick={() => setActiveStep(step.id)}
-                className="flex items-center gap-4 text-left relative z-10 cursor-pointer group"
+                className="flex items-center gap-4 text-left relative z-10 cursor-pointer group min-h-[44px]"
               >
                 {/* Node circle */}
-                <div className={`w-8 h-8 rounded-full border flex items-center justify-center flex-shrink-0 transition-all duration-300 -ml-8 bg-portfolio-bg ${
+                <div className={`w-10 h-10 rounded-full border flex items-center justify-center flex-shrink-0 transition-all duration-300 -ml-10 bg-portfolio-bg ${
                   isActive 
-                    ? 'border-white text-white' 
+                    ? 'border-white text-white bg-white/10' 
                     : isPassed 
                       ? 'border-white/30 text-white/85' 
                       : 'border-portfolio-border text-text-secondary'
                 }`}>
-                  <IconComponent size={12} />
+                  <IconComponent size={14} />
                 </div>
                 <div>
                   <span className={`text-[8px] font-mono uppercase tracking-widest block transition-colors ${
@@ -198,7 +198,7 @@ export default function InteractiveJourney() {
         </div>
 
         {/* Dynamic Descriptive Content Panel (Framer Motion Cross-Dissolve on step change) */}
-        <div className="max-w-4xl mx-auto glass-card p-8 md:p-10 rounded-[32px] border border-portfolio-border/60 relative overflow-hidden bg-portfolio-surface/30">
+        <div className="max-w-4xl mx-auto glass-card p-5 md:p-10 rounded-2xl md:rounded-[32px] border border-portfolio-border/60 relative overflow-hidden bg-portfolio-surface/30">
           <div className="absolute top-[-100px] right-[-100px] w-48 h-48 bg-accent-secondary/5 rounded-full blur-[80px]" />
           
           <AnimatePresence mode="wait">
@@ -213,7 +213,7 @@ export default function InteractiveJourney() {
               {/* Left Column icon */}
               <div className="md:col-span-3 flex justify-center">
                 <div className="w-20 h-20 md:w-28 md:h-28 rounded-3xl border border-portfolio-border bg-portfolio-surface-secondary flex items-center justify-center text-accent-primary shadow-xl">
-                  <CurrentIcon size={44} className="md:size-52" />
+                  <CurrentIcon className="w-10 h-10 md:w-14 md:h-14" />
                 </div>
               </div>
 

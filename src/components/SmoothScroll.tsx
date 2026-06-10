@@ -5,6 +5,10 @@ import Lenis from 'lenis';
 
 export default function SmoothScroll() {
   useEffect(() => {
+    // Detect mobile touch screens to disable touch smoothing/sync and preserve 100% native momentum scrolling
+    const isTouchDevice = typeof window !== 'undefined' && 
+      ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
     // Instantiate Lenis with cast to unknown -> ConstructorParameters to handle type mismatch on touch settings
     const lenis = new Lenis({
       duration: 1.2,
@@ -12,8 +16,8 @@ export default function SmoothScroll() {
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      syncTouch: true, // v1.1+ standard touch syncing
-      smoothTouch: true, // Legacy option fallback
+      syncTouch: !isTouchDevice, // disable touch syncing on mobile/touch screens
+      smoothTouch: !isTouchDevice, // disable touch smoothing on mobile/touch screens
       touchMultiplier: 1.2,
       wheelMultiplier: 0.9,
       infinite: false,

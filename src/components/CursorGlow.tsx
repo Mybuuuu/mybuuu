@@ -22,7 +22,7 @@ export default function CursorGlow() {
       mouseY.set(e.clientY - 250);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => {
       cancelAnimationFrame(animFrame);
       window.removeEventListener('mousemove', handleMouseMove);

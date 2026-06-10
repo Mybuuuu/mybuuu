@@ -49,25 +49,33 @@ export default function Hero({ introComplete = true }: HeroProps) {
     },
   };
 
-  const handleScrollToProjects = () => {
-    const el = document.getElementById('projects');
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
     if (el) {
-      window.scrollTo({
-        top: el.offsetTop - 90,
-        behavior: 'smooth',
-      });
+      const lenisInstance = (window as unknown as { 
+        lenis?: { 
+          scrollTo?: (target: HTMLElement, options: { offset: number; duration: number; easing: (t: number) => number }) => void 
+        } 
+      }).lenis;
+      if (lenisInstance && lenisInstance.scrollTo) {
+        const easeInOutExpo = (t: number) =>
+          t === 0 ? 0 : t === 1 ? 1 : t < 0.5 ? Math.pow(2, 20 * t - 10) / 2 : (2 - Math.pow(2, -20 * t + 10)) / 2;
+        lenisInstance.scrollTo(el, {
+          offset: -90,
+          duration: 1.2,
+          easing: easeInOutExpo
+        });
+      } else {
+        window.scrollTo({
+          top: el.offsetTop - 90,
+          behavior: 'smooth',
+        });
+      }
     }
   };
 
-  const handleScrollToJourney = () => {
-    const el = document.getElementById('creative-journey');
-    if (el) {
-      window.scrollTo({
-        top: el.offsetTop - 90,
-        behavior: 'smooth',
-      });
-    }
-  };
+  const handleScrollToProjects = () => scrollToSection('projects');
+  const handleScrollToJourney = () => scrollToSection('creative-journey');
 
   return (
     <section id="home" className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden">
@@ -80,31 +88,28 @@ export default function Hero({ introComplete = true }: HeroProps) {
         <div className="absolute bottom-[10%] left-[5%] w-[300px] h-[300px] bg-accent-secondary/80 rounded-full blur-[120px] opacity-20" />
       </motion.div>
 
-      {/* Interactive Background Portrait System (Mesh gradient, particles, hologram copy layers) */}
-      <InteractivePortrait />
-
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={introComplete ? "visible" : "hidden"}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
         >
           {/* Left Text Column (Progressive fade-out & blur on scroll) */}
           <motion.div 
             style={{ y: contentY, opacity: contentOpacity, filter: contentBlur }}
-            className="col-span-1 lg:col-span-7 flex flex-col items-start text-left"
+            className="col-span-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left"
           >
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-portfolio-border bg-portfolio-surface text-[10px] font-bold tracking-widest text-text-secondary uppercase font-space mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-portfolio-border bg-portfolio-surface text-[10px] font-bold tracking-widest text-text-secondary uppercase font-space mb-6 mx-auto lg:mx-0"
             >
               {t('hero.badge')}
             </motion.div>
 
             <motion.h1 
               variants={itemVariants}
-              className="font-space font-extrabold text-5xl md:text-7xl lg:text-8xl tracking-tight text-white mb-4 py-1 min-h-[1.2em] flex items-center w-full"
+              className="font-space font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight text-white mb-4 py-1 min-h-[1.2em] flex items-center justify-center lg:justify-start w-full"
             >
               <Typewriter 
                 texts={[
@@ -124,23 +129,26 @@ export default function Hero({ introComplete = true }: HeroProps) {
 
             <motion.h2
               variants={itemVariants}
-              className="text-xl md:text-2xl font-space font-medium text-white mb-6 leading-snug"
+              className="text-lg md:text-2xl font-space font-medium text-white mb-6 leading-snug max-w-xl"
             >
               <TextReveal text={t('hero.title')} mode="words" />
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
-              className="text-text-secondary text-base md:text-lg leading-relaxed max-w-xl mb-8 font-sans"
+              className="text-text-secondary text-sm md:text-lg leading-relaxed max-w-xl mb-8 font-sans mx-auto lg:mx-0"
             >
               <TextReveal text={t('hero.description')} mode="fade-up" delay={0.2} />
             </motion.p>
 
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-4 w-full sm:w-auto">
+            <motion.div 
+              variants={itemVariants} 
+              className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 w-full sm:w-auto"
+            >
               <Magnetic>
                 <button
                   onClick={handleScrollToJourney}
-                  className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-accent-primary text-white text-sm font-semibold uppercase tracking-wider hover:bg-accent-primary/90 active:scale-95 transition-all duration-300 cursor-pointer w-full sm:w-auto font-space"
+                  className="flex items-center justify-center gap-2.5 px-7 py-4 min-h-[52px] rounded-full bg-accent-primary text-white text-sm font-semibold uppercase tracking-wider hover:bg-accent-primary/90 active:scale-95 transition-all duration-300 cursor-pointer w-full sm:w-auto font-space shadow-md"
                 >
                   {t('hero.ctaJourney')}
                   <ArrowRight size={16} />
@@ -150,7 +158,7 @@ export default function Hero({ introComplete = true }: HeroProps) {
               <Magnetic>
                 <button
                   onClick={handleScrollToProjects}
-                  className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full border border-accent-gold/25 hover:border-accent-gold/50 text-accent-gold text-sm font-semibold uppercase tracking-wider hover:bg-accent-gold/5 active:scale-95 transition-all duration-300 cursor-pointer w-full sm:w-auto font-space"
+                  className="flex items-center justify-center gap-2.5 px-7 py-4 min-h-[52px] rounded-full border border-accent-gold/25 hover:border-accent-gold/50 text-accent-gold text-sm font-semibold uppercase tracking-wider hover:bg-accent-gold/5 active:scale-95 transition-all duration-300 cursor-pointer w-full sm:w-auto font-space"
                 >
                   {t('hero.ctaProjects')}
                   <Download size={16} />
@@ -159,8 +167,10 @@ export default function Hero({ introComplete = true }: HeroProps) {
             </motion.div>
           </motion.div>
 
-          {/* Right Column Spacer (The lanyard hangs absolute in the center, so this column acts as beautiful negative space) */}
-          <div className="col-span-1 lg:col-span-5 hidden lg:block pointer-events-none" />
+          {/* Right Column (Shows Portrait stacked on mobile, acts as spacer on desktop) */}
+          <div className="col-span-1 lg:col-span-5 w-full flex items-center justify-center pointer-events-none relative h-[310px] lg:h-auto mt-2 lg:mt-0">
+            <InteractivePortrait />
+          </div>
         </motion.div>
 
         {/* Stats Grid Cards Section */}

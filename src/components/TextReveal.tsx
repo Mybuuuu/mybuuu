@@ -11,7 +11,7 @@ interface TextRevealProps {
   once?: boolean;
 }
 
-export default function TextReveal({
+const TextReveal = React.memo(function TextReveal({
   text,
   mode = 'words',
   className = '',
@@ -125,4 +125,7 @@ export default function TextReveal({
       {text}
     </motion.span>
   );
-}
+});
+
+TextReveal.displayName = 'TextReveal';
+export default TextReveal;

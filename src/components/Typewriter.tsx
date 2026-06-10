@@ -125,9 +125,11 @@ export default function Typewriter({
     return () => clearInterval(cursorInterval);
   }, [mounted]);
 
-  const placeholder = texts && texts.length > 0
-    ? texts.reduce((max, cur) => cur.length > max.length ? cur : max, '')
-    : (text || '');
+  const placeholder = React.useMemo(() => {
+    return texts && texts.length > 0
+      ? texts.reduce((max, cur) => cur.length > max.length ? cur : max, '')
+      : (text || '');
+  }, [text, texts]);
 
   if (!mounted) {
     // Render hidden placeholder with relative container during SSR to prevent hydration mismatches

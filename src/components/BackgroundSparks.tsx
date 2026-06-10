@@ -92,7 +92,7 @@ export default function BackgroundSparks() {
       height = canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize, { passive: true });
 
     // Dynamic scroll tracking to shift ambient sparks with parallax speed mapping
     let lastScrollY = window.scrollY;
@@ -144,7 +144,7 @@ export default function BackgroundSparks() {
       }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
     // Animation Loop
     const render = () => {
