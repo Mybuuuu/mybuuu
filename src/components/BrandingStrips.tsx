@@ -213,8 +213,8 @@ export default function BrandingStrips() {
       parallaxStrength: { x: 15, y: 10 },
       hiddenOnMobile: true,
       items: [
-        { type: 'barcode', text: 'MYBUUU.DEPT-1', colorTheme: 'white' },
-        { type: 'title', text: 'MYBUUU', colorTheme: 'gold' },
+        { type: 'barcode', text: 'DENNY.DEPT-1', colorTheme: 'white' },
+        { type: 'title', text: 'DENNY', colorTheme: 'gold' },
         { type: 'symbol', text: '★', colorTheme: 'gold' },
         { type: 'detail', text: 'CREATIVE VISUAL DESIGNER', colorTheme: 'white' },
         { type: 'divider', colorTheme: 'gold' },
@@ -237,7 +237,7 @@ export default function BrandingStrips() {
       parallaxStrength: { x: 8, y: 5 },
       hiddenOnMobile: true,
       items: [
-        { type: 'title', text: 'MYBUUU', colorTheme: 'purple' },
+        { type: 'title', text: 'DENNY', colorTheme: 'purple' },
         { type: 'symbol', text: 'cross', colorTheme: 'purple' },
         { type: 'detail', text: 'SELF-TAUGHT DEVELOPER', colorTheme: 'white' },
         { type: 'barcode', text: 'CODE-CORE-X', colorTheme: 'white' },
@@ -259,7 +259,7 @@ export default function BrandingStrips() {
       parallaxStrength: { x: 26, y: 16 },
       hiddenOnMobile: true,
       items: [
-        { type: 'title', text: 'MYBUUU', colorTheme: 'black' },
+        { type: 'title', text: 'DENNY', colorTheme: 'black' },
         { type: 'symbol', text: '★', colorTheme: 'gold' },
         { type: 'detail', text: 'DIGITAL ARCHITECT', colorTheme: 'black' },
         { type: 'barcode', text: 'VERIFIED-002', colorTheme: 'black' },
@@ -281,7 +281,7 @@ export default function BrandingStrips() {
       parallaxStrength: { x: 18, y: 12 },
       hiddenOnMobile: true,
       items: [
-        { type: 'title', text: 'MYBUUU', colorTheme: 'gold' },
+        { type: 'title', text: 'DENNY', colorTheme: 'gold' },
         { type: 'barcode', text: 'SECURE-004', colorTheme: 'white' },
         { type: 'detail', text: 'SELF-TAUGHT DEVELOPER', colorTheme: 'white' },
         { type: 'symbol', text: 'cross', colorTheme: 'purple' },

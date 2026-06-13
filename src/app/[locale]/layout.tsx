@@ -3,10 +3,10 @@ import "../globals.css";
 import { LanguageProvider } from "../../context/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "Mybuu | Management Student & Self-Taught Web Developer",
-  description: "Official developer portfolio of Mybuu, combining strategic management problem-solving with advanced programming logic to build high-performance digital solutions.",
-  keywords: ["Mybuu", "Developer Portfolio", "Self-Taught Web Developer", "Management Student", "Roblox Lua Scripting", "Next.js Portfolio", "Tailwind CSS v4", "TypeScript Web App"],
-  authors: [{ name: "Mybuu" }],
+  title: "Denny | Management Student & Self-Taught Web Developer",
+  description: "Official developer portfolio of Denny, combining strategic management problem-solving with advanced programming logic to build high-performance digital solutions.",
+  keywords: ["Denny", "Developer Portfolio", "Self-Taught Web Developer", "Management Student", "Roblox Lua Scripting", "Next.js Portfolio", "Tailwind CSS v4", "TypeScript Web App"],
+  authors: [{ name: "Denny" }],
 };
 
 export default async function RootLayout({

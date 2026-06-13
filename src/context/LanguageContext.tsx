@@ -66,7 +66,7 @@ export const LanguageProvider = ({
           
           // Update Page Title
           const title = getNestedValue(dict, 'seo.title');
-          document.title = typeof title === 'string' ? title : 'Mybuu | Management Student & Web Developer';
+          document.title = typeof title === 'string' ? title : 'Denny | Management Student & Web Developer';
           
           // Update Meta Description
           const desc = getNestedValue(dict, 'seo.description');

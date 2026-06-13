@@ -9,7 +9,7 @@
   "hero": {
     "badge": "行而不辍，履践致远",
     "typewriter": {
-      "hello": "你好，我是 Mybuu。",
+      "hello": "你好，我是 Denny。",
       "tech": "技术发烧友。",
       "management": "管理学在读生。",
       "selfTaught": "自学成才的程序员。"
@@ -440,7 +440,7 @@
   "footer": {
     "title": "感谢您的光临。",
     "subtitle": "道阻且长，仍有许多知识需要汲取，仍有许多项目期待落地。",
-    "copyright": "© Mybuu. 基于 Next.js 与 Tailwind CSS 构建。",
+    "copyright": "© Denny. 基于 Next.js 与 Tailwind CSS 构建。",
     "backToTop": "返回顶部"
   },
   "loader": {

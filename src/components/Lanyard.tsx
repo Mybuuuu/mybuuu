@@ -231,7 +231,7 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
       if (idx % 5 === 1) {
         ctx.fillStyle = 'rgba(255, 255, 255, 0.72)';
         ctx.font = 'bold 7px "Space Grotesk", sans-serif';
-        ctx.fillText('MYBUUU', len / 2 - 14, 2.2);
+        ctx.fillText('DENNY', len / 2 - 14, 2.2);
       } else if (idx % 5 === 3) {
         ctx.fillStyle = 'rgba(168, 85, 247, 0.55)'; // Lavender branding accent
         ctx.font = 'bold 6.5px "Space Grotesk", sans-serif';
@@ -538,7 +538,7 @@ export default function Lanyard({ isReady = true }: LanyardProps) {
             
             {/* Primary Name */}
             <h3 className="font-space font-black text-sm text-white mt-2.5 tracking-wider leading-none">
-              MYBUUU
+              DENNY
             </h3>
           </div>
 

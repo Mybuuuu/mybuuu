@@ -72,7 +72,7 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
               className="w-full flex items-center justify-between border-b border-portfolio-border pb-3 mb-6"
             >
               <span className="font-space font-bold text-xs tracking-widest text-white">
-                MYBUU // PORTFOLIO
+                DENNY // PORTFOLIO
               </span>
               <span className="font-mono text-[9px] text-text-secondary">
                 V2.0_STABLE

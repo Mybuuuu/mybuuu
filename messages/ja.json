@@ -9,7 +9,7 @@
   "hero": {
     "badge": "日々学び、日々成長中",
     "typewriter": {
-      "hello": "こんにちは、Mybuuです。",
+      "hello": "こんにちは、Dennyです。",
       "tech": "テックに夢中な学生です。",
       "management": "経営学を専攻しています。",
       "selfTaught": "独学のエンジニアです。"
@@ -440,7 +440,7 @@
   "footer": {
     "title": "お立ち寄りいただき、ありがとうございました。",
     "subtitle": "学ぶべきことはまだ多く、構築したいプロダクトも無限にあります。",
-    "copyright": "© Mybuu. Next.js ＆ Tailwind CSS で構築。",
+    "copyright": "© Denny. Next.js ＆ Tailwind CSS で構築。",
     "backToTop": "トップへ戻る"
   },
   "loader": {

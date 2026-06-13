@@ -117,7 +117,7 @@ export default function Navbar() {
             onClick={() => scrollToSection('home')}
             className="font-space font-bold text-2xl tracking-wider bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent hover:scale-105 transition-transform cursor-pointer"
           >
-            MYBUUU
+            DENNY
           </button>
 
           {/* Desktop Navigation Links */}

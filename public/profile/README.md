@@ -1,4 +1,4 @@
-# Mybuu Profile Photo Directory
+# Denny Profile Photo Directory
 
 Place your profile photo in this folder to display it on the interactive lanyard card.
 

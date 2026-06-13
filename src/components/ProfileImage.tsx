@@ -87,7 +87,7 @@ export default function ProfileImage({ className = 'w-full h-full' }: ProfileIma
   return (
     <img
       src={FORMATS[formatIdx]}
-      alt="Mybuu Profile Avatar"
+      alt="Denny Profile Avatar"
       onError={handleImageError}
       className={`${className} object-cover`}
     />

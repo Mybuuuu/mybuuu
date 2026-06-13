@@ -9,7 +9,7 @@
   "hero": {
     "badge": "Still Learning, Still Growing",
     "typewriter": {
-      "hello": "Hello, I'm Mybuu.",
+      "hello": "Hello, I'm Denny.",
       "tech": "Tech Enthusiast.",
       "management": "Management Student.",
       "selfTaught": "Self-Taught Coder."
@@ -440,7 +440,7 @@
   "footer": {
     "title": "Thank you for dropping by.",
     "subtitle": "Still so much to learn, still so much to build.",
-    "copyright": "© Mybuu. Built using Next.js & Tailwind CSS.",
+    "copyright": "© Denny. Built using Next.js & Tailwind CSS.",
     "backToTop": "Back to Top"
   },
   "loader": {

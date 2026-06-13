@@ -9,7 +9,7 @@
   "hero": {
     "badge": "Sedang Belajar, Sedang Bertumbuh",
     "typewriter": {
-      "hello": "Halo, Aku Mybuu.",
+      "hello": "Halo, Aku Denny.",
       "tech": "Tech Enthusiast.",
       "management": "Manajemen Student.",
       "selfTaught": "Self-Taught Coder."
@@ -440,7 +440,7 @@
   "footer": {
     "title": "Terima kasih sudah mampir.",
     "subtitle": "Masih banyak yang ingin aku pelajari, masih banyak yang ingin aku bangun.",
-    "copyright": "© Mybuu. Dibuat menggunakan Next.js & Tailwind CSS.",
+    "copyright": "© Denny. Dibuat menggunakan Next.js & Tailwind CSS.",
     "backToTop": "Kembali ke Atas"
   },
   "loader": {

@@ -9,7 +9,7 @@
   "hero": {
     "badge": "Apprendre et Grandir Chaque Jour",
     "typewriter": {
-      "hello": "Bonjour, je suis Mybuu.",
+      "hello": "Bonjour, je suis Denny.",
       "tech": "Passionné de Tech.",
       "management": "Étudiant en Management.",
       "selfTaught": "Développeur Autodidacte."
@@ -440,7 +440,7 @@
   "footer": {
     "title": "Merci de votre visite.",
     "subtitle": "Encore tant de choses à apprendre, encore tant de choses à bâtir.",
-    "copyright": "© Mybuu. Réalisé avec Next.js & Tailwind CSS.",
+    "copyright": "© Denny. Réalisé avec Next.js & Tailwind CSS.",
     "backToTop": "Retour en Haut"
   },
   "loader": {

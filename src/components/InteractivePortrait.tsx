@@ -145,7 +145,7 @@ export default function InteractivePortrait() {
             ) : (
               <img
                 src={PORTRAIT_FORMATS[formatIdx]}
-                alt="Mybuu Portrait Backdrop"
+                alt="Denny Portrait Backdrop"
                 onError={handleImageError}
                 className="w-full h-full object-contain"
               />
